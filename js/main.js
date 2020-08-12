@@ -122,7 +122,7 @@ $(document).ready(function() {
     scrollTopArrowEvent();
 });
 /* 离开当前页面时修改网页标题，回到当前页面时恢复原来标题 */
-window.onload = function() {
+$(function() {
     var OriginTitile = document.title;
     var titleTime;
     document.addEventListener('visibilitychange', function() {
@@ -140,4 +140,4 @@ window.onload = function() {
             }, 2000);
         }
     });
-}
+});
