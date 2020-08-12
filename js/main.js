@@ -114,15 +114,8 @@ function scrollTopArrowEvent() {
         });
     });
 }
-
-$(document).ready(function() {
-    navbarScrollEvent();
-    parallaxEvent();
-    scrollDownArrowEvent();
-    scrollTopArrowEvent();
-});
 /* 离开当前页面时修改网页标题，回到当前页面时恢复原来标题 */
-$(function() {
+function wzx() {
     var OriginTitile = document.title;
     var titleTime;
     document.addEventListener('visibilitychange', function() {
@@ -140,4 +133,12 @@ $(function() {
             }, 2000);
         }
     });
+}
+
+$(document).ready(function() {
+    navbarScrollEvent();
+    parallaxEvent();
+    scrollDownArrowEvent();
+    scrollTopArrowEvent();
+    wzx();
 });
