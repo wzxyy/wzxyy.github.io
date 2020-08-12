@@ -171,7 +171,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      730 字
+      733 字
     </span>
   
 
@@ -205,7 +205,10 @@
             <h1 style="display: none">jquery入门</h1>
             
             <div class="markdown-body" id="post-body">
-              <h2 id="jQuery入门"><a href="#jQuery入门" class="headerlink" title="jQuery入门"></a>jQuery入门</h2><p>1.xxx：兼容IE5678浏览器，不更新。</p>
+              <p>JQ入门</p>
+<a id="more"></a>
+
+<h2 id="jQuery入门"><a href="#jQuery入门" class="headerlink" title="jQuery入门"></a>jQuery入门</h2><p>1.xxx：兼容IE5678浏览器，不更新。</p>
 <p>2.xxx：不兼容IE5678，不更新。</p>
 <p>3.xxx：正在更新，不兼容IE5678，比前面版本多了一些语法。</p>
 <p><code>国内使用最多的是jq的1.x版本，主要是为了兼容老版本浏览器</code></p>
@@ -422,6 +425,12 @@ jQuery(<span class="hljs-function"><span class="hljs-keyword">function</span>(<s
                   <article class="post-next col-6">
                     
                     
+                      <a href="/2020/08/07/%E9%80%92%E5%BD%92/">
+                        <span class="hidden-mobile">递归</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
                   </article>
                 </div>
               
@@ -517,19 +526,66 @@ jQuery(<span class="hljs-function"><span class="hljs-keyword">function</span>(<s
   
 
   <footer class="mt-5">
-  <div class="text-center py-3">
-    <div>
-      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
-      <i class="iconfont icon-love"></i>
-      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
-        <span>Fluid</span></a>
+    <div class="text-center py-3">
+        <div>
+            <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
+            <i class="iconfont icon-love"></i>
+            <a href="" target="_blank" rel="nofollow noopener">
+                <span>Fluid</span></a>
+        </div>
+        <div>
+            <span id="timeDate">载入天数...</span>
+            <span id="times">载入时分秒...</span>
+            <p id="hitokoto">:D 获取中...</p>
+            <script>
+                //运行时间
+                var now = new Date();
+
+                function createtime() {
+                    var grt = new Date("07/01/2020 00:00:00"); //此处修改你的建站时间或者网站上线时间
+                    now.setTime(now.getTime() + 250);
+                    days = (now - grt) / 1000 / 60 / 60 / 24;
+                    dnum = Math.floor(days);
+                    hours = (now - grt) / 1000 / 60 / 60 - (24 * dnum);
+                    hnum = Math.floor(hours);
+                    if (String(hnum).length == 1) {
+                        hnum = "0" + hnum;
+                    }
+                    minutes = (now - grt) / 1000 / 60 - (24 * 60 * dnum) - (60 * hnum);
+                    mnum = Math.floor(minutes);
+                    if (String(mnum).length == 1) {
+                        mnum = "0" + mnum;
+                    }
+                    seconds = (now - grt) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+                    snum = Math.round(seconds);
+                    if (String(snum).length == 1) {
+                        snum = "0" + snum;
+                    }
+                    document.getElementById("timeDate").innerHTML = "已运行&nbsp" + dnum + "&nbsp天";
+                    document.getElementById("times").innerHTML = hnum + "&nbsp小时&nbsp" + mnum + "&nbsp分&nbsp" + snum +
+                        "&nbsp秒";
+                }
+                setInterval("createtime()", 250);
+                //一言
+                var yy = function() {
+                    fetch('https://v1.hitokoto.cn')
+                        .then(response => response.json())
+                        .then(data => {
+                            const hitokoto = document.getElementById('hitokoto')
+                            hitokoto.innerText = data.hitokoto
+                        })
+                        .catch(console.error)
+                }
+                yy();
+                setInterval("yy()", 4000);
+            </script>
+        </div>
+        
+
+            
+
+                
     </div>
-    
-
-    
-
-    
-  </div>
 </footer>
 
 <!-- SCRIPTS -->
@@ -702,7 +758,6 @@ jQuery(<span class="hljs-function"><span class="hljs-keyword">function</span>(<s
       }(window, document);
     </script>
   
-
 
 
 

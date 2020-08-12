@@ -229,7 +229,13 @@ $(&#x27;标签名&#x27;).css(&#x
   <div class="row mx-auto index-card">
     
     
-    <article class="col-12 col-md-12 mx-auto index-info">
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2020/08/10/jquery-%E5%85%A5%E9%97%A8/" target="_self">
+          <img src="https://cdn.jsdelivr.net/gh/wzxyy/cdn/chuyin.jpg" srcset="/img/loading.gif" alt="jquery入门">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
       <h1 class="index-header">
         <a href="/2020/08/10/jquery-%E5%85%A5%E9%97%A8/">jquery入门</a>
       </h1>
@@ -240,16 +246,7 @@ $(&#x27;标签名&#x27;).css(&#x
           
             
           
-          jQuery入门1.xxx：兼容IE5678浏览器，不更新。
-2.xxx：不兼容IE5678，不更新。
-3.xxx：正在更新，不兼容IE5678，比前面版本多了一些语法。
-国内使用最多的是jq的1.x版本，主要是为了兼容老版本浏览器
-jQuery框架的使用流程
-导包：得到一个全局函数
-用包：$() 👉底层 document.querySelector()
-
-jQuery入口函数两种写法
-标准写法
+          JQ入门
         </a>
       </p>
 
@@ -267,6 +264,60 @@ jQuery入口函数两种写法
             <i class="iconfont icon-category"></i>
             
               <a href="/categories/jQuery/">jQuery</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/JS/">JS</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        <a href="/2020/08/07/%E9%80%92%E5%BD%92/">递归</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/08/07/%E9%80%92%E5%BD%92/">
+          
+          
+            
+          
+          递归函数递归函数：一个函数在函数体中调用自己
+递归函数的作用：函数体代码的重复执行，递归函数做的事和循环是一样的，能用递归做的就可以用循环做，只是语法简洁性不同。
+递归注意点：一定要有结束条件，否则会导致死循环
+单函数递归&lt;script&gt;
+    //死循环
+    function fn()&#123;
+     console.log(&#x27;开心的&#x27;);
+     
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-08-07 15:00" pubdate>
+              2020-08-07
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/JS%E9%AB%98%E7%BA%A7/">JS高级</a>
             
           </div>
         
@@ -329,19 +380,66 @@ jQuery入口函数两种写法
   
 
   <footer class="mt-5">
-  <div class="text-center py-3">
-    <div>
-      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
-      <i class="iconfont icon-love"></i>
-      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
-        <span>Fluid</span></a>
+    <div class="text-center py-3">
+        <div>
+            <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
+            <i class="iconfont icon-love"></i>
+            <a href="" target="_blank" rel="nofollow noopener">
+                <span>Fluid</span></a>
+        </div>
+        <div>
+            <span id="timeDate">载入天数...</span>
+            <span id="times">载入时分秒...</span>
+            <p id="hitokoto">:D 获取中...</p>
+            <script>
+                //运行时间
+                var now = new Date();
+
+                function createtime() {
+                    var grt = new Date("07/01/2020 00:00:00"); //此处修改你的建站时间或者网站上线时间
+                    now.setTime(now.getTime() + 250);
+                    days = (now - grt) / 1000 / 60 / 60 / 24;
+                    dnum = Math.floor(days);
+                    hours = (now - grt) / 1000 / 60 / 60 - (24 * dnum);
+                    hnum = Math.floor(hours);
+                    if (String(hnum).length == 1) {
+                        hnum = "0" + hnum;
+                    }
+                    minutes = (now - grt) / 1000 / 60 - (24 * 60 * dnum) - (60 * hnum);
+                    mnum = Math.floor(minutes);
+                    if (String(mnum).length == 1) {
+                        mnum = "0" + mnum;
+                    }
+                    seconds = (now - grt) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+                    snum = Math.round(seconds);
+                    if (String(snum).length == 1) {
+                        snum = "0" + snum;
+                    }
+                    document.getElementById("timeDate").innerHTML = "已运行&nbsp" + dnum + "&nbsp天";
+                    document.getElementById("times").innerHTML = hnum + "&nbsp小时&nbsp" + mnum + "&nbsp分&nbsp" + snum +
+                        "&nbsp秒";
+                }
+                setInterval("createtime()", 250);
+                //一言
+                var yy = function() {
+                    fetch('https://v1.hitokoto.cn')
+                        .then(response => response.json())
+                        .then(data => {
+                            const hitokoto = document.getElementById('hitokoto')
+                            hitokoto.innerText = data.hitokoto
+                        })
+                        .catch(console.error)
+                }
+                yy();
+                setInterval("yy()", 4000);
+            </script>
+        </div>
+        
+
+            
+
+                
     </div>
-    
-
-    
-
-    
-  </div>
 </footer>
 
 <!-- SCRIPTS -->
@@ -460,7 +558,6 @@ jQuery入口函数两种写法
       }(window, document);
     </script>
   
-
 
 
 
