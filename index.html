@@ -176,17 +176,24 @@
     
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
-        <a href="/2020/08/12/hello-world/">Hello World</a>
+        <a href="/2020/08/10/jquery-01%E5%B8%B8%E7%94%A8%E6%9F%A5%E8%AF%A2%E5%85%83%E7%B4%A0%E8%AF%AD%E6%B3%95/">jquery-01常用查询元素语法</a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/08/12/hello-world/">
+        <a href="/2020/08/10/jquery-01%E5%B8%B8%E7%94%A8%E6%9F%A5%E8%AF%A2%E5%85%83%E7%B4%A0%E8%AF%AD%E6%B3%95/">
           
           
             
           
-          Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick
+          空就是获取，输入值就是设置
+基本选择器(和css一样)id选择器  :  $(‘#box’)
+$(&#x27;#id&#x27;).css(&#x27;属性名&#x27;,属性值);
+
+类选择器  :  $(‘.one’)
+$(&#x27;.类名&#x27;).css(&#x27;属性名&#x27;,属性值);
+
+标签选择器 ： $(‘li’)
+$(&#x27;标签名&#x27;).css(&#x
         </a>
       </p>
 
@@ -194,12 +201,82 @@ Quick
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2020-08-12 22:00" pubdate>
-              2020-08-12
+            <time datetime="2020-08-10 17:42" pubdate>
+              2020-08-10
             </time>
           </div>
         
         
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/jQuery/">jQuery</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/JS/">JS</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        <a href="/2020/08/10/jquery-%E5%85%A5%E9%97%A8/">jquery入门</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/08/10/jquery-%E5%85%A5%E9%97%A8/">
+          
+          
+            
+          
+          jQuery入门1.xxx：兼容IE5678浏览器，不更新。
+2.xxx：不兼容IE5678，不更新。
+3.xxx：正在更新，不兼容IE5678，比前面版本多了一些语法。
+国内使用最多的是jq的1.x版本，主要是为了兼容老版本浏览器
+jQuery框架的使用流程
+导包：得到一个全局函数
+用包：$() 👉底层 document.querySelector()
+
+jQuery入口函数两种写法
+标准写法
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-08-10 09:30" pubdate>
+              2020-08-10
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/jQuery/">jQuery</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/JS/">JS</a>
+            
+          </div>
         
       </div>
     </article>
