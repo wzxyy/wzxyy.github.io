@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="button" value="淡入" id="fadeIn" />
+    <input type="button" value="淡出" id="fadeOut" />
+    <input type="button" value="淡入/出切换" id="fadeToggle" />
+    <input type="button" value="淡入到指定透明度" id="fadeTo" />
+    <br /><br />
+    <div id="div1"></div>
+    <script src="https://cdn.jsdelivr.net/gh/wzxyy/cdn/jquery-1.12.4.js"></script>
+    <script>
+        $('#fadeIn').click(function() {
+            $('#div1').fadeIn(3000, function() {
+                console.log('淡入结束');
+            });
+        })
+        $('#fadeOut').click(function() {
+            $('#div1').fadeOut(function() {
+                console.log('淡出结束');
+            });
+        })
+        $('#fadeToggle').click(function() {
+            $('#div1').fadeToggle(function() {
+                console.log('切换结束');
+            });
+        })
+        $('#fadeTo').click(function() {
+            $('#div1').fadeTo('', .5);
+        })
+    </script>
+</body>
+
+</html>

@@ -17,7 +17,7 @@
   <meta name="description" content="">
   <meta name="author" content="wzx">
   <meta name="keywords" content="">
-  <title>jQuery的记事本 | 夜雨声繁</title>
+  <title>jQuery动画之-自定义动画 | 夜雨声繁</title>
 
   <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
 
@@ -160,8 +160,8 @@
               
   <div class="mt-3 post-meta">
     <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-    <time datetime="2020-08-10 08:30" pubdate>
-      2020年8月10日 早上
+    <time datetime="2020-08-13 20:47" pubdate>
+      2020年8月13日 晚上
     </time>
   </div>
 
@@ -171,7 +171,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      178 字
+      289 字
     </span>
   
 
@@ -202,41 +202,86 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto" id="post">
             <!-- SEO header -->
-            <h1 style="display: none">jQuery的记事本</h1>
+            <h1 style="display: none">jQuery动画之-自定义动画</h1>
             
             <div class="markdown-body" id="post-body">
-              <p>查阅中文文档：<a target="_blank" rel="noopener" href="https://jquery.cuishifeng.cn/index.html">https://jquery.cuishifeng.cn/index.html</a></p>
+              <p>animate()自定义动画    ——    (🙂原理：利用定位)</p>
 <a id="more"></a>
 
-<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p><code>为什么要记录jQuery，看文档它不香吗？</code></p>
-<p>此篇章主要记录我使用过的JQ方法，方便自己查漏补缺😅</p>
-<p>同时也锻炼自己的写作能力😜</p>
-<img src="https://cdn.jsdelivr.net/gh/wzxyy/cdn/qianyan.png" srcset="/img/loading.gif" class="[qianyan]">
+<h2 id="写在开头"><a href="#写在开头" class="headerlink" title="写在开头"></a>写在开头</h2><p>详细了解请戳我    👉    <a target="_blank" rel="noopener" href='https://jquery.cuishifeng.cn/index.html'>jQurye中文文档</a></p>
+<p><code>本章案例效果展示页面</code>    👉    <a target="_blank" rel="noopener" href="https://www.rainfall.top/demo//jQuery/jQuery%E5%8A%A8%E7%94%BB%E4%B9%8B-%E8%87%AA%E5%AE%9A%E4%B9%89%E5%8A%A8%E7%94%BB.html">查看效果请戳我</a></p>
+<p>本章案例均操作此页面结构✡</p>
+<div class="hljs"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span>
+        div &#123;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: absolute;
+            left: 0px;
+        &#125;
 
-<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><ol>
-<li><a href="/2020/08/13/jQuery%E5%8A%A8%E7%94%BB%E4%B9%8B-01">jQuery动画之-01显示与隐藏</a></li>
-</ol>
-<blockquote>
-<p>show()显示    —    hide()隐藏    —    toggle()显示或隐藏    —    (🙂原理：修改宽高)</p>
+<span class="css">        <span class="hljs-selector-id">#div1</span> &#123;</span>
+            top: 50px;
+            border: 50px solid yellow;
+        &#125;
+
+<span class="css">        <span class="hljs-selector-id">#div2</span> &#123;</span>
+            left: 300px;
+            top: 200px;
+            background-color: green;
+        &#125;
+<span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;自定义动画&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;btn&quot;</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;div1&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;div2&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span></code></pre></div>
+
+<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><p>animate(properties，duration，speed，function)</p>
+<table>
+<thead>
+<tr>
+<th>properties - (object)</th>
+<th>要移动的属性</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>duration - (number)</td>
+<td>动画时间</td>
+</tr>
+<tr>
+<td>speed - (string)</td>
+<td>默认swing缓动， 匀速：linear</td>
+</tr>
+<tr>
+<td>function</td>
+<td>完成回调函数</td>
+</tr>
+</tbody></table>
+<h3 id="animate"><a href="#animate" class="headerlink" title="animate()"></a>animate()</h3><blockquote>
+<p>用于创建自定义动画的函数。</p>
+<p>这个函数的关键在于指定动画形式及结果样式属性对象。这个对象中每个属性都表示一个可以变化的样式属性</p>
 </blockquote>
-<ol start="2">
-<li><a href="/2020/08/13/jQuery%E5%8A%A8%E7%94%BB%E4%B9%8B-02">jQuery动画之-02滑入与滑出</a></li>
-</ol>
-<blockquote>
-<p>slideDown()滑入    —    slideUp()滑出    —    slideToggle()滑入或滑出    —    (🙂原理：修改高)</p>
-</blockquote>
-<ol start="3">
-<li><a href="/2020/08/13/jQuery%E5%8A%A8%E7%94%BB%E4%B9%8B-03">jQuery动画之-03淡入淡出</a></li>
-</ol>
-<blockquote>
-<p>fadeIn()淡入    ——    fadeOut()淡出    ——    fadeToggle()淡入/出切换    ——    fadeTo()淡入到指定透明度    ——    (🙂原理：修改透明度)</p>
-</blockquote>
-<ol start="4">
-<li><a href="/2020/08/13/jQuery%E5%8A%A8%E7%94%BB%E4%B9%8B-%E8%87%AA%E5%AE%9A%E4%B9%89%E5%8A%A8%E7%94%BB">jQuery动画之-自定义动画</a></li>
-</ol>
-<blockquote>
-<p>animate()自定义动画    ——    (🙂原理：利用定位)</p>
-</blockquote>
+<div class="hljs"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;./jquery-1.12.4.js&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span>
+<span class="javascript">    $(<span class="hljs-string">&#x27;#btn&#x27;</span>).click(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>&#123;</span>
+<span class="javascript">        $(<span class="hljs-string">&#x27;#div1&#x27;</span>).animate(&#123;</span>
+<span class="javascript">            borderWidth: <span class="hljs-string">&#x27;6&#x27;</span>,</span>
+            left: 100,
+<span class="javascript">        &#125;, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>&#123;</span>
+<span class="javascript">            $(<span class="hljs-string">&#x27;#div1&#x27;</span>).animate(&#123;</span>
+                top: 400,
+            &#125;)
+        &#125;)
+    &#125;)
+<span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></code></pre></div>
+
+
+
+
+
+
+
 
             </div>
             <hr>
@@ -254,7 +299,7 @@
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
-                      <a class="hover-with-bg" href="/tags/JS/">JS</a>
+                      <a class="hover-with-bg" href="/tags/JS-jQ/">JS jQ</a>
                     
                   </div>
                 
@@ -262,17 +307,6 @@
               
                 <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！</p>
               
-              
-                <div class="post-prevnext row">
-                  <article class="post-prev col-6">
-                    
-                    
-                  </article>
-                  <article class="post-next col-6">
-                    
-                    
-                  </article>
-                </div>
               
             </div>
 
@@ -484,7 +518,7 @@
     var typed = new Typed('#subtitle', {
       strings: [
         '  ',
-        "jQuery的记事本&nbsp;",
+        "jQuery动画之-自定义动画&nbsp;",
       ],
       cursorChar: "_",
       typeSpeed: 130,
