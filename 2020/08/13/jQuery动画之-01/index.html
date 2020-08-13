@@ -17,10 +17,20 @@
   <meta name="description" content="">
   <meta name="author" content="wzx">
   <meta name="keywords" content="">
-  <title>分类 - JS高级 | 夜雨声繁</title>
+  <title>jQuery动画之-01显示与隐藏 | 夜雨声繁</title>
 
   <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
 
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/an-old-hope.min.css" />
+  
+
+  
 
 
 <!-- 主题依赖的图标库，不要自行修改 -->
@@ -43,7 +53,7 @@
 
 
 <body>
-  <header style="height: 60vh;">
+  <header style="height: 70vh;">
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand"
@@ -147,6 +157,31 @@
             </span>
 
             
+              
+  <div class="mt-3 post-meta">
+    <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+    <time datetime="2020-08-13 16:00" pubdate>
+      2020年8月13日 下午
+    </time>
+  </div>
+
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      421 字
+    </span>
+  
+
+  
+
+  
+  
+</div>
+
+            
           </div>
 
           
@@ -157,37 +192,184 @@
 
   <main>
     
-      <div class="container nopadding-md">
-        <div class="py-5" id="board"
-          >
-          
-          <div class="container">
-            <div class="row">
-              <div class="col-12 col-md-10 m-auto">
-                
-
-<div class="list-group">
-  <p class="h4">共计 1 篇文章</p>
-  <hr>
-  
-    
       
-      <p class="h5">2020</p>
-    
-    <a href="/2020/08/07/%E9%80%92%E5%BD%92/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">递归</span>
-      <time style="float: right;">08-07</time>
-    </a>
-  
-</div>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto" id="post">
+            <!-- SEO header -->
+            <h1 style="display: none">jQuery动画之-01显示与隐藏</h1>
+            
+            <div class="markdown-body" id="post-body">
+              <p>show()显示    ——    hide()隐藏    ——    toggle()显示或隐藏    ——    (🙂原理：修改宽高)</p>
+<a id="more"></a>
+
+<h2 id="写在开头"><a href="#写在开头" class="headerlink" title="写在开头"></a>写在开头</h2><p>详细了解请戳我    👉    <a target="_blank" rel="noopener" href='https://jquery.cuishifeng.cn/index.html'>jQurye中文文档</a></p>
+<hr>
+
+<p>本章案例均操作此页面结构✡</p>
+<div class="hljs"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span>
+    div &#123;
+        width: 200px;
+        height: 200px;
+        background-color: red;
+        display: none;
+    &#125;
+<span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;显示&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;show&quot;</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;隐藏&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;hide&quot;</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;切换&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;toggle&quot;</span> /&gt;</span> 
+    <span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;div1&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;div2&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span></code></pre></div>
+
+<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><table>
+<thead>
+<tr>
+<th align="left">第一个参数(动画时间)</th>
+<th>可以是num，也可以是预先定义的三种字符串：         ‘slow’:600       ‘normal’:400       ‘fast’:200</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">第二参数(动画方式)</td>
+<td>缓动: ‘swing’ (默认)       匀速：’linear’</td>
+</tr>
+<tr>
+<td align="left">第三个参数(完成回调)</td>
+<td>动画完成时执行的函数，每个元素执行一次</td>
+</tr>
+</tbody></table>
+<p>⚠<code>如果不传参数，则没有动画</code></p>
+<h3 id="show-1-2-3"><a href="#show-1-2-3" class="headerlink" title="show(1,2,3)"></a>show(1,2,3)</h3><blockquote>
+<p>显示隐藏的匹配元素。</p>
+</blockquote>
+<div class="hljs"><pre><code class="hljs javascript">&lt;script src=<span class="hljs-string">&quot;./jquery-1.12.4.js&quot;</span>&gt;&lt;/script&gt;
+&lt;script&gt;
+    $(<span class="hljs-string">&#x27;#show&#x27;</span>).click(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>&#123;
+        $(<span class="hljs-string">&#x27;div&#x27;</span>).show(<span class="hljs-number">2000</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>&#123;
+            <span class="hljs-built_in">console</span>.log((<span class="hljs-string">&#x27;显示动画结束&#x27;</span>));
+        &#125;);
+    &#125;)
+&lt;/script&gt;</code></pre></div>
+
+<h3 id="hide-1-2-3"><a href="#hide-1-2-3" class="headerlink" title="hide(1,2,3)"></a>hide(1,2,3)</h3><blockquote>
+<p>隐藏显示的元素</p>
+</blockquote>
+<p>✅<code>hide()所有特点与show()一致，唯一区别:动画是相反的</code></p>
+<div class="hljs"><pre><code class="hljs javascript">&lt;script&gt;
+    $(<span class="hljs-string">&#x27;#hide&#x27;</span>).click(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>&#123;
+        $(<span class="hljs-string">&#x27;div&#x27;</span>).hide(<span class="hljs-number">1000</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>&#123;
+            <span class="hljs-built_in">console</span>.log((<span class="hljs-string">&#x27;隐藏动画结束&#x27;</span>));
+        &#125;);
+    &#125;)
+&lt;/script&gt;</code></pre></div>
+
+<h3 id="toggle-1-2-3"><a href="#toggle-1-2-3" class="headerlink" title="toggle(1,2,3)"></a>toggle(1,2,3)</h3><blockquote>
+<p>如果元素是可见的，切换为隐藏的；如果元素是隐藏的，切换为可见的。</p>
+</blockquote>
+<div class="hljs"><pre><code class="hljs javascript">&lt;script&gt;
+    $(<span class="hljs-string">&#x27;#toggle&#x27;</span>).click(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>&#123;
+        $(<span class="hljs-string">&#x27;div&#x27;</span>).toggle(<span class="hljs-number">5000</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>&#123;
+            <span class="hljs-built_in">console</span>.log((<span class="hljs-string">&#x27;切换动画结束&#x27;</span>));
+        &#125;);
+    &#125;)
+&lt;/script&gt;</code></pre></div>
 
 
 
-              </div>
+
+
+
+
+
+
+
             </div>
-          </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/jQuery/">jQuery</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/JS-jQ/">JS jQ</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！</p>
+              
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments">
+                
+                
+  <div id="vcomments"></div>
+  <script type="text/javascript">
+    function loadValine() {
+      addScript('https://cdn.staticfile.org/valine/1.4.14/Valine.min.js', function () {
+        new Valine({
+          el: "#vcomments",
+          app_id: "Gf5Q9dqXU1FJawgocfhwUqOo-gzGzoHsz",
+          app_key: "3VvaKbHfPXTQ5849CwtVrLcT",
+          placeholder: "说点什么",
+          path: window.location.pathname,
+          avatar: "retro",
+          meta: ["nick","mail","link"],
+          pageSize: "10",
+          lang: "zh-CN",
+          highlight: false,
+          recordIP: false,
+          serverURLs: "",
+        });
+      });
+    }
+    waitElementVisible('vcomments', loadValine);
+  </script>
+  <noscript>Please enable JavaScript to view the <a target="_blank" href="https://valine.js.org" rel="nofollow noopener noopener">comments
+      powered by Valine.</a></noscript>
+
+
+              </article>
+            
+          </article>
         </div>
       </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div id="tocbot"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
     
   </main>
 
@@ -312,6 +494,31 @@
 
 
 
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: '#post-body',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 0,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
+
 
 
   <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
@@ -319,7 +526,7 @@
     var typed = new Typed('#subtitle', {
       strings: [
         '  ',
-        "分类 - JS高级&nbsp;",
+        "jQuery动画之-01显示与隐藏&nbsp;",
       ],
       cursorChar: "_",
       typeSpeed: 130,
@@ -334,6 +541,21 @@
 
 
 
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "right",
+      visible: "hover",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
 
 
   <script  src="/js/local-search.js" ></script>
@@ -347,6 +569,20 @@
   </script>
 
 
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
 
 
 

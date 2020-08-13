@@ -17,7 +17,7 @@
   <meta name="description" content="">
   <meta name="author" content="wzx">
   <meta name="keywords" content="">
-  <title>递归 | 夜雨声繁</title>
+  <title>jQuery的记事本 | 夜雨声繁</title>
 
   <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
 
@@ -160,8 +160,8 @@
               
   <div class="mt-3 post-meta">
     <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-    <time datetime="2020-08-07 15:00" pubdate>
-      2020年8月7日 下午
+    <time datetime="2020-08-10 08:30" pubdate>
+      2020年8月10日 早上
     </time>
   </div>
 
@@ -171,7 +171,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      439 字
+      78 字
     </span>
   
 
@@ -202,103 +202,23 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto" id="post">
             <!-- SEO header -->
-            <h1 style="display: none">递归</h1>
+            <h1 style="display: none">jQuery的记事本</h1>
             
             <div class="markdown-body" id="post-body">
-              <h2 id="递归函数"><a href="#递归函数" class="headerlink" title="递归函数"></a>递归函数</h2><p><code>递归函数</code>：一个函数在函数体中调用自己</p>
-<p><code>递归函数的作用</code>：函数体代码的重复执行，<code>递归函数做的事和循环是一样的</code>，能用递归做的就可以用循环做，只是语法简洁性不同。</p>
-<p><code>递归注意点</code>：一定要有结束条件，否则会导致死循环</p>
-<h2 id="单函数递归"><a href="#单函数递归" class="headerlink" title="单函数递归"></a>单函数递归</h2><div class="hljs"><pre><code class="hljs javascript">&lt;script&gt;
-    <span class="hljs-comment">//死循环</span>
-    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">fn</span>(<span class="hljs-params"></span>)</span>&#123;
-     <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&#x27;开心的&#x27;</span>);
-     fn();
-    &#125;;
-&lt;/script&gt;</code></pre></div>
+              <p>查阅中文文档：<a target="_blank" rel="noopener" href="https://jquery.cuishifeng.cn/index.html">https://jquery.cuishifeng.cn/index.html</a></p>
+<a id="more"></a>
 
-<h2 id="双函数递归"><a href="#双函数递归" class="headerlink" title="双函数递归"></a>双函数递归</h2><div class="hljs"><pre><code class="hljs javascript">&lt;script&gt;
-    <span class="hljs-comment">//死循环</span>
-    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">fn1</span>(<span class="hljs-params"></span>) </span>&#123;
-        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&#x27;开心的&#x27;</span>);
-        fn2();
-    &#125;;
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p><code>为什么要记录jQuery，看文档它不香吗？</code></p>
+<p>此篇章主要记录我使用过的JQ方法，方便自己查漏补缺😅</p>
+<p>同时也锻炼自己的写作能力😜</p>
+<img src="https://cdn.jsdelivr.net/gh/wzxyy/cdn/qianyan.png" srcset="/img/loading.gif" class="[qianyan]">
 
-    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">fn2</span>(<span class="hljs-params"></span>) </span>&#123;
-        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&#x27;不开心的&#x27;</span>);
-        fn1();
-    &#125;;
-    fn1();
-&lt;/script&gt;</code></pre></div>
-
-<h2 id="递归实例"><a href="#递归实例" class="headerlink" title="递归实例"></a>递归实例</h2><div class="hljs"><pre><code class="hljs javascript">&lt;script&gt;
-    <span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>;
-    <span class="hljs-comment">//函数在函数体中调用自己</span>
-    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">fun</span>(<span class="hljs-params"></span>) </span>&#123;
-        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&#x27;打印&#x27;</span>);
-        i++;
-        <span class="hljs-keyword">if</span> (i &lt; <span class="hljs-number">3</span>) &#123;
-            fun();
-        &#125;
-    &#125;
-    fun();
-&lt;/script&gt;</code></pre></div>
-
-<h2 id="递归实例进阶版1-求1-n的累加和"><a href="#递归实例进阶版1-求1-n的累加和" class="headerlink" title="递归实例进阶版1,求1-n的累加和"></a>递归实例进阶版1,求1-n的累加和</h2><div class="hljs"><pre><code class="hljs javascript">&lt;script&gt;
-    <span class="hljs-comment">//求1-n的累加和,n是正向整数</span>
-    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getSum</span>(<span class="hljs-params">n</span>) </span>&#123;
-    <span class="hljs-keyword">return</span> n == <span class="hljs-number">1</span> ? <span class="hljs-number">1</span> : n + getSum(n<span class="hljs-number">-1</span>);
-    <span class="hljs-comment">/*</span>
-<span class="hljs-comment">       if (n == 1) &#123;</span>
-<span class="hljs-comment">           return 1;</span>
-<span class="hljs-comment">       &#125; else if (n == 2) &#123;</span>
-<span class="hljs-comment">           return 2 + getSum(1);</span>
-<span class="hljs-comment">       &#125; else if (n == 3) &#123;</span>
-<span class="hljs-comment">           return 3 + getSum(2);</span>
-<span class="hljs-comment">       &#125; else if( n == 4)&#123;</span>
-<span class="hljs-comment">           return 4 + getSum(3)</span>
-<span class="hljs-comment">       &#125;</span>
-<span class="hljs-comment">       ………………</span>
-<span class="hljs-comment">       else if(n == n)&#123;</span>
-<span class="hljs-comment">           return n + getSum(n-1)</span>
-<span class="hljs-comment">       &#125;;</span>
-<span class="hljs-comment">    */</span>
-&#125;
-&lt;/script&gt;</code></pre></div>
-
-<img src="https://cdn.jsdelivr.net/gh/wzxyy/cdn/dg.png" srcset="/img/loading.gif" class="[01]">
-
-
-
-<h2 id="递归实例进阶版2，遍历body的所有后代元素"><a href="#递归实例进阶版2，遍历body的所有后代元素" class="headerlink" title="递归实例进阶版2，遍历body的所有后代元素"></a>递归实例进阶版2，遍历body的所有后代元素</h2><div class="hljs"><pre><code class="hljs javascript">&lt;div&gt;
-    &lt;p&gt;<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></span>&lt;/p&gt;
-    &lt;p&gt;<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></span>&lt;/p&gt;
-    &lt;p&gt;<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></span>&lt;/p&gt;
-&lt;/div&gt;
-&lt;div&gt;
-    &lt;a href=<span class="hljs-string">&quot;#&quot;</span>&gt;&lt;/a&gt;
-&lt;/div&gt;
-&lt;script&gt;
-    <span class="hljs-comment">//遍历body内的所有元素</span>
-    <span class="hljs-keyword">let</span> d = <span class="hljs-built_in">document</span>.body;
-    <span class="hljs-keyword">let</span> arr = [];
-    <span class="hljs-built_in">console</span>.log(d.children);
-
-    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">fun</span>(<span class="hljs-params">ele</span>) </span>&#123;
-        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; ele.children.length; i++) &#123;
-            arr.push(ele.children[i]);
-            <span class="hljs-comment">//类似于for循环的嵌套</span>
-            fun(ele.children[i]);
-        &#125;
-    &#125;
-    fun(d);
-    <span class="hljs-built_in">console</span>.log(arr);
-&lt;/script&gt;</code></pre></div>
-
-
-
-
-
-
+<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><ol>
+<li><a href="/2020/08/13/jQuery%E5%8A%A8%E7%94%BB%E4%B9%8B-01">jQuery动画之-01显示与隐藏</a></li>
+</ol>
+<blockquote>
+<p>show()    —    hide()    —    toggle()</p>
+</blockquote>
 
             </div>
             <hr>
@@ -308,7 +228,7 @@
                   <div class="post-meta mr-3">
                     <i class="iconfont icon-category"></i>
                     
-                      <a class="hover-with-bg" href="/categories/JS%E9%AB%98%E7%BA%A7/">JS高级</a>
+                      <a class="hover-with-bg" href="/categories/jQuery/">jQuery</a>
                     
                   </div>
                 
@@ -328,12 +248,6 @@
                 <div class="post-prevnext row">
                   <article class="post-prev col-6">
                     
-                    
-                      <a href="/2020/08/10/jquery-%E5%85%A5%E9%97%A8/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">jquery入门</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
                     
                   </article>
                   <article class="post-next col-6">
@@ -552,7 +466,7 @@
     var typed = new Typed('#subtitle', {
       strings: [
         '  ',
-        "递归&nbsp;",
+        "jQuery的记事本&nbsp;",
       ],
       cursorChar: "_",
       typeSpeed: 130,
