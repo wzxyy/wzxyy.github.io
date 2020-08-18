@@ -1,0 +1,779 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://cdn.jsdelivr.net/gh/wzxyy/cdn@1.1/favicon.ico">
+  <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/wzxyy/cdn@1.1/favicon.ico">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="wzx">
+  <meta name="keywords" content="">
+  <title>less | 夜雨声繁</title>
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/vs2015.min.css" />
+  
+
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_6peoq002giu.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_pjno9b9zyxs.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.0.2"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>夜雨声繁</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner intro-2" id="background" parallax=true
+         style="background: url('https://cdn.jsdelivr.net/gh/wzxyy/cdn/b1.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="container page-header text-center fade-in-up">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+              
+  <div class="mt-3 post-meta">
+    <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+    <time datetime="2020-08-15 16:47" pubdate>
+      2020年8月15日 下午
+    </time>
+  </div>
+
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      963 字
+    </span>
+  
+
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto" id="post">
+            <!-- SEO header -->
+            <h1 style="display: none">less</h1>
+            
+            <div class="markdown-body" id="post-body">
+              <p>记录一下less，方便自己快速查阅</p>
+<a id="more"></a>
+
+<h2 id="写在开头"><a href="#写在开头" class="headerlink" title="写在开头"></a>写在开头</h2><p>Less是一门CSS预处理语言，它扩展了CSS语言，增加了变量，Mixin，函数等特性，使CSS更易维护和扩展。</p>
+<p><code>详细了解请戳我</code>    👉    <a target="_blank" rel="noopener" href='http://lesscss.cn/'>Less中文网</a></p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><h3 id="通过npm安装"><a href="#通过npm安装" class="headerlink" title="通过npm安装"></a>通过npm安装</h3><p>全局安装</p>
+<blockquote>
+<p>npm install -g less</p>
+</blockquote>
+<p>查看版本号</p>
+<blockquote>
+<p>lessc -v</p>
+</blockquote>
+<p>使用方法</p>
+<blockquote>
+<p>创建一个test.less文件</p>
+<p>cd到当前目录，命令窗口:  lessc test.less test.css</p>
+</blockquote>
+<h3 id="vsCode安装"><a href="#vsCode安装" class="headerlink" title="vsCode安装"></a>vsCode安装</h3><blockquote>
+<p>扩展商店    👉    Easy LESS</p>
+</blockquote>
+<h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><h3 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h3><div class="hljs"><pre><code class="hljs less"><span class="hljs-variable">@width:</span> <span class="hljs-number">10px</span>;
+<span class="hljs-variable">@color:</span> zz;
+<span class="hljs-variable">@zz:</span>green;
+<span class="hljs-selector-id">#box</span>&#123; 
+    <span class="hljs-attribute">widht</span>:<span class="hljs-variable">@width</span>;
+    <span class="hljs-attribute">color</span>:<span class="hljs-variable">@@color</span> <span class="hljs-comment">// 相当于@zz</span>
+&#125;</code></pre></div>
+
+<p>此时#box的宽为10px;    颜色是green</p>
+<h3 id="混合-Mixins"><a href="#混合-Mixins" class="headerlink" title="混合(Mixins)"></a>混合(Mixins)</h3><div class="hljs"><pre><code class="hljs less"><span class="hljs-selector-class">.testClass</span> &#123; <span class="hljs-attribute">width</span>:<span class="hljs-number">10px</span> &#125;
+<span class="hljs-selector-id">#box</span>&#123; <span class="hljs-selector-class">.testClass</span>(); &#125;</code></pre></div>
+
+<p>此时#box拥有.testClass的属性</p>
+<p>你也可以使用 <code>#ids</code> 作为 mixin 使用</p>
+<h3 id="嵌套写法"><a href="#嵌套写法" class="headerlink" title="嵌套写法"></a>嵌套写法</h3><div class="hljs"><pre><code class="hljs less"><span class="hljs-selector-id">#box</span>&#123;
+    <span class="hljs-attribute">width</span>:<span class="hljs-number">10px</span>;
+    <span class="hljs-selector-tag">&amp;</span><span class="hljs-selector-pseudo">:hover</span>&#123;&#125;
+    <span class="hljs-selector-tag">p</span>&#123;
+        <span class="hljs-attribute">width</span>:<span class="hljs-number">5px</span>;
+    &#125;
+&#125;</code></pre></div>
+
+<p>相当于 #box:hover{};</p>
+<h3 id="运算"><a href="#运算" class="headerlink" title="运算"></a>运算</h3><div class="hljs"><pre><code class="hljs less"><span class="hljs-variable">@widht:</span> <span class="hljs-number">2px</span> + <span class="hljs-number">8px</span>; <span class="hljs-comment">// 结果是10px</span>
+<span class="hljs-variable">@test:</span> <span class="hljs-variable">@widht</span> + <span class="hljs-variable">@widht</span>;<span class="hljs-comment">// 结果是20px</span>
+
+<span class="hljs-variable">@color:</span> <span class="hljs-number">#224488</span> / <span class="hljs-number">2</span>; <span class="hljs-comment">// 结果是#112244</span>
+<span class="hljs-attribute">background-color</span>: <span class="hljs-number">#112244</span> + <span class="hljs-number">#111</span>; <span class="hljs-comment">// 结果是#223355</span></code></pre></div>
+
+<p>支持对任何，数字，颜色，变量。加减乘除。</p>
+<p><code>以左边数的单位为准，如果失去意义就忽略单位</code>。</p>
+<h3 id="calc-特例"><a href="#calc-特例" class="headerlink" title="calc() 特例"></a>calc() 特例</h3><div class="hljs"><pre><code class="hljs less"><span class="hljs-variable">@var:</span> <span class="hljs-number">50px</span>/<span class="hljs-number">2</span>;
+<span class="hljs-attribute">width</span>: calc(<span class="hljs-number">50%</span> + <span class="hljs-variable">@var</span>);  <span class="hljs-comment">// 结果是 calc(50% + 25px)</span></code></pre></div>
+
+<p>为了保持和原生的一致，只会计算变量函数的值，calc里面的不动</p>
+<p><a target="_blank" rel="noopener" href='https://www.runoob.com/cssref/func-calc.html'>css原生calc()点我，用于动态计算长度值</a></p>
+<h3 id="的规则嵌套和冒泡"><a href="#的规则嵌套和冒泡" class="headerlink" title="@的规则嵌套和冒泡"></a>@的规则嵌套和冒泡</h3><div class="hljs"><pre><code class="hljs less"><span class="hljs-selector-class">.component</span> &#123;
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">300px</span>;
+  <span class="hljs-keyword">@media</span> (<span class="hljs-attribute">min-width</span>: <span class="hljs-number">768px</span>) &#123;
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">600px</span>;
+    <span class="hljs-keyword">@media</span>  (<span class="hljs-attribute">min-resolution</span>: <span class="hljs-number">192dpi</span>) &#123;
+      <span class="hljs-attribute">background-image</span>: url(<span class="hljs-string">/img/retina2x.png</span>);
+    &#125;
+  &#125;
+  <span class="hljs-keyword">@media</span> (<span class="hljs-attribute">min-width</span>: <span class="hljs-number">1280px</span>) &#123;
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">800px</span>;
+  &#125;
+&#125;</code></pre></div>
+
+<p>编译成css的结果</p>
+<div class="hljs"><pre><code class="hljs css"><span class="hljs-selector-class">.component</span> &#123;
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">300px</span>;
+&#125;
+<span class="hljs-keyword">@media</span> (<span class="hljs-attribute">min-width:</span> <span class="hljs-number">768px</span>) &#123;
+  <span class="hljs-selector-class">.component</span> &#123;
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">600px</span>;
+  &#125;
+&#125;
+<span class="hljs-keyword">@media</span> (<span class="hljs-attribute">min-width:</span> <span class="hljs-number">768px</span>) <span class="hljs-keyword">and</span> (<span class="hljs-attribute">min-resolution:</span> <span class="hljs-number">192dpi</span>) &#123;
+  <span class="hljs-selector-class">.component</span> &#123;
+    <span class="hljs-attribute">background-image</span>: <span class="hljs-built_in">url</span>(/img/retina2x.png);
+  &#125;
+&#125;
+<span class="hljs-keyword">@media</span> (<span class="hljs-attribute">min-width:</span> <span class="hljs-number">1280px</span>) &#123;
+  <span class="hljs-selector-class">.component</span> &#123;
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">800px</span>;
+  &#125;
+&#125;</code></pre></div>
+
+<p>@ 规则（例如 <code>@media</code> 或 <code>@supports</code>）可以与选择器以相同的方式进行嵌套。@ 规则会被放在前面，同一规则集中的其它元素的相对顺序保持不变。这叫做冒泡（bubbling）。</p>
+<h3 id="转义"><a href="#转义" class="headerlink" title="转义"></a>转义</h3><div class="hljs"><pre><code class="hljs less"><span class="hljs-variable">@min768:</span> (<span class="hljs-attribute">min-width</span>: <span class="hljs-number">768px</span>);
+<span class="hljs-selector-class">.element</span> &#123;
+  <span class="hljs-keyword">@media</span> <span class="hljs-variable">@min768</span> &#123;
+    <span class="hljs-attribute">font-size</span>: <span class="hljs-number">1.2rem</span>;
+  &#125;
+&#125;
+<span class="hljs-comment">/*</span>
+<span class="hljs-comment">@media (min-width: 768px) &#123;</span>
+<span class="hljs-comment">  .element &#123;</span>
+<span class="hljs-comment">    font-size: 1.2rem;</span>
+<span class="hljs-comment">  &#125;</span>
+<span class="hljs-comment">&#125;</span>
+<span class="hljs-comment">*/</span></code></pre></div>
+
+<p>转义（Escaping）允许你使用任意字符串作为属性或变量值。任何 <code>~&quot;anything&quot;</code> 或 <code>~&#39;anything&#39;</code> 形式的内容都将按原样输出，除非 <a target="_blank" rel="noopener" href="https://less.bootcss.com/features/#variables-feature-variable-interpolation">interpolation</a>。</p>
+<h3 id="可变插值-Variable-Interpolation"><a href="#可变插值-Variable-Interpolation" class="headerlink" title="可变插值(Variable Interpolation)"></a>可变插值(Variable Interpolation)</h3><div class="hljs"><pre><code class="hljs less"><span class="hljs-variable">@images:</span> <span class="hljs-string">&quot;../img&quot;</span>;
+
+<span class="hljs-selector-tag">body</span> &#123;
+  <span class="hljs-attribute">color</span>: <span class="hljs-number">#444</span>;
+  <span class="hljs-attribute">background</span>: url(<span class="hljs-string">&quot;@&#123;images&#125;/bg.png&quot;</span>);
+&#125;</code></pre></div>
+
+<h3 id="image-size，image-width，image-height"><a href="#image-size，image-width，image-height" class="headerlink" title="image-size，image-width，image-height"></a>image-size，image-width，image-height</h3><p>从文件获取的图像尺寸。</p>
+<div class="hljs"><pre><code class="hljs less"><span class="hljs-selector-tag">image-size</span>(<span class="hljs-string">&quot;file.png&quot;</span>);<span class="hljs-comment">//输出：10px 10px</span>
+<span class="hljs-selector-tag">image-width</span>(<span class="hljs-string">&quot;file.png&quot;</span>);<span class="hljs-comment">//10px</span>
+<span class="hljs-selector-tag">image-height</span>(<span class="hljs-string">&quot;file.png&quot;</span>);<span class="hljs-comment">//10px</span></code></pre></div>
+
+<h3 id="命名空间访问符"><a href="#命名空间访问符" class="headerlink" title="命名空间访问符"></a>命名空间访问符</h3><p>有点像对象，封装的感觉</p>
+<div class="hljs"><pre><code class="hljs less"><span class="hljs-selector-id">#bundle</span>() &#123;
+  <span class="hljs-selector-class">.button</span> &#123;
+    <span class="hljs-attribute">display</span>: block;
+    <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid black;
+    <span class="hljs-attribute">background-color</span>: grey;
+    <span class="hljs-selector-tag">&amp;</span><span class="hljs-selector-pseudo">:hover</span> &#123;
+      <span class="hljs-attribute">background-color</span>: white;
+    &#125;
+  &#125;
+  <span class="hljs-selector-class">.tab</span> &#123; ... &#125;
+  <span class="hljs-selector-class">.citation</span> &#123; ... &#125;
+&#125;</code></pre></div>
+
+<p>现在，如果我们希望把 <code>.button</code> 类混合到 <code>#header a</code> 中，我们可以这样做：</p>
+<div class="hljs"><pre><code class="hljs less"><span class="hljs-selector-id">#header</span> <span class="hljs-selector-tag">a</span> &#123;
+  <span class="hljs-attribute">color</span>: orange;
+  <span class="hljs-selector-id">#bundle</span><span class="hljs-selector-class">.button</span>();  <span class="hljs-comment">// 还可以书写为 #bundle &gt; .button 形式</span>
+&#125;</code></pre></div>
+
+<p>注意：如果不希望它们出现在输出的 CSS 中，例如 <code>#bundle .tab</code>，请将 <code>()</code> 附加到命名空间（例如 <code>#bundle()</code>）后面。</p>
+<h3 id="映射"><a href="#映射" class="headerlink" title="映射"></a>映射</h3><p>像对象取值一样</p>
+<div class="hljs"><pre><code class="hljs less"><span class="hljs-selector-id">#colors</span>() &#123;
+  <span class="hljs-attribute">primary</span>: blue;
+  <span class="hljs-attribute">secondary</span>: green;
+&#125;
+
+<span class="hljs-selector-class">.button</span> &#123;
+  <span class="hljs-attribute">color</span>: #colors[primary];
+  <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid #colors[secondary];
+&#125;</code></pre></div>
+
+<p>输出符合预期：</p>
+<div class="hljs"><pre><code class="hljs css"><span class="hljs-selector-class">.button</span> &#123;
+  <span class="hljs-attribute">color</span>: blue;
+  <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid green;
+&#125;</code></pre></div>
+
+<h3 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h3><div class="hljs"><pre><code class="hljs less"><span class="hljs-variable">@var:</span> red;
+
+<span class="hljs-selector-id">#page</span> &#123;
+  <span class="hljs-variable">@var:</span> white;
+  <span class="hljs-selector-id">#header</span> &#123;
+    <span class="hljs-attribute">color</span>: <span class="hljs-variable">@var</span>; <span class="hljs-comment">// white</span>
+  &#125;
+&#125;</code></pre></div>
+
+<p>与 CSS 自定义属性一样，混合（mixin）和变量的定义不必在引用之前事先定义。因此，下面的 Less 代码示例和上面的代码示例是相同的：</p>
+<div class="hljs"><pre><code class="hljs less"><span class="hljs-variable">@var:</span> red;
+
+<span class="hljs-selector-id">#page</span> &#123;
+  <span class="hljs-selector-id">#header</span> &#123;
+    <span class="hljs-attribute">color</span>: <span class="hljs-variable">@var</span>; <span class="hljs-comment">// white</span>
+  &#125;
+  <span class="hljs-variable">@var:</span> white;
+&#125;</code></pre></div>
+
+<h3 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h3><div class="hljs"><pre><code class="hljs less"><span class="hljs-comment">/* 一个块注释</span>
+<span class="hljs-comment"> * style comment! */</span>
+<span class="hljs-variable">@var:</span> red;
+
+<span class="hljs-comment">// 这一行被注释掉了！</span>
+<span class="hljs-variable">@var:</span> white;</code></pre></div>
+
+<h3 id="导入"><a href="#导入" class="headerlink" title="导入"></a>导入</h3><p>“导入”的工作方式和你预期的一样。你可以导入一个 <code>.less</code> 文件，此文件中的所有变量就可以全部使用了。如果导入的文件是 <code>.less</code> 扩展名，则可以将扩展名省略掉：</p>
+<div class="hljs"><pre><code class="hljs css">@import &quot;library&quot;; // library.less
+<span class="hljs-keyword">@import</span> <span class="hljs-string">&quot;typo.css&quot;</span>;</code></pre></div>
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/Less/">Less</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/css-less/">css less</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！</p>
+              
+              
+                <div class="post-prevnext row">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/08/18/css3%E9%95%BF%E5%BA%A6%E5%8D%95%E4%BD%8D/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">css3长度单位</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2020/08/15/npm%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">
+                        <span class="hidden-mobile">npm常用命令</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments">
+                
+                
+  <div id="vcomments"></div>
+  <script type="text/javascript">
+    function loadValine() {
+      addScript('https://cdn.staticfile.org/valine/1.4.14/Valine.min.js', function () {
+        new Valine({
+          el: "#vcomments",
+          app_id: "Gf5Q9dqXU1FJawgocfhwUqOo-gzGzoHsz",
+          app_key: "3VvaKbHfPXTQ5849CwtVrLcT",
+          placeholder: "说点什么",
+          path: window.location.pathname,
+          avatar: "retro",
+          meta: ["nick","mail","link"],
+          pageSize: "10",
+          lang: "zh-CN",
+          highlight: false,
+          recordIP: false,
+          serverURLs: "",
+        });
+      });
+    }
+    waitElementVisible('vcomments', loadValine);
+  </script>
+  <noscript>Please enable JavaScript to view the <a target="_blank" href="https://valine.js.org" rel="nofollow noopener noopener">comments
+      powered by Valine.</a></noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div id="tocbot"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+  </main>
+
+  
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  
+
+  
+
+  <footer class="mt-5">
+    <div class="text-center py-3">
+        <div>
+            <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
+            <i class="iconfont icon-love"></i>
+            <a href="" target="_blank" rel="nofollow noopener">
+                <span>Fluid</span></a>
+        </div>
+        <div>
+            <span id="timeDate">载入天数...</span>
+            <span id="times">载入时分秒...</span>
+            <p id="hitokoto">:D 获取中...</p>
+            <script>
+                //运行时间
+                var now = new Date();
+
+                function createtime() {
+                    var grt = new Date("07/01/2020 00:00:00"); //此处修改你的建站时间或者网站上线时间
+                    now.setTime(now.getTime() + 250);
+                    days = (now - grt) / 1000 / 60 / 60 / 24;
+                    dnum = Math.floor(days);
+                    hours = (now - grt) / 1000 / 60 / 60 - (24 * dnum);
+                    hnum = Math.floor(hours);
+                    if (String(hnum).length == 1) {
+                        hnum = "0" + hnum;
+                    }
+                    minutes = (now - grt) / 1000 / 60 - (24 * 60 * dnum) - (60 * hnum);
+                    mnum = Math.floor(minutes);
+                    if (String(mnum).length == 1) {
+                        mnum = "0" + mnum;
+                    }
+                    seconds = (now - grt) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+                    snum = Math.round(seconds);
+                    if (String(snum).length == 1) {
+                        snum = "0" + snum;
+                    }
+                    document.getElementById("timeDate").innerHTML = "已运行&nbsp" + dnum + "&nbsp天";
+                    document.getElementById("times").innerHTML = hnum + "&nbsp小时&nbsp" + mnum + "&nbsp分&nbsp" + snum +
+                        "&nbsp秒";
+                }
+                setInterval("createtime()", 250);
+                //一言
+                var yy = function() {
+                    fetch('https://v1.hitokoto.cn')
+                        .then(response => response.json())
+                        .then(data => {
+                            const hitokoto = document.getElementById('hitokoto')
+                            hitokoto.innerText = data.hitokoto
+                        })
+                        .catch(console.error)
+                }
+                yy();
+                setInterval("yy()", 4000);
+            </script>
+        </div>
+        
+
+            
+
+                
+    </div>
+</footer>
+
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/main.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
+
+
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: '#post-body',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 0,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "less&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 130,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "right",
+      visible: "hover",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+
+
+  
+  
+    <script>
+      !function (e, t, a) {
+        function r() {
+          for (var e = 0; e < s.length; e++) s[e].alpha <= 0 ? (t.body.removeChild(s[e].el), s.splice(e, 1)) : (s[e].y--, s[e].scale += .004, s[e].alpha -= .013, s[e].el.style.cssText = "left:" + s[e].x + "px;top:" + s[e].y + "px;opacity:" + s[e].alpha + ";transform:scale(" + s[e].scale + "," + s[e].scale + ") rotate(45deg);background:" + s[e].color + ";z-index:99999");
+          requestAnimationFrame(r)
+        }
+
+        function n() {
+          var t = "function" == typeof e.onclick && e.onclick;
+          e.onclick = function (e) {
+            t && t(), o(e)
+          }
+        }
+
+        function o(e) {
+          var a = t.createElement("div");
+          a.className = "heart", s.push({
+            el: a,
+            x: e.clientX - 5,
+            y: e.clientY - 5,
+            scale: 1,
+            alpha: 1,
+            color: c()
+          }), t.body.appendChild(a)
+        }
+
+        function i(e) {
+          var a = t.createElement("style");
+          a.type = "text/css";
+          try {
+            a.appendChild(t.createTextNode(e))
+          } catch (t) {
+            a.styleSheet.cssText = e
+          }
+          t.getElementsByTagName("head")[0].appendChild(a)
+        }
+
+        function c() {
+          return "rgb(" + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + ")"
+        }
+
+        var s = [];
+        e.requestAnimationFrame = e.requestAnimationFrame || e.webkitRequestAnimationFrame || e.mozRequestAnimationFrame || e.oRequestAnimationFrame || e.msRequestAnimationFrame || function (e) {
+          setTimeout(e, 1e3 / 60)
+        }, i(".heart{width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);}.heart:after,.heart:before{content: '';width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: fixed;}.heart:after{top: -5px;}.heart:before{left: -5px;}"), n(), r()
+      }(window, document);
+    </script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

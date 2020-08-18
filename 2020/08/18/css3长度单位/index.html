@@ -17,7 +17,7 @@
   <meta name="description" content="">
   <meta name="author" content="wzx">
   <meta name="keywords" content="">
-  <title>jQuery动画之-01显示与隐藏 | 夜雨声繁</title>
+  <title>css3长度单位 | 夜雨声繁</title>
 
   <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
 
@@ -160,8 +160,8 @@
               
   <div class="mt-3 post-meta">
     <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-    <time datetime="2020-08-13 16:00" pubdate>
-      2020年8月13日 下午
+    <time datetime="2020-08-18 17:47" pubdate>
+      2020年8月18日 下午
     </time>
   </div>
 
@@ -171,7 +171,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      438 字
+      901 字
     </span>
   
 
@@ -202,95 +202,63 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto" id="post">
             <!-- SEO header -->
-            <h1 style="display: none">jQuery动画之-01显示与隐藏</h1>
+            <h1 style="display: none">css3长度单位</h1>
             
             <div class="markdown-body" id="post-body">
-              <p>show()显示    ——    hide()隐藏    ——    toggle()显示或隐藏    ——    (🙂原理：修改宽高)</p>
+              <p>vw、vh、vmin、vmax、rem</p>
 <a id="more"></a>
 
-<h2 id="写在开头"><a href="#写在开头" class="headerlink" title="写在开头"></a>写在开头</h2><p>详细了解请戳我    👉    <a target="_blank" rel="noopener" href='https://jquery.cuishifeng.cn/index.html'>jQurye中文文档</a></p>
-<hr>
-本章案例均操作此页面结构✡
+<h1 id="vw、vh、vmin、vmax"><a href="#vw、vh、vmin、vmax" class="headerlink" title="vw、vh、vmin、vmax"></a>vw、vh、vmin、vmax</h1><p>这四个单位都是基于视口的。那么，什么是视口呢，我们来看一段代码：</p>
+<div class="hljs"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;viewport&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no&quot;</span>&gt;</span></code></pre></div>
 
-<p><code>本章案例效果展示页面</code>    👉    <a target="_blank" rel="noopener" href="https://www.rainfall.top/demo//jQuery/jQuery%E5%8A%A8%E7%94%BB%E4%B9%8B-01%E6%98%BE%E7%A4%BA%E4%B8%8E%E9%9A%90%E8%97%8F.html.html">查看效果请戳我</a></p>
-<div class="hljs"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span>
-    div &#123;
-        width: 200px;
-        height: 200px;
-        background-color: red;
-        display: none;
-    &#125;
-<span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;显示&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;show&quot;</span> /&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;隐藏&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;hide&quot;</span> /&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;切换&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;toggle&quot;</span> /&gt;</span> 
-    <span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;div1&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;div2&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span></code></pre></div>
+<p>其中，浏览器利用 meta 标签里面的 width 来改变浏览器的视口大小，将 width 设置为设备的宽度 device-width。我们可以使用document.documentElement.clientWidth 获取浏览器的视口大小。</p>
+<h4 id="含义"><a href="#含义" class="headerlink" title="含义"></a>含义</h4><p>vw: 视口宽度的百分比（1vw 等于视口宽度的 1%）<br> vh: 视口高度的百分比（1vh 等于视口高度的 1%）<br> vmin: 选取 vw 和 vh 中最小的那个<br> vmax: 选取 vw 和 vh 中最大的那个</p>
+<p>vw、vh 是基于视口的，而不是父元素。1vw 等于1/100 的视口宽度，1vh 等于1/100 的视口高度，比如：<br> 浏览器高度 950px，宽度为 1920px, 1vh = 950px/100 = 9.5 px，1vw = 1920px/100 =19.2 px</p>
+<h1 id="vw、vh、％-的区别"><a href="#vw、vh、％-的区别" class="headerlink" title="vw、vh、％ 的区别"></a>vw、vh、％ 的区别</h1><ol>
+<li>％ 是相对于父元素的大小设定的比率，vw vh 是视口大小决定的</li>
+<li>vw、vh 能直接获取高度，而 ％ 如果没有设置body的高度情况下，是无法获取可视区域的高度。</li>
+</ol>
+<h1 id="vmin、vmax-用处"><a href="#vmin、vmax-用处" class="headerlink" title="vmin、vmax 用处"></a>vmin、vmax 用处</h1><p>做移动页面开发时，如果使用 vw、wh 设置字体大小（比如 5vw），在竖屏和横屏状态下显示的字体大小是不一样的。<br> 由于 vmin 和 vmax 是当前较小的 vw 和 vh 和当前较大的 vw 和 vh。这里就可以用到 vmin 和 vmax。使得文字大小在横竖屏下保持一致。</p>
+<h1 id="vw、vh、rem-相比的优势"><a href="#vw、vh、rem-相比的优势" class="headerlink" title="vw、vh、rem 相比的优势"></a>vw、vh、rem 相比的优势</h1><ol>
+<li>如果使用 rem ，我们页面的头部引入 js 来动态设置页面 html 的 font-size，一般情况下基于屏幕的宽度来计算：var rem = docEl.clientWidth / 10;docEl.style.fontSize = rem + ‘px’</li>
+<li>css 这块，使用 less 或者 scss 来动态计算 dom 的实际 rem 值</li>
+</ol>
+<div class="hljs"><pre><code class="hljs php">@<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">px2rem</span>(<span class="hljs-params">$size</span>) </span>&#123;
+  $remSize: $size / <span class="hljs-number">20</span>;
+  @<span class="hljs-keyword">return</span> <span class="hljs-comment">#&#123;$remSize&#125;rem;</span>
+&#125;</code></pre></div>
 
-<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><table>
-<thead>
-<tr>
-<th align="left">第一个参数(动画时间)</th>
-<th>可以是num，也可以是预先定义的三种字符串：         ‘slow’:600       ‘normal’:400       ‘fast’:200</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">第二参数(动画方式)</td>
-<td>缓动: ‘swing’ (默认)       匀速：’linear’</td>
-</tr>
-<tr>
-<td align="left">第三个参数(完成回调)</td>
-<td>动画完成时执行的函数，每个元素执行一次</td>
-</tr>
-</tbody></table>
-<p>⚠<code>如果不传参数，则没有动画</code></p>
-<h3 id="show-1-2-3"><a href="#show-1-2-3" class="headerlink" title="show(1,2,3)"></a>show(1,2,3)</h3><blockquote>
-<p>显示隐藏的匹配元素。</p>
-</blockquote>
-<div class="hljs"><pre><code class="hljs javascript">&lt;script src=<span class="hljs-string">&quot;./jquery-1.12.4.js&quot;</span>&gt;&lt;/script&gt;
-&lt;script&gt;
-    $(<span class="hljs-string">&#x27;#show&#x27;</span>).click(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>&#123;
-        $(<span class="hljs-string">&#x27;div&#x27;</span>).show(<span class="hljs-number">2000</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>&#123;
-            <span class="hljs-built_in">console</span>.log((<span class="hljs-string">&#x27;显示动画结束&#x27;</span>));
-        &#125;);
-    &#125;)
-&lt;/script&gt;</code></pre></div>
-
-<h3 id="hide-1-2-3"><a href="#hide-1-2-3" class="headerlink" title="hide(1,2,3)"></a>hide(1,2,3)</h3><blockquote>
-<p>隐藏显示的元素</p>
-</blockquote>
-<p>✅<code>hide()所有特点与show()一致，唯一区别:动画是相反的</code></p>
-<div class="hljs"><pre><code class="hljs javascript">&lt;script&gt;
-    $(<span class="hljs-string">&#x27;#hide&#x27;</span>).click(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>&#123;
-        $(<span class="hljs-string">&#x27;div&#x27;</span>).hide(<span class="hljs-number">1000</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>&#123;
-            <span class="hljs-built_in">console</span>.log((<span class="hljs-string">&#x27;隐藏动画结束&#x27;</span>));
-        &#125;);
-    &#125;)
-&lt;/script&gt;</code></pre></div>
-
-<h3 id="toggle-1-2-3"><a href="#toggle-1-2-3" class="headerlink" title="toggle(1,2,3)"></a>toggle(1,2,3)</h3><blockquote>
-<p>如果元素是可见的，切换为隐藏的；如果元素是隐藏的，切换为可见的。</p>
-</blockquote>
-<div class="hljs"><pre><code class="hljs javascript">&lt;script&gt;
-    $(<span class="hljs-string">&#x27;#toggle&#x27;</span>).click(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>&#123;
-        $(<span class="hljs-string">&#x27;div&#x27;</span>).toggle(<span class="hljs-number">5000</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>&#123;
-            <span class="hljs-built_in">console</span>.log((<span class="hljs-string">&#x27;切换动画结束&#x27;</span>));
-        &#125;);
-    &#125;)
-&lt;/script&gt;</code></pre></div>
-
-
-
-
-
-
-
-
-
+<p>因此会有问题：</p>
+<ol>
+<li>依赖页面头部的js设置，虽说基本上不会阻塞页面渲染，但是放在头部始终要进行一次dom计算，不算优雅。</li>
+<li>通常使用宽度来计算 html 的 font-size 时，对于那种很宽的手机或者是ipad，会导致适配的不准确</li>
+</ol>
+<p>如果使用 vmin 可以规避上面的问题：</p>
+<ol>
+<li>不依赖js执行。</li>
+<li>选取宽高之中较小的值进行适配</li>
+</ol>
+<h1 id="rem-em-的区别"><a href="#rem-em-的区别" class="headerlink" title="rem em 的区别"></a>rem em 的区别</h1><ol>
+<li>两者都是相对单位</li>
+<li>rem 是相对于根元素（html）的字体大小</li>
+<li>em 是相对于其父元素的字体大小</li>
+</ol>
+<p>对于一些固定的元素，我们不推荐使用 rem，而改为使用 px 去确保在同一屏幕上保持一致，比如字体 font-size，这个更趋向于阅读的实用性，不适合排版布局</p>
+<p>这里给大家提供了一个px、em、rem单位的转换工具：<a target="_blank" rel="noopener" href="http://pxtoem.com/">http://pxtoem.com/</a></p>
+<h1 id="浏览器兼容性"><a href="#浏览器兼容性" class="headerlink" title="浏览器兼容性"></a>浏览器兼容性</h1><p>桌面 pc:</p>
+<ul>
+<li>Chrome：自 26 版起就完美支持（2013年2月）</li>
+<li>Firefox：自 19 版起就完美支持（2013年1月）</li>
+<li>Safari：自 6.1 版起就完美支持（2013年10月）</li>
+<li>Opera：自 15 版起就完美支持（2013年7月）</li>
+<li>IE：自 IE10 起（包括 Edge）到现在还只是部分支持（不支持 vmax，同时 vm 代替 vmin）</li>
+</ul>
+<p>移动设备</p>
+<ul>
+<li>Android：自 4.4 版起就完美支持（2013年12月）</li>
+<li>iOS：自 iOS8 版起就完美支持（2014年9月）</li>
+</ul>
+<p>作者：alipy_258<br>链接：<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/fe36aa3e5fc6">https://www.jianshu.com/p/fe36aa3e5fc6</a><br>来源：简书<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
 
             </div>
             <hr>
@@ -300,7 +268,7 @@
                   <div class="post-meta mr-3">
                     <i class="iconfont icon-category"></i>
                     
-                      <a class="hover-with-bg" href="/categories/jQuery/">jQuery</a>
+                      <a class="hover-with-bg" href="/categories/css/">css</a>
                     
                   </div>
                 
@@ -308,7 +276,7 @@
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
-                      <a class="hover-with-bg" href="/tags/JS-jQ/">JS jQ</a>
+                      <a class="hover-with-bg" href="/tags/css-css3/">css css3</a>
                     
                   </div>
                 
@@ -316,6 +284,29 @@
               
                 <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！</p>
               
+              
+                <div class="post-prevnext row">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/08/18/cmd%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">cmd</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2020/08/15/Less%E5%85%A5%E9%97%A8/">
+                        <span class="hidden-mobile">less</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
               
             </div>
 
@@ -527,7 +518,7 @@
     var typed = new Typed('#subtitle', {
       strings: [
         '  ',
-        "jQuery动画之-01显示与隐藏&nbsp;",
+        "css3长度单位&nbsp;",
       ],
       cursorChar: "_",
       typeSpeed: 130,

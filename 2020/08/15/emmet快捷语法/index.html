@@ -1,0 +1,737 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://cdn.jsdelivr.net/gh/wzxyy/cdn@1.1/favicon.ico">
+  <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/wzxyy/cdn@1.1/favicon.ico">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="wzx">
+  <meta name="keywords" content="">
+  <title>emmet快捷语法 | 夜雨声繁</title>
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/vs2015.min.css" />
+  
+
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_6peoq002giu.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_pjno9b9zyxs.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.0.2"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>夜雨声繁</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner intro-2" id="background" parallax=true
+         style="background: url('https://cdn.jsdelivr.net/gh/wzxyy/cdn/b1.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="container page-header text-center fade-in-up">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+              
+  <div class="mt-3 post-meta">
+    <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+    <time datetime="2020-08-15 16:47" pubdate>
+      2020年8月15日 下午
+    </time>
+  </div>
+
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      689 字
+    </span>
+  
+
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto" id="post">
+            <!-- SEO header -->
+            <h1 style="display: none">emmet快捷语法</h1>
+            
+            <div class="markdown-body" id="post-body">
+              <h2 id="一、HTML代码"><a href="#一、HTML代码" class="headerlink" title="一、HTML代码"></a><strong>一、HTML代码</strong></h2><p><strong>（一）HTML5文档基本结构（！）</strong></p>
+<p>想要快速生成一个HTML5的文档，包含<meta>、<html>、<body>、<title>、<head>、<!DOCTYPE html>的一个基本结构只需要    <strong>感叹号（！）和 Tab 键</strong>   就可以实现</p>
+<div algin="left"> 
+    <img src="assets/1748092-20191012190209861-1504500049.png" srcset="/img/loading.gif" />
+</div>
+- html:5 或!：用于HTML5文档类型
+- html:xt：用于XHTML过渡文档类型
+- html:4s：用于HTML4严格文档类型
+
+
+
+<p><strong>（二）页面中添加添加类、id、文本和属性</strong></p>
+<p><strong>1、添加id（#）</strong></p>
+<p>输入 p#box （给p元素添加一个名为box的id）</p>
+<div class="hljs"><pre><code class="hljs 1c">p<span class="hljs-meta">#box</span></code></pre></div>
+
+<div algin="left"> 
+    <img src="assets/1748092-20191012191017369-480170716.png" srcset="/img/loading.gif" />
+</div>
+
+<p><strong>2、添加类class（.）</strong></p>
+<p>输入 .box（給div元素添加一个名为box的class）</p>
+<div class="hljs"><pre><code class="hljs asciidoc"><span class="hljs-title">.box    </span></code></pre></div>
+<div algin="left"> 
+    <img src="assets/1748092-20191012191358183-101071079.png" srcset="/img/loading.gif" />
+</div>
+
+<p> 输入 p.box （给p元素添加一个名为box的class）</p>
+<div class="hljs"><pre><code class="hljs css"><span class="hljs-selector-tag">p</span><span class="hljs-selector-class">.box</span></code></pre></div>
+<div algin="left"> 
+    <img src="assets/1748092-20191012191706264-1209074938.png" srcset="/img/loading.gif" />
+</div>
+
+<p><strong>3、添加文本（{ }）和属性（[ ]）</strong></p>
+<p> 输入 h1{neirong} 和 Tab键 （为h1元素添加内容 neirong）</p>
+<div class="hljs"><pre><code class="hljs dust"><span class="xml">h1</span><span class="hljs-template-variable">&#123;nierong&#125;</span></code></pre></div>
+<div algin="left"> 
+    <img src="assets/1748092-20191012192607946-117025371.png" srcset="/img/loading.gif" />
+</div>
+
+<p> 输入 a[href=#] 和Tab键（为a元素加上href属性，并且为href加上属性值#）</p>
+<div class="hljs"><pre><code class="hljs livecodeserver"><span class="hljs-keyword">a</span>[href=<span class="hljs-comment">#]</span></code></pre></div>
+<div algin="left"> 
+    <img src="assets/1748092-20191012192803656-722963111.png" srcset="/img/loading.gif" />
+</div>
+
+
+
+<p><strong>（三）元素嵌套（子节点（&gt;），兄弟节点（+），上级节点（^））</strong></p>
+<p>**&gt;**：子元素符号，表示嵌套的元素</p>
+<p>**+**：同级标签符号</p>
+<p><strong>^</strong>：可以使该符号前的标签提升一行</p>
+<p><strong>嵌套子元素（&gt;）</strong></p>
+<div class="hljs"><pre><code class="hljs applescript"><span class="hljs-keyword">div</span>&gt;span</code></pre></div>
+<div algin="left"> 
+    <img src="assets/1748092-20191012193127062-1474488030.png" srcset="/img/loading.gif" />
+</div>
+
+<p> <strong>生成同级元素（+）</strong></p>
+<div class="hljs"><pre><code class="hljs applescript"><span class="hljs-keyword">div</span>+span</code></pre></div>
+<div algin="left"> 
+    <img src="assets/1584503144782.png" srcset="/img/loading.gif" />
+</div>
+
+<p> <strong>使符号前的标签提升一行，上级节点（^）</strong></p>
+<p>div&gt;ul&gt;li^span (这里的<code>^</code>是接在<code>li</code>后面所以span在<code>li</code>的上一级，与<code>ul</code>成了兄弟关系,当然两个  ^^  就是上上级）</p>
+<div class="hljs"><pre><code class="hljs applescript"><span class="hljs-keyword">div</span>&gt;ul&gt;li^<span class="hljs-keyword">div</span></code></pre></div>
+<div algin="left"> 
+    <img src="assets/1748092-20191012194030075-1466017426.png" srcset="/img/loading.gif" />
+</div>
+
+
+
+<p><strong>（四）重复指令（*）</strong></p>
+<p>*****号后面添加数字表示重复的元素个数</p>
+<div class="hljs"><pre><code class="hljs angelscript">ul&gt;li*<span class="hljs-number">3</span></code></pre></div>
+<div algin="left"> 
+    <img src="assets/1748092-20191012194521723-1438771130.png" srcset="/img/loading.gif" />
+</div>
+
+
+
+<p><strong>（五）分组（( )）</strong></p>
+<p>可以通过嵌套和括号来快速生成一些代码块，括号里面的内容为一个代码块，表示与括号内部嵌套和外面的的层级无关。</p>
+<div class="hljs"><pre><code class="hljs livecodeserver"><span class="hljs-keyword">div</span>&gt;(ul&gt;li&gt;<span class="hljs-keyword">a</span>)+<span class="hljs-keyword">div</span>&gt;p</code></pre></div>
+<div algin="left"> 
+    <img src="assets/1748092-20191012195105347-350246085.png" srcset="/img/loading.gif" />
+</div>
+
+
+
+<p><strong>（六）隐式标签</strong></p>
+<p>这个标签没有指令，而是部分标签可以不使用输入标签，直接输入指令，即可识别父元素</p>
+<p>隐式标签有以下几个：</p>
+<p><strong>li</strong>：用于 ul 和 ol 中</p>
+<p><strong>tr</strong>：用于 table、tbody、thead 和 tfoot 中</p>
+<p><strong>td</strong>：用于 tr 中</p>
+<p>例1：</p>
+<div class="hljs"><pre><code class="hljs asciidoc"><span class="hljs-title">.box</span></code></pre></div>
+<div algin="left"> 
+    <img src="assets/1748092-20191012201438063-411844726.png" srcset="/img/loading.gif" />
+</div>
+
+<p> <strong>例2：</strong></p>
+<div class="hljs"><pre><code class="hljs angelscript">ul&gt;.box$*<span class="hljs-number">3</span></code></pre></div>
+<div algin="left"> 
+    <img src="assets/1748092-20191012201625901-166598517.png" srcset="/img/loading.gif" />
+</div>
+
+
+
+<p><strong>（七）递增（$）</strong></p>
+<p>$代表一位数，后面更上*数字就代表从1递增到填写的数字；</p>
+<p>1、使用 <code>*</code> 运算符可以重复生成元素，如果带 <code>$</code> 就可以为它们编号。把 <code>$</code> 放在元素名、属性名或者属性值中，将为每个元素生成正确的编号</p>
+<div class="hljs"><pre><code class="hljs gauss"><span class="hljs-built_in">select</span>&gt;.<span class="hljs-built_in">box</span>$*<span class="hljs-number">3</span></code></pre></div>
+<div algin="left"> 
+    <img src="assets/1748092-20191012202316610-1999882115.png" srcset="/img/loading.gif" />
+</div>
+
+<p><strong>2、使用多 $ 可以填充前导的零</strong></p>
+<div class="hljs"><pre><code class="hljs powershell"><span class="hljs-built_in">select</span>&gt;.box<span class="hljs-variable">$</span><span class="hljs-variable">$</span><span class="hljs-variable">$</span>*<span class="hljs-number">5</span></code></pre></div>
+<div algin="left"> 
+    <img src="assets/1748092-20191012211225746-192819459.png" srcset="/img/loading.gif" />
+</div>
+
+<p> <strong>3、改变编号的基数和方向</strong></p>
+<p>使用@，可以改变数字的走向（升序或降序）和基数（例如启始值）。在$ 后添加 @- 来改变数字的排序。</p>
+<p>（从3开始，倒序排列）</p>
+<div class="hljs"><pre><code class="hljs gauss"><span class="hljs-built_in">select</span>&gt;.<span class="hljs-built_in">box</span>$<span class="hljs-comment">@-*3</span></code></pre></div>
+<div algin="left"> 
+    <img src="assets/1748092-20191012211822579-1645055345.png" srcset="/img/loading.gif" />
+</div>
+
+<p> <strong>4、在 $ 后面添加 @N(@数字) 改变编号的基数：</strong></p>
+<p>（从3开始，共5个数）</p>
+<div class="hljs"><pre><code class="hljs angelscript">select&gt;.box$@<span class="hljs-number">3</span>*<span class="hljs-number">5</span></code></pre></div>
+<div algin="left"> 
+    <img src="assets/1748092-20191012212203337-1971934090.png" srcset="/img/loading.gif" />
+</div>
+
+
+
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/emmet/">emmet</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/emmet/">emmet</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！</p>
+              
+              
+                <div class="post-prevnext row">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/08/15/npm%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">npm常用命令</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2020/08/15/vscode%E5%BF%AB%E6%8D%B7%E9%94%AE/">
+                        <span class="hidden-mobile">vscode快捷键</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments">
+                
+                
+  <div id="vcomments"></div>
+  <script type="text/javascript">
+    function loadValine() {
+      addScript('https://cdn.staticfile.org/valine/1.4.14/Valine.min.js', function () {
+        new Valine({
+          el: "#vcomments",
+          app_id: "Gf5Q9dqXU1FJawgocfhwUqOo-gzGzoHsz",
+          app_key: "3VvaKbHfPXTQ5849CwtVrLcT",
+          placeholder: "说点什么",
+          path: window.location.pathname,
+          avatar: "retro",
+          meta: ["nick","mail","link"],
+          pageSize: "10",
+          lang: "zh-CN",
+          highlight: false,
+          recordIP: false,
+          serverURLs: "",
+        });
+      });
+    }
+    waitElementVisible('vcomments', loadValine);
+  </script>
+  <noscript>Please enable JavaScript to view the <a target="_blank" href="https://valine.js.org" rel="nofollow noopener noopener">comments
+      powered by Valine.</a></noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div id="tocbot"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+  </main>
+
+  
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  
+
+  
+
+  <footer class="mt-5">
+    <div class="text-center py-3">
+        <div>
+            <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
+            <i class="iconfont icon-love"></i>
+            <a href="" target="_blank" rel="nofollow noopener">
+                <span>Fluid</span></a>
+        </div>
+        <div>
+            <span id="timeDate">载入天数...</span>
+            <span id="times">载入时分秒...</span>
+            <p id="hitokoto">:D 获取中...</p>
+            <script>
+                //运行时间
+                var now = new Date();
+
+                function createtime() {
+                    var grt = new Date("07/01/2020 00:00:00"); //此处修改你的建站时间或者网站上线时间
+                    now.setTime(now.getTime() + 250);
+                    days = (now - grt) / 1000 / 60 / 60 / 24;
+                    dnum = Math.floor(days);
+                    hours = (now - grt) / 1000 / 60 / 60 - (24 * dnum);
+                    hnum = Math.floor(hours);
+                    if (String(hnum).length == 1) {
+                        hnum = "0" + hnum;
+                    }
+                    minutes = (now - grt) / 1000 / 60 - (24 * 60 * dnum) - (60 * hnum);
+                    mnum = Math.floor(minutes);
+                    if (String(mnum).length == 1) {
+                        mnum = "0" + mnum;
+                    }
+                    seconds = (now - grt) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+                    snum = Math.round(seconds);
+                    if (String(snum).length == 1) {
+                        snum = "0" + snum;
+                    }
+                    document.getElementById("timeDate").innerHTML = "已运行&nbsp" + dnum + "&nbsp天";
+                    document.getElementById("times").innerHTML = hnum + "&nbsp小时&nbsp" + mnum + "&nbsp分&nbsp" + snum +
+                        "&nbsp秒";
+                }
+                setInterval("createtime()", 250);
+                //一言
+                var yy = function() {
+                    fetch('https://v1.hitokoto.cn')
+                        .then(response => response.json())
+                        .then(data => {
+                            const hitokoto = document.getElementById('hitokoto')
+                            hitokoto.innerText = data.hitokoto
+                        })
+                        .catch(console.error)
+                }
+                yy();
+                setInterval("yy()", 4000);
+            </script>
+        </div>
+        
+
+            
+
+                
+    </div>
+</footer>
+
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/main.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
+
+
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: '#post-body',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 0,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "emmet快捷语法&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 130,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "right",
+      visible: "hover",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+
+
+  
+  
+    <script>
+      !function (e, t, a) {
+        function r() {
+          for (var e = 0; e < s.length; e++) s[e].alpha <= 0 ? (t.body.removeChild(s[e].el), s.splice(e, 1)) : (s[e].y--, s[e].scale += .004, s[e].alpha -= .013, s[e].el.style.cssText = "left:" + s[e].x + "px;top:" + s[e].y + "px;opacity:" + s[e].alpha + ";transform:scale(" + s[e].scale + "," + s[e].scale + ") rotate(45deg);background:" + s[e].color + ";z-index:99999");
+          requestAnimationFrame(r)
+        }
+
+        function n() {
+          var t = "function" == typeof e.onclick && e.onclick;
+          e.onclick = function (e) {
+            t && t(), o(e)
+          }
+        }
+
+        function o(e) {
+          var a = t.createElement("div");
+          a.className = "heart", s.push({
+            el: a,
+            x: e.clientX - 5,
+            y: e.clientY - 5,
+            scale: 1,
+            alpha: 1,
+            color: c()
+          }), t.body.appendChild(a)
+        }
+
+        function i(e) {
+          var a = t.createElement("style");
+          a.type = "text/css";
+          try {
+            a.appendChild(t.createTextNode(e))
+          } catch (t) {
+            a.styleSheet.cssText = e
+          }
+          t.getElementsByTagName("head")[0].appendChild(a)
+        }
+
+        function c() {
+          return "rgb(" + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + ")"
+        }
+
+        var s = [];
+        e.requestAnimationFrame = e.requestAnimationFrame || e.webkitRequestAnimationFrame || e.mozRequestAnimationFrame || e.oRequestAnimationFrame || e.msRequestAnimationFrame || function (e) {
+          setTimeout(e, 1e3 / 60)
+        }, i(".heart{width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);}.heart:after,.heart:before{content: '';width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: fixed;}.heart:after{top: -5px;}.heart:before{left: -5px;}"), n(), r()
+      }(window, document);
+    </script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
