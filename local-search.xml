@@ -29,6 +29,31 @@
   
   
   <entry>
+    <title>健忘盲区</title>
+    <link href="/2020/08/20/%E9%81%87%E5%88%B0%E7%9A%84%E5%B0%8F%E9%97%AE%E9%A2%98/"/>
+    <url>/2020/08/20/%E9%81%87%E5%88%B0%E7%9A%84%E5%B0%8F%E9%97%AE%E9%A2%98/</url>
+    
+    <content type="html"><![CDATA[<p>查漏补缺😫</p><a id="more"></a><ol><li>动态的绑定事件addEventListener方法的使用</li></ol><pre><code class="hljs javascript">element.addEventListener(event, <span class="hljs-function"><span class="hljs-keyword">function</span>, <span class="hljs-title">useCapture</span>)</span></code></pre><ol start="2"><li>JQ动态绑定事件</li></ol><pre><code class="hljs css">父元素<span class="hljs-selector-class">.on</span>(<span class="hljs-selector-tag">events</span>,<span class="hljs-selector-attr">[后代元素]</span>,<span class="hljs-selector-attr">[data]</span>,<span class="hljs-selector-tag">fn</span>)</code></pre><ol start="3"><li>window.sessionStorage</li></ol><pre><code class="hljs javascript"><span class="hljs-comment">//临时保存同一窗口(或标签页)的数据，在关闭窗口或标签页之后将会删除这些数据。</span>sessionStorage.setItem(<span class="hljs-string">&quot;key&quot;</span>, <span class="hljs-string">&quot;value&quot;</span>);<span class="hljs-comment">//保存数据语法：</span><span class="hljs-keyword">var</span> lastname = sessionStorage.getItem(<span class="hljs-string">&quot;key&quot;</span>);<span class="hljs-comment">//读取数据语法：</span>sessionStorage.removeItem(<span class="hljs-string">&quot;key&quot;</span>);<span class="hljs-comment">//删除指定键的数据语法：</span>sessionStorage.clear();<span class="hljs-comment">//删除所有数据：</span></code></pre><ol start="4"><li>window.localStorage</li></ol><pre><code class="hljs javascript"><span class="hljs-comment">//localStorage 用于长久保存整个网站的数据，保存的数据没有过期时间，直到手动去删除。</span><span class="hljs-built_in">localStorage</span>.setItem(<span class="hljs-string">&quot;key&quot;</span>, <span class="hljs-string">&quot;value&quot;</span>);<span class="hljs-comment">//保存数据语法：</span><span class="hljs-keyword">var</span> lastname = <span class="hljs-built_in">localStorage</span>.getItem(<span class="hljs-string">&quot;key&quot;</span>);<span class="hljs-comment">//读取数据语法：</span><span class="hljs-built_in">localStorage</span>.removeItem(<span class="hljs-string">&quot;key&quot;</span>);<span class="hljs-comment">//删除数据语法：</span></code></pre>]]></content>
+    
+    
+    <categories>
+      
+      <category>查缺补漏</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>查缺补漏</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>echarts尝试</title>
     <link href="/2020/08/19/echart%E5%B0%9D%E8%AF%95/"/>
     <url>/2020/08/19/echart%E5%B0%9D%E8%AF%95/</url>
