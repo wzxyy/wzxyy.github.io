@@ -171,7 +171,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      580 字
+      561 字
     </span>
   
 
@@ -260,23 +260,15 @@
 </ol>
 <p><code>服务器一般返回json对象，不能直接使用需要转成js对象</code></p>
 <ul>
-<li>JSON 转 JS ； JSON.parse(js对象)</li>
+<li>JSON 转 JS ； JSON.parse(json对象)</li>
 <li>JS转JSON ： JSON.stringify(js对象)</li>
 </ul>
 <div class="hljs"><pre><code class="hljs javascript"><span class="hljs-comment">//1. json数组必须使用[]包起来</span>
 <span class="hljs-comment">//json里面的内容必须要使用双引号包起来</span>
 <span class="hljs-keyword">let</span> jsonArr = <span class="hljs-string">&#x27;[&quot;10&quot;,&quot;20&quot;,&quot;30&quot;]&#x27;</span>;
 
-<span class="hljs-built_in">console</span>.log(jsonArr);
-<span class="hljs-keyword">let</span> jsArr = <span class="hljs-built_in">JSON</span>.parse(jsonArr);
-<span class="hljs-built_in">console</span>.log(jsArr);
-
 <span class="hljs-comment">//2. json对象必须要使用&#123;&#125;包起来</span>
-
-<span class="hljs-keyword">let</span> jsonObj = <span class="hljs-string">&#x27;&#123;&quot;name&quot;:&quot;张三&quot;,&quot;age&quot;:&quot;18&quot;&#125;&#x27;</span>;
-
-<span class="hljs-keyword">let</span> jsObj = <span class="hljs-built_in">JSON</span>.parse(jsonObj);
-<span class="hljs-built_in">console</span>.log(jsObj);</code></pre></div>
+<span class="hljs-keyword">let</span> jsonObj = <span class="hljs-string">&#x27;&#123;&quot;name&quot;:&quot;张三&quot;,&quot;age&quot;:&quot;18&quot;&#125;&#x27;</span>;</code></pre></div>
 
 <h2 id="ajax传递多参数"><a href="#ajax传递多参数" class="headerlink" title="ajax传递多参数"></a>ajax传递多参数</h2><p>用 &amp; 连接参数</p>
 <div class="hljs"><pre><code class="hljs javascript"><span class="hljs-comment">//get</span>
