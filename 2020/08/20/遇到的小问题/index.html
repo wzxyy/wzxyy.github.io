@@ -171,7 +171,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      256 字
+      398 字
     </span>
   
 
@@ -254,6 +254,39 @@ sessionStorage.clear();<span class="hljs-comment">//删除所有数据：</span>
 <li>取消事件的默认动作。</li>
 </ol>
 <div class="hljs"><pre><code class="hljs javascript">event.preventDefault()</code></pre></div>
+
+<ol start="9">
+<li>vscode小技巧</li>
+</ol>
+<div class="hljs"><pre><code class="hljs javascript"><span class="hljs-comment">// 选中内容  ctrl + d   然后   ctrl + ↓</span>
+<span class="hljs-comment">// ctrl + →</span></code></pre></div>
+
+<ol start="10">
+<li>加载动画基本都是git做的，整个类名加个伪类背景动图，完美</li>
+</ol>
+<div class="hljs"><pre><code class="hljs javascript">.input_sub.loading::before&#123;
+    content:<span class="hljs-string">&#x27;&#x27;</span>;
+    position: absolute;
+    left: <span class="hljs-number">0</span>;
+    top: <span class="hljs-number">0</span>;
+    width: <span class="hljs-number">100</span>%;
+    height: <span class="hljs-number">100</span>%;
+    background: url(<span class="hljs-string">&#x27;../img/loading.gif&#x27;</span>);
+&#125;</code></pre></div>
+
+<ol start="11">
+<li>模板引擎支持调用API</li>
+</ol>
+<div class="hljs"><pre><code class="hljs javascript">&lt;b&gt;&#123;&#123; v.high.split(<span class="hljs-string">&#x27; &#x27;</span>)[<span class="hljs-number">1</span>] &#125;&#125;&lt;</code></pre></div>
+
+<ol start="12">
+<li>JQ的手动触发事件</li>
+</ol>
+<div class="hljs"><pre><code class="hljs javascript">$(<span class="hljs-string">&#x27;.input_sub&#x27;</span>).click(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>&#123;&#125;<span class="hljs-comment">//点击事件</span>
+$(<span class="hljs-string">&#x27;.input_sub&#x27;</span>).click()<span class="hljs-comment">//手动触发点击事件</span></code></pre></div>
+
+<p>13.JQ插件，窗口随内容增加自动往最下面走</p>
+<div class="hljs"><pre><code class="hljs javascript"><span class="hljs-comment">//scroll.js 的  resetui(); 方法</span></code></pre></div>
 
 
             </div>

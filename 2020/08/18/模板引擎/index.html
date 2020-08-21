@@ -17,7 +17,7 @@
   <meta name="description" content="">
   <meta name="author" content="wzx">
   <meta name="keywords" content="">
-  <title>css3长度单位 | 夜雨声繁</title>
+  <title>模板引擎 | 夜雨声繁</title>
 
   <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
 
@@ -171,7 +171,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      865 字
+      522 字
     </span>
   
 
@@ -202,63 +202,87 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto" id="post">
             <!-- SEO header -->
-            <h1 style="display: none">css3长度单位</h1>
+            <h1 style="display: none">模板引擎</h1>
             
             <div class="markdown-body" id="post-body">
-              <p>vw、vh、vmin、vmax、rem</p>
+              <p>模板引擎art-template</p>
+<p>传送门:<a target="_blank" rel="noopener" href="https://aui.github.io/art-template/zh-cn/index.html">https://aui.github.io/art-template/zh-cn/index.html</a></p>
 <a id="more"></a>
 
-<h1 id="vw、vh、vmin、vmax"><a href="#vw、vh、vmin、vmax" class="headerlink" title="vw、vh、vmin、vmax"></a>vw、vh、vmin、vmax</h1><p>这四个单位都是基于视口的。那么，什么是视口呢，我们来看一段代码：</p>
-<div class="hljs"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;viewport&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no&quot;</span>&gt;</span></code></pre></div>
+<h2 id="四个步骤"><a href="#四个步骤" class="headerlink" title="四个步骤"></a>四个步骤</h2><div class="hljs"><pre><code class="hljs javascript"><span class="hljs-comment">//1.导包</span>
+&lt;script src=<span class="hljs-string">&quot;./libs/template-web.js&quot;</span>&gt;&lt;/script&gt;
 
-<p>其中，浏览器利用 meta 标签里面的 width 来改变浏览器的视口大小，将 width 设置为设备的宽度 device-width。我们可以使用document.documentElement.clientWidth 获取浏览器的视口大小。</p>
-<h4 id="含义"><a href="#含义" class="headerlink" title="含义"></a>含义</h4><p>vw: 视口宽度的百分比（1vw 等于视口宽度的 1%）<br> vh: 视口高度的百分比（1vh 等于视口高度的 1%）<br> vmin: 选取 vw 和 vh 中最小的那个<br> vmax: 选取 vw 和 vh 中最大的那个</p>
-<p>vw、vh 是基于视口的，而不是父元素。1vw 等于1/100 的视口宽度，1vh 等于1/100 的视口高度，比如：<br> 浏览器高度 950px，宽度为 1920px, 1vh = 950px/100 = 9.5 px，1vw = 1920px/100 =19.2 px</p>
-<h1 id="vw、vh、％-的区别"><a href="#vw、vh、％-的区别" class="headerlink" title="vw、vh、％ 的区别"></a>vw、vh、％ 的区别</h1><ol>
-<li>％ 是相对于父元素的大小设定的比率，vw vh 是视口大小决定的</li>
-<li>vw、vh 能直接获取高度，而 ％ 如果没有设置body的高度情况下，是无法获取可视区域的高度。</li>
-</ol>
-<h1 id="vmin、vmax-用处"><a href="#vmin、vmax-用处" class="headerlink" title="vmin、vmax 用处"></a>vmin、vmax 用处</h1><p>做移动页面开发时，如果使用 vw、wh 设置字体大小（比如 5vw），在竖屏和横屏状态下显示的字体大小是不一样的。<br> 由于 vmin 和 vmax 是当前较小的 vw 和 vh 和当前较大的 vw 和 vh。这里就可以用到 vmin 和 vmax。使得文字大小在横竖屏下保持一致。</p>
-<h1 id="vw、vh、rem-相比的优势"><a href="#vw、vh、rem-相比的优势" class="headerlink" title="vw、vh、rem 相比的优势"></a>vw、vh、rem 相比的优势</h1><ol>
-<li>如果使用 rem ，我们页面的头部引入 js 来动态设置页面 html 的 font-size，一般情况下基于屏幕的宽度来计算：var rem = docEl.clientWidth / 10;docEl.style.fontSize = rem + ‘px’</li>
-<li>css 这块，使用 less 或者 scss 来动态计算 dom 的实际 rem 值</li>
-</ol>
-<div class="hljs"><pre><code class="hljs php">@<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">px2rem</span>(<span class="hljs-params">$size</span>) </span>&#123;
-  $remSize: $size / <span class="hljs-number">20</span>;
-  @<span class="hljs-keyword">return</span> <span class="hljs-comment">#&#123;$remSize&#125;rem;</span>
-&#125;</code></pre></div>
+<span class="hljs-comment">//2.写模板</span>
+<span class="hljs-comment">//a. 一定要写id属性</span>
+<span class="hljs-comment">//b. 一定要设置type属性， 建议写成 type=text/html</span>
+&lt;script id=<span class="hljs-string">&quot;weather_list&quot;</span> type=<span class="hljs-string">&quot;text/html&quot;</span>&gt;
+    &lt;p&gt;&#123;&#123; data.xx &#125;&#125;&lt;/p&gt;
+&lt;/script&gt;
 
-<p>因此会有问题：</p>
+<span class="hljs-comment">//3.调用官方API</span>
+<span class="hljs-comment">//第一个参数：模板id  第二个参数：要渲染的js对象  返回值：解析的html字符串</span>
+template(<span class="hljs-string">&#x27;weather_list&#x27;</span>,backData);
+
+<span class="hljs-comment">//4.渲染解析好的html字符串</span>
+<span class="hljs-built_in">document</span>.body.innerHTML += template(<span class="hljs-string">&#x27;weather_list&#x27;</span>,backData);</code></pre></div>
+
+<h2 id="模板常用语法"><a href="#模板常用语法" class="headerlink" title="模板常用语法"></a>模板常用语法</h2><div class="hljs"><pre><code class="hljs javascript">&lt;script id=<span class="hljs-string">&quot;weather_list&quot;</span> type=<span class="hljs-string">&quot;text/html&quot;</span>&gt;
+    &lt;p&gt; &#123;&#123; data.ganmao &#125;&#125; &lt;/p&gt;
+    &lt;p&gt; &#123;&#123; data.wendu + <span class="hljs-number">1</span> &#125;&#125;&lt;/p&gt;
+    &lt;p&gt; &#123;&#123; +data.wendu + <span class="hljs-number">1</span> &#125;&#125;&lt;/p&gt;
+    &lt;p&gt; &#123;&#123; data.wendu &gt; <span class="hljs-number">25</span> ? <span class="hljs-string">&#x27;好热&#x27;</span>:<span class="hljs-string">&#x27;好冷&#x27;</span> &#125;&#125;&lt;/p&gt;
+
+    <span class="hljs-comment">//(2)条件分支</span>
+    &#123;&#123; <span class="hljs-keyword">if</span> data.wendu &gt; <span class="hljs-number">30</span> &#125;&#125;
+        &lt;p&gt;如果条件成立，我才会渲染&lt;/p&gt;
+        &lt;p&gt;如果条件不成立，我就渲染&lt;/p&gt;
+    &#123;&#123; /<span class="hljs-keyword">if</span> &#125;&#125;
+
+    <span class="hljs-comment">//(3)循环遍历</span>
+    &#123;&#123; each data.forecast&#125;&#125;
+    <span class="hljs-comment">//&#123;&#123; each data.forecast v i &#125;&#125; 可以自定义字符替换value和index</span>
+        &lt;li&gt;
+            &lt;span&gt;数组下标： &#123;&#123; $index &#125;&#125;&lt;/span&gt;
+            &lt;span&gt;数组元素： &#123;&#123; $value  &#125;&#125;&lt;/span&gt;
+        &lt;/li&gt;
+    &#123;&#123; /each &#125;&#125;
+&lt;/script&gt;</code></pre></div>
+
+<h2 id="易错点"><a href="#易错点" class="headerlink" title="易错点"></a>易错点</h2><p><code>模板引擎易错点总结</code></p>
 <ol>
-<li>依赖页面头部的js设置，虽说基本上不会阻塞页面渲染，但是放在头部始终要进行一次dom计算，不算优雅。</li>
-<li>通常使用宽度来计算 html 的 font-size 时，对于那种很宽的手机或者是ipad，会导致适配的不准确</li>
-</ol>
-<p>如果使用 vmin 可以规避上面的问题：</p>
-<ol>
-<li>不依赖js执行。</li>
-<li>选取宽高之中较小的值进行适配</li>
-</ol>
-<h1 id="rem-em-的区别"><a href="#rem-em-的区别" class="headerlink" title="rem em 的区别"></a>rem em 的区别</h1><ol>
-<li>两者都是相对单位</li>
-<li>rem 是相对于根元素（html）的字体大小</li>
-<li>em 是相对于其父元素的字体大小</li>
-</ol>
-<p>对于一些固定的元素，我们不推荐使用 rem，而改为使用 px 去确保在同一屏幕上保持一致，比如字体 font-size，这个更趋向于阅读的实用性，不适合排版布局</p>
-<p>这里给大家提供了一个px、em、rem单位的转换工具：<a target="_blank" rel="noopener" href="http://pxtoem.com/">http://pxtoem.com/</a></p>
-<h1 id="浏览器兼容性"><a href="#浏览器兼容性" class="headerlink" title="浏览器兼容性"></a>浏览器兼容性</h1><p>桌面 pc:</p>
+<li><p>导包</p>
 <ul>
-<li>Chrome：自 26 版起就完美支持（2013年2月）</li>
-<li>Firefox：自 19 版起就完美支持（2013年1月）</li>
-<li>Safari：自 6.1 版起就完美支持（2013年10月）</li>
-<li>Opera：自 15 版起就完美支持（2013年7月）</li>
-<li>IE：自 IE10 起（包括 Edge）到现在还只是部分支持（不支持 vmax，同时 vm 代替 vmin）</li>
+<li>路径错误 ： 固定格式报错 ‘template’ is not defined</li>
 </ul>
-<p>移动设备</p>
+</li>
+<li><p>写模板</p>
 <ul>
-<li>Android：自 4.4 版起就完美支持（2013年12月）</li>
-<li>iOS：自 iOS8 版起就完美支持（2014年9月）</li>
+<li><p>id错误 </p>
+</li>
+<li><p>必须要设置type = text/html</p>
+</li>
+<li><p>模板语法错误 ： 固定格式报错 ‘告诉你第几行模板语法错误’</p>
+</li>
+<li><p>对象取值语法错误(单词写错) ： 不报错，但是也不会渲染</p>
+</li>
 </ul>
-<p>原作链接：<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/fe36aa3e5fc6">https://www.jianshu.com/p/fe36aa3e5fc6</a></p>
+</li>
+<li><p>调用官方API</p>
+<ul>
+<li><p>id错误 ： 固定错误模板找不到 template not found: Cannot read property ‘value’ of null</p>
+</li>
+<li><p>第二个参数必须是js对象</p>
+</li>
+</ul>
+</li>
+<li><p>渲染页面</p>
+<ul>
+<li>父元素选择器写错了</li>
+</ul>
+</li>
+</ol>
+<h2 id="模板引擎支持调用API"><a href="#模板引擎支持调用API" class="headerlink" title="模板引擎支持调用API"></a>模板引擎支持调用API</h2><div class="hljs"><pre><code class="hljs javascript">&lt;b&gt;&#123;&#123; v.high.split(<span class="hljs-string">&#x27; &#x27;</span>)[<span class="hljs-number">1</span>] &#125;&#125;&lt;</code></pre></div>
+
 
             </div>
             <hr>
@@ -268,7 +292,7 @@
                   <div class="post-meta mr-3">
                     <i class="iconfont icon-category"></i>
                     
-                      <a class="hover-with-bg" href="/categories/css/">css</a>
+                      <a class="hover-with-bg" href="/categories/art-template/">art-template</a>
                     
                   </div>
                 
@@ -276,7 +300,7 @@
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
-                      <a class="hover-with-bg" href="/tags/css-css3/">css css3</a>
+                      <a class="hover-with-bg" href="/tags/art-template/">art-template</a>
                     
                   </div>
                 
@@ -289,9 +313,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2020/08/18/cmd%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">
+                      <a href="/2020/08/18/css3%E9%95%BF%E5%BA%A6%E5%8D%95%E4%BD%8D/">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">cmd</span>
+                        <span class="hidden-mobile">css3长度单位</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -299,8 +323,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2020/08/18/%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/">
-                        <span class="hidden-mobile">模板引擎</span>
+                      <a href="/2020/08/15/Less%E5%85%A5%E9%97%A8/">
+                        <span class="hidden-mobile">less</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -518,7 +542,7 @@
     var typed = new Typed('#subtitle', {
       strings: [
         '  ',
-        "css3长度单位&nbsp;",
+        "模板引擎&nbsp;",
       ],
       cursorChar: "_",
       typeSpeed: 130,

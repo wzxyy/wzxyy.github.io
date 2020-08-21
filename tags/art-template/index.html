@@ -17,20 +17,10 @@
   <meta name="description" content="">
   <meta name="author" content="wzx">
   <meta name="keywords" content="">
-  <title>css3长度单位 | 夜雨声繁</title>
+  <title>标签 - art-template | 夜雨声繁</title>
 
   <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
 
-
-  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
-  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
-
-  
-    
-    <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/vs2015.min.css" />
-  
-
-  
 
 
 <!-- 主题依赖的图标库，不要自行修改 -->
@@ -53,7 +43,7 @@
 
 
 <body>
-  <header style="height: 70vh;">
+  <header style="height: 80vh;">
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand"
@@ -157,31 +147,6 @@
             </span>
 
             
-              
-  <div class="mt-3 post-meta">
-    <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-    <time datetime="2020-08-18 17:47" pubdate>
-      2020年8月18日 下午
-    </time>
-  </div>
-
-
-<div class="mt-1">
-  
-    
-    <span class="post-meta mr-2">
-      <i class="iconfont icon-chart"></i>
-      865 字
-    </span>
-  
-
-  
-
-  
-  
-</div>
-
-            
           </div>
 
           
@@ -192,176 +157,37 @@
 
   <main>
     
+      <div class="container nopadding-md">
+        <div class="py-5" id="board"
+          >
+          
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-10 m-auto">
+                
+
+<div class="list-group">
+  <p class="h4">共计 1 篇文章</p>
+  <hr>
+  
+    
       
+      <p class="h5">2020</p>
+    
+    <a href="/2020/08/18/%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/" class="list-group-item list-group-item-action">
+      <span class="archive-post-title">模板引擎</span>
+      <time style="float: right;">08-18</time>
+    </a>
+  
+</div>
 
-<div class="container-fluid">
-  <div class="row">
-    <div class="d-none d-lg-block col-lg-2"></div>
-    <div class="col-lg-8 nopadding-md">
-      <div class="container nopadding-md" id="board-ctn">
-        <div class="py-5" id="board">
-          <article class="post-content mx-auto" id="post">
-            <!-- SEO header -->
-            <h1 style="display: none">css3长度单位</h1>
-            
-            <div class="markdown-body" id="post-body">
-              <p>vw、vh、vmin、vmax、rem</p>
-<a id="more"></a>
 
-<h1 id="vw、vh、vmin、vmax"><a href="#vw、vh、vmin、vmax" class="headerlink" title="vw、vh、vmin、vmax"></a>vw、vh、vmin、vmax</h1><p>这四个单位都是基于视口的。那么，什么是视口呢，我们来看一段代码：</p>
-<div class="hljs"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;viewport&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no&quot;</span>&gt;</span></code></pre></div>
 
-<p>其中，浏览器利用 meta 标签里面的 width 来改变浏览器的视口大小，将 width 设置为设备的宽度 device-width。我们可以使用document.documentElement.clientWidth 获取浏览器的视口大小。</p>
-<h4 id="含义"><a href="#含义" class="headerlink" title="含义"></a>含义</h4><p>vw: 视口宽度的百分比（1vw 等于视口宽度的 1%）<br> vh: 视口高度的百分比（1vh 等于视口高度的 1%）<br> vmin: 选取 vw 和 vh 中最小的那个<br> vmax: 选取 vw 和 vh 中最大的那个</p>
-<p>vw、vh 是基于视口的，而不是父元素。1vw 等于1/100 的视口宽度，1vh 等于1/100 的视口高度，比如：<br> 浏览器高度 950px，宽度为 1920px, 1vh = 950px/100 = 9.5 px，1vw = 1920px/100 =19.2 px</p>
-<h1 id="vw、vh、％-的区别"><a href="#vw、vh、％-的区别" class="headerlink" title="vw、vh、％ 的区别"></a>vw、vh、％ 的区别</h1><ol>
-<li>％ 是相对于父元素的大小设定的比率，vw vh 是视口大小决定的</li>
-<li>vw、vh 能直接获取高度，而 ％ 如果没有设置body的高度情况下，是无法获取可视区域的高度。</li>
-</ol>
-<h1 id="vmin、vmax-用处"><a href="#vmin、vmax-用处" class="headerlink" title="vmin、vmax 用处"></a>vmin、vmax 用处</h1><p>做移动页面开发时，如果使用 vw、wh 设置字体大小（比如 5vw），在竖屏和横屏状态下显示的字体大小是不一样的。<br> 由于 vmin 和 vmax 是当前较小的 vw 和 vh 和当前较大的 vw 和 vh。这里就可以用到 vmin 和 vmax。使得文字大小在横竖屏下保持一致。</p>
-<h1 id="vw、vh、rem-相比的优势"><a href="#vw、vh、rem-相比的优势" class="headerlink" title="vw、vh、rem 相比的优势"></a>vw、vh、rem 相比的优势</h1><ol>
-<li>如果使用 rem ，我们页面的头部引入 js 来动态设置页面 html 的 font-size，一般情况下基于屏幕的宽度来计算：var rem = docEl.clientWidth / 10;docEl.style.fontSize = rem + ‘px’</li>
-<li>css 这块，使用 less 或者 scss 来动态计算 dom 的实际 rem 值</li>
-</ol>
-<div class="hljs"><pre><code class="hljs php">@<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">px2rem</span>(<span class="hljs-params">$size</span>) </span>&#123;
-  $remSize: $size / <span class="hljs-number">20</span>;
-  @<span class="hljs-keyword">return</span> <span class="hljs-comment">#&#123;$remSize&#125;rem;</span>
-&#125;</code></pre></div>
-
-<p>因此会有问题：</p>
-<ol>
-<li>依赖页面头部的js设置，虽说基本上不会阻塞页面渲染，但是放在头部始终要进行一次dom计算，不算优雅。</li>
-<li>通常使用宽度来计算 html 的 font-size 时，对于那种很宽的手机或者是ipad，会导致适配的不准确</li>
-</ol>
-<p>如果使用 vmin 可以规避上面的问题：</p>
-<ol>
-<li>不依赖js执行。</li>
-<li>选取宽高之中较小的值进行适配</li>
-</ol>
-<h1 id="rem-em-的区别"><a href="#rem-em-的区别" class="headerlink" title="rem em 的区别"></a>rem em 的区别</h1><ol>
-<li>两者都是相对单位</li>
-<li>rem 是相对于根元素（html）的字体大小</li>
-<li>em 是相对于其父元素的字体大小</li>
-</ol>
-<p>对于一些固定的元素，我们不推荐使用 rem，而改为使用 px 去确保在同一屏幕上保持一致，比如字体 font-size，这个更趋向于阅读的实用性，不适合排版布局</p>
-<p>这里给大家提供了一个px、em、rem单位的转换工具：<a target="_blank" rel="noopener" href="http://pxtoem.com/">http://pxtoem.com/</a></p>
-<h1 id="浏览器兼容性"><a href="#浏览器兼容性" class="headerlink" title="浏览器兼容性"></a>浏览器兼容性</h1><p>桌面 pc:</p>
-<ul>
-<li>Chrome：自 26 版起就完美支持（2013年2月）</li>
-<li>Firefox：自 19 版起就完美支持（2013年1月）</li>
-<li>Safari：自 6.1 版起就完美支持（2013年10月）</li>
-<li>Opera：自 15 版起就完美支持（2013年7月）</li>
-<li>IE：自 IE10 起（包括 Edge）到现在还只是部分支持（不支持 vmax，同时 vm 代替 vmin）</li>
-</ul>
-<p>移动设备</p>
-<ul>
-<li>Android：自 4.4 版起就完美支持（2013年12月）</li>
-<li>iOS：自 iOS8 版起就完美支持（2014年9月）</li>
-</ul>
-<p>原作链接：<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/fe36aa3e5fc6">https://www.jianshu.com/p/fe36aa3e5fc6</a></p>
-
-            </div>
-            <hr>
-            <div>
-              <div class="post-metas mb-3">
-                
-                  <div class="post-meta mr-3">
-                    <i class="iconfont icon-category"></i>
-                    
-                      <a class="hover-with-bg" href="/categories/css/">css</a>
-                    
-                  </div>
-                
-                
-                  <div class="post-meta">
-                    <i class="iconfont icon-tags"></i>
-                    
-                      <a class="hover-with-bg" href="/tags/css-css3/">css css3</a>
-                    
-                  </div>
-                
               </div>
-              
-                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！</p>
-              
-              
-                <div class="post-prevnext row">
-                  <article class="post-prev col-6">
-                    
-                    
-                      <a href="/2020/08/18/cmd%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">cmd</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
-                  </article>
-                  <article class="post-next col-6">
-                    
-                    
-                      <a href="/2020/08/18/%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/">
-                        <span class="hidden-mobile">模板引擎</span>
-                        <span class="visible-mobile">下一篇</span>
-                        <i class="iconfont icon-arrowright"></i>
-                      </a>
-                    
-                  </article>
-                </div>
-              
             </div>
-
-            
-              <!-- Comments -->
-              <article class="comments" id="comments">
-                
-                
-  <div id="vcomments"></div>
-  <script type="text/javascript">
-    function loadValine() {
-      addScript('https://cdn.staticfile.org/valine/1.4.14/Valine.min.js', function () {
-        new Valine({
-          el: "#vcomments",
-          app_id: "Gf5Q9dqXU1FJawgocfhwUqOo-gzGzoHsz",
-          app_key: "3VvaKbHfPXTQ5849CwtVrLcT",
-          placeholder: "说点什么",
-          path: window.location.pathname,
-          avatar: "retro",
-          meta: ["nick","mail","link"],
-          pageSize: "10",
-          lang: "zh-CN",
-          highlight: false,
-          recordIP: false,
-          serverURLs: "",
-        });
-      });
-    }
-    waitElementVisible('vcomments', loadValine);
-  </script>
-  <noscript>Please enable JavaScript to view the <a target="_blank" href="https://valine.js.org" rel="nofollow noopener noopener">comments
-      powered by Valine.</a></noscript>
-
-
-              </article>
-            
-          </article>
+          </div>
         </div>
       </div>
-    </div>
-    
-      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
-        <div id="toc">
-  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
-  <div id="tocbot"></div>
-</div>
-
-      </div>
-    
-  </div>
-</div>
-
-<!-- Custom -->
-
-
     
   </main>
 
@@ -486,31 +312,6 @@
 
 
 
-  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
-  <script>
-    $(document).ready(function () {
-      var boardCtn = $('#board-ctn');
-      var boardTop = boardCtn.offset().top;
-
-      tocbot.init({
-        tocSelector: '#tocbot',
-        contentSelector: '#post-body',
-        headingSelector: 'h1,h2,h3,h4,h5,h6',
-        linkClass: 'tocbot-link',
-        activeLinkClass: 'tocbot-active-link',
-        listClass: 'tocbot-list',
-        isCollapsedClass: 'tocbot-is-collapsed',
-        collapsibleClass: 'tocbot-is-collapsible',
-        collapseDepth: 0,
-        scrollSmooth: true,
-        headingsOffset: -boardTop
-      });
-      if ($('.toc-list-item').length > 0) {
-        $('#toc').css('visibility', 'visible');
-      }
-    });
-  </script>
-
 
 
   <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
@@ -518,7 +319,7 @@
     var typed = new Typed('#subtitle', {
       strings: [
         '  ',
-        "css3长度单位&nbsp;",
+        "标签 - art-template&nbsp;",
       ],
       cursorChar: "_",
       typeSpeed: 130,
@@ -533,21 +334,6 @@
 
 
 
-  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
-  <script>
-    anchors.options = {
-      placement: "right",
-      visible: "hover",
-      
-    };
-    var el = "h1,h2,h3,h4,h5,h6".split(",");
-    var res = [];
-    for (item of el) {
-      res.push(".markdown-body > " + item)
-    }
-    anchors.add(res.join(", "))
-  </script>
-
 
 
   <script  src="/js/local-search.js" ></script>
@@ -561,20 +347,6 @@
   </script>
 
 
-
-  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
-  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
-
-  <script>
-    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
-      function () {
-        var element = document.createElement('a');
-        $(element).attr('data-fancybox', 'images');
-        $(element).attr('href', $(this).attr('src'));
-        $(this).wrap(element);
-      }
-    );
-  </script>
 
 
 
