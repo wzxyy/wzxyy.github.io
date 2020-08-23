@@ -171,7 +171,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      398 字
+      453 字
     </span>
   
 
@@ -211,82 +211,70 @@
 <ol>
 <li>动态的绑定事件addEventListener方法的使用</li>
 </ol>
-<div class="hljs"><pre><code class="hljs javascript">element.addEventListener(event, <span class="hljs-function"><span class="hljs-keyword">function</span>, <span class="hljs-title">useCapture</span>)</span></code></pre></div>
+<figure class="highlight javascript"><table><tr><td class="gutter"><div class="hljs"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs"><pre><span class="line">element.addEventListener(event, <span class="function"><span class="keyword">function</span>, <span class="title">useCapture</span>)</span></span><br></pre></div></td></tr></table></figure>
 
 <ol start="2">
 <li>JQ动态绑定事件</li>
 </ol>
-<div class="hljs"><pre><code class="hljs css">父元素<span class="hljs-selector-class">.on</span>(<span class="hljs-selector-tag">events</span>,<span class="hljs-selector-attr">[后代元素]</span>,<span class="hljs-selector-attr">[data]</span>,<span class="hljs-selector-tag">fn</span>)</code></pre></div>
+<figure class="highlight plain"><table><tr><td class="gutter"><div class="hljs"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs"><pre><span class="line">父元素.on(events,[后代元素],[data],fn)</span><br></pre></div></td></tr></table></figure>
 
 <ol start="3">
 <li>window.sessionStorage</li>
 </ol>
-<div class="hljs"><pre><code class="hljs javascript"><span class="hljs-comment">//临时保存同一窗口(或标签页)的数据，在关闭窗口或标签页之后将会删除这些数据。</span>
-sessionStorage.setItem(<span class="hljs-string">&quot;key&quot;</span>, <span class="hljs-string">&quot;value&quot;</span>);<span class="hljs-comment">//保存数据语法：</span>
-<span class="hljs-keyword">var</span> lastname = sessionStorage.getItem(<span class="hljs-string">&quot;key&quot;</span>);<span class="hljs-comment">//读取数据语法：</span>
-sessionStorage.removeItem(<span class="hljs-string">&quot;key&quot;</span>);<span class="hljs-comment">//删除指定键的数据语法：</span>
-sessionStorage.clear();<span class="hljs-comment">//删除所有数据：</span></code></pre></div>
+<figure class="highlight javascript"><table><tr><td class="gutter"><div class="hljs"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></div></td><td class="code"><div class="hljs"><pre><span class="line"><span class="comment">//临时保存同一窗口(或标签页)的数据，在关闭窗口或标签页之后将会删除这些数据。</span></span><br><span class="line">sessionStorage.setItem(<span class="string">&quot;key&quot;</span>, <span class="string">&quot;value&quot;</span>);<span class="comment">//保存数据语法：</span></span><br><span class="line"><span class="keyword">var</span> lastname = sessionStorage.getItem(<span class="string">&quot;key&quot;</span>);<span class="comment">//读取数据语法：</span></span><br><span class="line">sessionStorage.removeItem(<span class="string">&quot;key&quot;</span>);<span class="comment">//删除指定键的数据语法：</span></span><br><span class="line">sessionStorage.clear();<span class="comment">//删除所有数据：</span></span><br></pre></div></td></tr></table></figure>
 
 <ol start="4">
 <li>window.localStorage</li>
 </ol>
-<div class="hljs"><pre><code class="hljs javascript"><span class="hljs-comment">//localStorage 用于长久保存整个网站的数据，保存的数据没有过期时间，直到手动去删除。</span>
-<span class="hljs-built_in">localStorage</span>.setItem(<span class="hljs-string">&quot;key&quot;</span>, <span class="hljs-string">&quot;value&quot;</span>);<span class="hljs-comment">//保存数据语法：</span>
-<span class="hljs-keyword">var</span> lastname = <span class="hljs-built_in">localStorage</span>.getItem(<span class="hljs-string">&quot;key&quot;</span>);<span class="hljs-comment">//读取数据语法：</span>
-<span class="hljs-built_in">localStorage</span>.removeItem(<span class="hljs-string">&quot;key&quot;</span>);<span class="hljs-comment">//删除数据语法：</span></code></pre></div>
+<figure class="highlight javascript"><table><tr><td class="gutter"><div class="hljs"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></div></td><td class="code"><div class="hljs"><pre><span class="line"><span class="comment">//localStorage 用于长久保存整个网站的数据，保存的数据没有过期时间，直到手动去删除。</span></span><br><span class="line"><span class="built_in">localStorage</span>.setItem(<span class="string">&quot;key&quot;</span>, <span class="string">&quot;value&quot;</span>);<span class="comment">//保存数据语法：</span></span><br><span class="line"><span class="keyword">var</span> lastname = <span class="built_in">localStorage</span>.getItem(<span class="string">&quot;key&quot;</span>);<span class="comment">//读取数据语法：</span></span><br><span class="line"><span class="built_in">localStorage</span>.removeItem(<span class="string">&quot;key&quot;</span>);<span class="comment">//删除数据语法：</span></span><br></pre></div></td></tr></table></figure>
 
 <ol start="5">
 <li>window.open 跳转到新的页面</li>
 </ol>
-<div class="hljs"><pre><code class="hljs javascript"><span class="hljs-built_in">window</span>.open(<span class="hljs-string">&#x27;./test2.html&#x27;</span>);</code></pre></div>
+<figure class="highlight javascript"><table><tr><td class="gutter"><div class="hljs"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs"><pre><span class="line"><span class="built_in">window</span>.open(<span class="string">&#x27;./test2.html&#x27;</span>);</span><br></pre></div></td></tr></table></figure>
 
 <ol start="6">
 <li>window.location.href 本页面跳转</li>
 </ol>
-<div class="hljs"><pre><code class="hljs javascript"><span class="hljs-built_in">window</span>.location.href = <span class="hljs-string">&#x27;./02-英雄联盟皮肤查询.html&#x27;</span>;</code></pre></div>
+<figure class="highlight javascript"><table><tr><td class="gutter"><div class="hljs"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs"><pre><span class="line"><span class="built_in">window</span>.location.href = <span class="string">&#x27;./02-英雄联盟皮肤查询.html&#x27;</span>;</span><br></pre></div></td></tr></table></figure>
 
 <ol start="7">
 <li>防止冒泡和捕获</li>
 </ol>
-<div class="hljs"><pre><code class="hljs javascript">e.stopPropagation()</code></pre></div>
+<figure class="highlight javascript"><table><tr><td class="gutter"><div class="hljs"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs"><pre><span class="line">e.stopPropagation()</span><br></pre></div></td></tr></table></figure>
 
 <ol start="8">
 <li>取消事件的默认动作。</li>
 </ol>
-<div class="hljs"><pre><code class="hljs javascript">event.preventDefault()</code></pre></div>
+<figure class="highlight javascript"><table><tr><td class="gutter"><div class="hljs"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs"><pre><span class="line">event.preventDefault()</span><br></pre></div></td></tr></table></figure>
 
 <ol start="9">
 <li>vscode小技巧</li>
 </ol>
-<div class="hljs"><pre><code class="hljs javascript"><span class="hljs-comment">// 选中内容  ctrl + d   然后   ctrl + ↓</span>
-<span class="hljs-comment">// ctrl + →</span></code></pre></div>
+<figure class="highlight javascript"><table><tr><td class="gutter"><div class="hljs"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><div class="hljs"><pre><span class="line"><span class="comment">// 选中内容  ctrl + d   然后   ctrl + ↓</span></span><br><span class="line"><span class="comment">// ctrl + →</span></span><br></pre></div></td></tr></table></figure>
 
 <ol start="10">
 <li>加载动画基本都是git做的，整个类名加个伪类背景动图，完美</li>
 </ol>
-<div class="hljs"><pre><code class="hljs javascript">.input_sub.loading::before&#123;
-    content:<span class="hljs-string">&#x27;&#x27;</span>;
-    position: absolute;
-    left: <span class="hljs-number">0</span>;
-    top: <span class="hljs-number">0</span>;
-    width: <span class="hljs-number">100</span>%;
-    height: <span class="hljs-number">100</span>%;
-    background: url(<span class="hljs-string">&#x27;../img/loading.gif&#x27;</span>);
-&#125;</code></pre></div>
+<figure class="highlight javascript"><table><tr><td class="gutter"><div class="hljs"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></div></td><td class="code"><div class="hljs"><pre><span class="line">.input_sub.loading::before&#123;</span><br><span class="line">    content:<span class="string">&#x27;&#x27;</span>;</span><br><span class="line">    position: absolute;</span><br><span class="line">    left: <span class="number">0</span>;</span><br><span class="line">    top: <span class="number">0</span>;</span><br><span class="line">    width: <span class="number">100</span>%;</span><br><span class="line">    height: <span class="number">100</span>%;</span><br><span class="line">    background: url(<span class="string">&#x27;../img/loading.gif&#x27;</span>);</span><br><span class="line">&#125;</span><br></pre></div></td></tr></table></figure>
 
 <ol start="11">
 <li>模板引擎支持调用API</li>
 </ol>
-<div class="hljs"><pre><code class="hljs javascript">&lt;b&gt;&#123;&#123; v.high.split(<span class="hljs-string">&#x27; &#x27;</span>)[<span class="hljs-number">1</span>] &#125;&#125;&lt;</code></pre></div>
+<figure class="highlight javascript"><table><tr><td class="gutter"><div class="hljs"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs"><pre><span class="line">&lt;b&gt;&#123;&#123; v.high.split(<span class="string">&#x27; &#x27;</span>)[<span class="number">1</span>] &#125;&#125;&lt;</span><br></pre></div></td></tr></table></figure>
 
 <ol start="12">
 <li>JQ的手动触发事件</li>
 </ol>
-<div class="hljs"><pre><code class="hljs javascript">$(<span class="hljs-string">&#x27;.input_sub&#x27;</span>).click(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>&#123;&#125;<span class="hljs-comment">//点击事件</span>
-$(<span class="hljs-string">&#x27;.input_sub&#x27;</span>).click()<span class="hljs-comment">//手动触发点击事件</span></code></pre></div>
+<figure class="highlight javascript"><table><tr><td class="gutter"><div class="hljs"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><div class="hljs"><pre><span class="line">$(<span class="string">&#x27;.input_sub&#x27;</span>).click(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;&#125;<span class="comment">//点击事件</span></span><br><span class="line">$(<span class="string">&#x27;.input_sub&#x27;</span>).click()<span class="comment">//手动触发点击事件</span></span><br></pre></div></td></tr></table></figure>
 
 <p>13.JQ插件，窗口随内容增加自动往最下面走</p>
-<div class="hljs"><pre><code class="hljs javascript"><span class="hljs-comment">//scroll.js 的  resetui(); 方法</span></code></pre></div>
+<figure class="highlight javascript"><table><tr><td class="gutter"><div class="hljs"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs"><pre><span class="line"><span class="comment">//scroll.js 的  resetui(); 方法</span></span><br></pre></div></td></tr></table></figure>
+
+<ol start="14">
+<li>去除字符串空格，.trim&amp;正则</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><div class="hljs"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><div class="hljs"><pre><span class="line">str1.replace(<span class="regexp">/ /g</span>,<span class="string">&#x27;&#x27;</span>) <span class="comment">// 把所有有的空格替换成空</span></span><br><span class="line">.trim <span class="comment">// jq的方法，只能去除左右两边的空格，中间不行</span></span><br></pre></div></td></tr></table></figure>
 
 
             </div>
