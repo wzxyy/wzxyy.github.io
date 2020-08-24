@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>Git</title>
+    <link href="/2020/08/24/Git/"/>
+    <url>/2020/08/24/Git/</url>
+    
+    <content type="html"><![CDATA[<p>Git版本管理工具</p><p>传送门：<a href="https://www.jianshu.com/p/93318220cdce">https://www.jianshu.com/p/93318220cdce</a></p><p>vscode 终端清屏 命令行输入 cls</p><a id="more"></a><h2 id="git介绍"><a href="#git介绍" class="headerlink" title="git介绍"></a>git介绍</h2><ul><li><p><code>Git</code>是什么？</p><p><code>GIT是一个命令行工具,用于版本控制（存档器）</code></p></li><li><p>Git应用场景介绍</p><p>多人开发，异地开发，版本管理，版本回滚</p></li><li><p>常见版本管理工具介绍</p><p>git  和  svn</p></li></ul><h2 id="工作流程与常用命令"><a href="#工作流程与常用命令" class="headerlink" title="工作流程与常用命令"></a>工作流程与常用命令</h2><p>一般第一次使用git都会弹出下面一个小提示 ： 告诉你没有设置邮箱和用户名</p><blockquote><ul><li>设置邮箱：<code> git config --global user.email &quot;you@example.com&quot;</code></li><li>设置用户名:<code>git config --global user.name &quot;Your Name&quot;</code></li></ul></blockquote><table><thead><tr><th><code>Git命名</code></th><th><code>作用</code></th><th align="left"><code>详细描述</code></th></tr></thead><tbody><tr><td>git init</td><td>初始化git仓库（类似于玩游戏新建一个存档文件）</td><td align="left">在当前文件夹中新建一个 .git隐藏文件夹</td></tr><tr><td>git add .</td><td>添加文件信息（相当于游戏开始存档）</td><td align="left">把要提交的文件的信息添加到暂存区中（<code>常用</code>）</td></tr><tr><td>git commit -m”描述信息”</td><td>确认添加信息 (确认存档)</td><td align="left">将暂存区中的文件提交到本地仓库中（<code>常用</code>）</td></tr><tr><td>git config –global user.email “<a href="mailto:&#121;&#111;&#117;&#x40;&#101;&#120;&#x61;&#x6d;&#112;&#x6c;&#101;&#46;&#x63;&#x6f;&#109;">&#121;&#111;&#117;&#x40;&#101;&#120;&#x61;&#x6d;&#112;&#x6c;&#101;&#46;&#x63;&#x6f;&#109;</a>“</td><td>设置邮箱</td><td align="left">第一次使用git会让你输入邮箱</td></tr><tr><td>git config –global user.name “Your Name”</td><td>设置用户名</td><td align="left">第一次使用git会让你输入用户名</td></tr><tr><td>git reset –hard 版本号</td><td><code>版本回滚</code>(游戏回档)</td><td align="left">可以让你的文件回退到历史某一个版本</td></tr><tr><td>git  log</td><td>查看详细日志(存档日志)</td><td align="left">会显示你的每一次存档信息</td></tr><tr><td>git  log –oneline</td><td>查看简略版日志</td><td align="left">快速查看版本号</td></tr><tr><td>git reflog</td><td>查看所有日志(包含回滚日志)</td><td align="left">回档回错了会用到</td></tr></tbody></table><ul><li>传送门：<a href="https://www.jianshu.com/p/93318220cdce">https://www.jianshu.com/p/93318220cdce</a></li></ul><h2 id="远程仓库-github"><a href="#远程仓库-github" class="headerlink" title="远程仓库 github"></a>远程仓库 github</h2><h3 id="就是远程的服务器，帮我们存储代码的"><a href="#就是远程的服务器，帮我们存储代码的" class="headerlink" title="就是远程的服务器，帮我们存储代码的"></a>就是远程的服务器，帮我们存储代码的</h3><ul><li>本地git存储：一旦你电脑丢了或者硬盘损坏，直接扑街</li><li>远程git存储：如果你电脑坏了换了一个新的，只需要从网上重新下载即可</li></ul><h3 id="在github网站建立远程仓库，将远程仓库克隆到本地文件夹"><a href="#在github网站建立远程仓库，将远程仓库克隆到本地文件夹" class="headerlink" title="在github网站建立远程仓库，将远程仓库克隆到本地文件夹"></a><code>在github网站建立远程仓库，将远程仓库克隆到本地文件夹</code></h3><ul><li><p>git clone 仓库地址</p></li><li><p>打开克隆的文件夹，add，commit -m</p></li><li><p>提交推送，git push</p></li></ul><h3 id="拉取别人新增的代码"><a href="#拉取别人新增的代码" class="headerlink" title="拉取别人新增的代码"></a>拉取别人新增的代码</h3><ul><li>git pull </li></ul><p>就可以不用再克隆所有的了，会自动拉取我们没有的代码</p><h2 id="多人开发-权限"><a href="#多人开发-权限" class="headerlink" title="多人开发 权限"></a>多人开发 权限</h2><p>仓库 👉 settings 👉 Manage access</p><h2 id="恢复被删除的库，你本地有备份的情况新建一个相同库名的库"><a href="#恢复被删除的库，你本地有备份的情况新建一个相同库名的库" class="headerlink" title="恢复被删除的库，你本地有备份的情况新建一个相同库名的库"></a>恢复被删除的库，你本地有备份的情况新建一个相同库名的库</h2><ul><li>执行命令：git remote add origin 仓库地址</li><li>执行命令：git push -u origin master</li></ul><pre><code class="hljs javascript">git remote add origin**************fatal: remote origin already exists.（报错远程起源已经存在。）<span class="hljs-number">1</span>、先输入 git remote rm origin<span class="hljs-number">2</span>、再输入 git remote add origin**************</code></pre><h2 id="分支"><a href="#分支" class="headerlink" title="分支"></a>分支</h2><ul><li><p>创建分支名</p><ul><li>git branch 分支名</li></ul></li><li><p>查看当前所有分支</p><ul><li>git branch</li></ul></li><li><p>切换到分支</p><ul><li>git checkout 分支名</li></ul></li><li><p>在分支上进行编码</p><ul><li>pull，add，commit，git push –set-upstream origin xxx 等</li></ul></li><li><p>切换到主分支，在master下合并子分支</p><ul><li><p>git merge 分支名</p></li><li><p><code>git branch -d 分支名 (慎用)</code></p></li></ul></li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>git</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>git</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>AjAx</title>
     <link href="/2020/08/20/AjAx/"/>
     <url>/2020/08/20/AjAx/</url>

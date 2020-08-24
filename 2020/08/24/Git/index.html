@@ -17,7 +17,7 @@
   <meta name="description" content="">
   <meta name="author" content="wzx">
   <meta name="keywords" content="">
-  <title>AjAx | 夜雨声繁</title>
+  <title>Git | 夜雨声繁</title>
 
   <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
 
@@ -160,8 +160,8 @@
               
   <div class="mt-3 post-meta">
     <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-    <time datetime="2020-08-20 17:47" pubdate>
-      2020年8月20日 下午
+    <time datetime="2020-08-24 09:30" pubdate>
+      2020年8月24日 上午
     </time>
   </div>
 
@@ -171,7 +171,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      561 字
+      766 字
     </span>
   
 
@@ -202,100 +202,146 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto" id="post">
             <!-- SEO header -->
-            <h1 style="display: none">AjAx</h1>
+            <h1 style="display: none">Git</h1>
             
             <div class="markdown-body" id="post-body">
-              <p>js原生ajax，JQ的ajax</p>
+              <p>Git版本管理工具</p>
+<p>传送门：<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/93318220cdce">https://www.jianshu.com/p/93318220cdce</a></p>
+<p>vscode 终端清屏 命令行输入 cls</p>
 <a id="more"></a>
 
-<h2 id="ajax技术"><a href="#ajax技术" class="headerlink" title="ajax技术"></a>ajax技术</h2><p>在网页不跳转的情况下向服务器请求数据</p>
-<p><code>测试接口请戳我</code>👉 <a target="_blank" rel="noopener" href='https://github.com/AutumnFish/testApi'>大佬提供的测试接口</a></p>
-<h3 id="get请求"><a href="#get请求" class="headerlink" title="get请求"></a>get请求</h3><div class="hljs"><pre><code class="hljs javascript">&lt;script&gt;
-    <span class="hljs-comment">//(1)创建xhr对象</span>
-    <span class="hljs-keyword">let</span> xhr = <span class="hljs-keyword">new</span> XMLHttpRequest();
-    <span class="hljs-comment">//(2)设置请求方法和地址</span>
-    xhr.open(<span class="hljs-string">&#x27;get&#x27;</span>,<span class="hljs-string">&#x27;接口?&#x27;</span>+<span class="hljs-string">&#x27;参数key=参数value&#x27;</span>);
-    <span class="hljs-comment">//xhr.open(&#x27;get&#x27;,&#x27;https://autumnfish.cn/api/hero/simple?name=赵信&#x27;);</span>
-    <span class="hljs-comment">//(3)发送请求</span>
-    xhr.send();
-    <span class="hljs-comment">//(4)注册响应事件</span>
-    xhr.onload =<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>&#123;
-        <span class="hljs-built_in">console</span>.log(xhr.responseText);  
-    &#125;;
-&lt;/script&gt;</code></pre></div>
-
-<h3 id="post请求"><a href="#post请求" class="headerlink" title="post请求"></a>post请求</h3><div class="hljs"><pre><code class="hljs javascript">&lt;script&gt;
-    <span class="hljs-comment">//(1)创建xhr</span>
-    <span class="hljs-keyword">let</span> xhr = <span class="hljs-keyword">new</span> XMLHttpRequest();
-    <span class="hljs-comment">//(2)设置请求方法和地址</span>
-    xhr.open(<span class="hljs-string">&#x27;post&#x27;</span>, <span class="hljs-string">&#x27;https://autumnfish.cn/api/user/register&#x27;</span>);
-
-    <span class="hljs-comment">//(3)设置请求头（只有post才需要，为固定格式）</span>
-    xhr.setRequestHeader(<span class="hljs-string">&#x27;Content-Type&#x27;</span>,<span class="hljs-string">&#x27;application/x-www-form-urlencoded&#x27;</span>);
-
-    <span class="hljs-comment">//(4)发送ajax请求,</span>
-    xhr.send(<span class="hljs-string">&#x27;参数key=&#x27;</span>+参数value);
-    <span class="hljs-comment">//xhr.send(&#x27;username=&#x27; + username);</span>
-    <span class="hljs-comment">//(5)注册响应事件</span>
-    xhr.onload = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>&#123;
-        $(<span class="hljs-string">&#x27;.info&#x27;</span>).text(xhr.responseText);
-    &#125;
-
-&#125;);
-&lt;/script&gt;</code></pre></div>
-
-<h3 id="get与post的区别"><a href="#get与post的区别" class="headerlink" title="get与post的区别"></a>get与post的区别</h3><ul>
-<li><p>post需要单独设置请求头</p>
+<h2 id="git介绍"><a href="#git介绍" class="headerlink" title="git介绍"></a>git介绍</h2><ul>
+<li><p><code>Git</code>是什么？</p>
+<p><code>GIT是一个命令行工具,用于版本控制（存档器）</code></p>
 </li>
-<li><p>get在url后面发：      url?key=value </p>
+<li><p>Git应用场景介绍</p>
+<p>多人开发，异地开发，版本管理，版本回滚</p>
 </li>
-<li><p>post在send()方法里面发：  xhr.send(‘key=value’)</p>
+<li><p>常见版本管理工具介绍</p>
+<p>git  和  svn</p>
 </li>
 </ul>
-<h2 id="JSON格式数据"><a href="#JSON格式数据" class="headerlink" title="JSON格式数据"></a>JSON格式数据</h2><ol>
-<li><p>JSON是一种数据格式，本质是字符串。</p>
-</li>
-<li><p>JSON作用：解决跨平台问题。</p>
-</li>
-</ol>
-<p><code>服务器一般返回json对象，不能直接使用需要转成js对象</code></p>
+<h2 id="工作流程与常用命令"><a href="#工作流程与常用命令" class="headerlink" title="工作流程与常用命令"></a>工作流程与常用命令</h2><p>一般第一次使用git都会弹出下面一个小提示 ： 告诉你没有设置邮箱和用户名</p>
+<blockquote>
 <ul>
-<li>JSON 转 JS ； JSON.parse(json对象)</li>
-<li>JS转JSON ： JSON.stringify(js对象)</li>
+<li>设置邮箱：<code> git config --global user.email &quot;you@example.com&quot;</code></li>
+<li>设置用户名:<code>git config --global user.name &quot;Your Name&quot;</code></li>
 </ul>
-<div class="hljs"><pre><code class="hljs javascript"><span class="hljs-comment">//1. json数组必须使用[]包起来</span>
-<span class="hljs-comment">//json里面的内容必须要使用双引号包起来</span>
-<span class="hljs-keyword">let</span> jsonArr = <span class="hljs-string">&#x27;[&quot;10&quot;,&quot;20&quot;,&quot;30&quot;]&#x27;</span>;
+</blockquote>
+<table>
+<thead>
+<tr>
+<th><code>Git命名</code></th>
+<th><code>作用</code></th>
+<th align="left"><code>详细描述</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>git init</td>
+<td>初始化git仓库（类似于玩游戏新建一个存档文件）</td>
+<td align="left">在当前文件夹中新建一个 .git隐藏文件夹</td>
+</tr>
+<tr>
+<td>git add .</td>
+<td>添加文件信息（相当于游戏开始存档）</td>
+<td align="left">把要提交的文件的信息添加到暂存区中（<code>常用</code>）</td>
+</tr>
+<tr>
+<td>git commit -m”描述信息”</td>
+<td>确认添加信息 (确认存档)</td>
+<td align="left">将暂存区中的文件提交到本地仓库中（<code>常用</code>）</td>
+</tr>
+<tr>
+<td>git config –global user.email “<a href="mailto:&#121;&#111;&#117;&#x40;&#101;&#120;&#x61;&#x6d;&#112;&#x6c;&#101;&#46;&#x63;&#x6f;&#109;">&#121;&#111;&#117;&#x40;&#101;&#120;&#x61;&#x6d;&#112;&#x6c;&#101;&#46;&#x63;&#x6f;&#109;</a>“</td>
+<td>设置邮箱</td>
+<td align="left">第一次使用git会让你输入邮箱</td>
+</tr>
+<tr>
+<td>git config –global user.name “Your Name”</td>
+<td>设置用户名</td>
+<td align="left">第一次使用git会让你输入用户名</td>
+</tr>
+<tr>
+<td>git reset –hard 版本号</td>
+<td><code>版本回滚</code>(游戏回档)</td>
+<td align="left">可以让你的文件回退到历史某一个版本</td>
+</tr>
+<tr>
+<td>git  log</td>
+<td>查看详细日志(存档日志)</td>
+<td align="left">会显示你的每一次存档信息</td>
+</tr>
+<tr>
+<td>git  log –oneline</td>
+<td>查看简略版日志</td>
+<td align="left">快速查看版本号</td>
+</tr>
+<tr>
+<td>git reflog</td>
+<td>查看所有日志(包含回滚日志)</td>
+<td align="left">回档回错了会用到</td>
+</tr>
+</tbody></table>
+<ul>
+<li>传送门：<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/93318220cdce">https://www.jianshu.com/p/93318220cdce</a></li>
+</ul>
+<h2 id="远程仓库-github"><a href="#远程仓库-github" class="headerlink" title="远程仓库 github"></a>远程仓库 github</h2><h3 id="就是远程的服务器，帮我们存储代码的"><a href="#就是远程的服务器，帮我们存储代码的" class="headerlink" title="就是远程的服务器，帮我们存储代码的"></a>就是远程的服务器，帮我们存储代码的</h3><ul>
+<li>本地git存储：一旦你电脑丢了或者硬盘损坏，直接扑街</li>
+<li>远程git存储：如果你电脑坏了换了一个新的，只需要从网上重新下载即可</li>
+</ul>
+<h3 id="在github网站建立远程仓库，将远程仓库克隆到本地文件夹"><a href="#在github网站建立远程仓库，将远程仓库克隆到本地文件夹" class="headerlink" title="在github网站建立远程仓库，将远程仓库克隆到本地文件夹"></a><code>在github网站建立远程仓库，将远程仓库克隆到本地文件夹</code></h3><ul>
+<li><p>git clone 仓库地址</p>
+</li>
+<li><p>打开克隆的文件夹，add，commit -m</p>
+</li>
+<li><p>提交推送，git push</p>
+</li>
+</ul>
+<h3 id="拉取别人新增的代码"><a href="#拉取别人新增的代码" class="headerlink" title="拉取别人新增的代码"></a>拉取别人新增的代码</h3><ul>
+<li>git pull </li>
+</ul>
+<p>就可以不用再克隆所有的了，会自动拉取我们没有的代码</p>
+<h2 id="多人开发-权限"><a href="#多人开发-权限" class="headerlink" title="多人开发 权限"></a>多人开发 权限</h2><p>仓库 👉 settings 👉 Manage access</p>
+<h2 id="恢复被删除的库，你本地有备份的情况新建一个相同库名的库"><a href="#恢复被删除的库，你本地有备份的情况新建一个相同库名的库" class="headerlink" title="恢复被删除的库，你本地有备份的情况新建一个相同库名的库"></a>恢复被删除的库，你本地有备份的情况新建一个相同库名的库</h2><ul>
+<li>执行命令：git remote add origin 仓库地址</li>
+<li>执行命令：git push -u origin master</li>
+</ul>
+<div class="hljs"><pre><code class="hljs javascript">git remote add origin**************
+fatal: remote origin already exists.（报错远程起源已经存在。）
 
-<span class="hljs-comment">//2. json对象必须要使用&#123;&#125;包起来</span>
-<span class="hljs-keyword">let</span> jsonObj = <span class="hljs-string">&#x27;&#123;&quot;name&quot;:&quot;张三&quot;,&quot;age&quot;:&quot;18&quot;&#125;&#x27;</span>;</code></pre></div>
+<span class="hljs-number">1</span>、先输入 git remote rm origin
+<span class="hljs-number">2</span>、再输入 git remote add origin**************</code></pre></div>
 
-<h2 id="ajax传递多参数"><a href="#ajax传递多参数" class="headerlink" title="ajax传递多参数"></a>ajax传递多参数</h2><p>用 &amp; 连接参数</p>
-<div class="hljs"><pre><code class="hljs javascript"><span class="hljs-comment">//get</span>
-xhr.open(<span class="hljs-string">&#x27;get&#x27;</span>, <span class="hljs-string">&#x27;http://www.tuling123.com/openapi/api?key1=2162602fd87240a8b7bba7431ffd379b&amp;key12=额&#x27;</span>);
-
-<span class="hljs-comment">//post</span>
-xhr.send(<span class="hljs-string">&#x27;key=2162602fd87240a8b7bba7431ffd379b&amp;info=不需要吗？&#x27;</span>);</code></pre></div>
-
-<h2 id="jQ使用ajax"><a href="#jQ使用ajax" class="headerlink" title="jQ使用ajax"></a>jQ使用ajax</h2><p>$.ajax()</p>
-<div class="hljs"><pre><code class="hljs javascript">$.ajax(&#123;
-    <span class="hljs-comment">//接口地址</span>
-    url: <span class="hljs-string">&#x27;http://www.tuling123.com/openapi/api&#x27;</span>,
-    <span class="hljs-comment">//请求类型，可选get</span>
-    type: <span class="hljs-string">&#x27;post&#x27;</span>,
-    <span class="hljs-comment">//检测json格式,如果不是json则不执行回调函数了</span>
-    dataType:<span class="hljs-string">&#x27;json&#x27;</span>,
-    <span class="hljs-comment">//参数</span>
-    data: &#123;
-        key: <span class="hljs-string">&#x27;2162602fd87240a8b7bba7431ffd379b&#x27;</span>,
-        info: <span class="hljs-string">&#x27;请告诉我，我的女朋友在哪里？&#x27;</span>
-    &#125;,
-    <span class="hljs-comment">//回调函数</span>
-    success: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">backdata</span>) </span>&#123;
-        <span class="hljs-comment">//backdata,存放返回的内容，会自动转换成js对象</span>
-    &#125;
-&#125;);</code></pre></div>
-
+<h2 id="分支"><a href="#分支" class="headerlink" title="分支"></a>分支</h2><ul>
+<li><p>创建分支名</p>
+<ul>
+<li>git branch 分支名</li>
+</ul>
+</li>
+<li><p>查看当前所有分支</p>
+<ul>
+<li>git branch</li>
+</ul>
+</li>
+<li><p>切换到分支</p>
+<ul>
+<li>git checkout 分支名</li>
+</ul>
+</li>
+<li><p>在分支上进行编码</p>
+<ul>
+<li>pull，add，commit，git push –set-upstream origin xxx 等</li>
+</ul>
+</li>
+<li><p>切换到主分支，在master下合并子分支</p>
+<ul>
+<li><p>git merge 分支名</p>
+</li>
+<li><p><code>git branch -d 分支名 (慎用)</code></p>
+</li>
+</ul>
+</li>
+</ul>
 
             </div>
             <hr>
@@ -305,7 +351,7 @@ xhr.send(<span class="hljs-string">&#x27;key=2162602fd87240a8b7bba7431ffd379b&am
                   <div class="post-meta mr-3">
                     <i class="iconfont icon-category"></i>
                     
-                      <a class="hover-with-bg" href="/categories/ajax/">ajax</a>
+                      <a class="hover-with-bg" href="/categories/git/">git</a>
                     
                   </div>
                 
@@ -313,7 +359,7 @@ xhr.send(<span class="hljs-string">&#x27;key=2162602fd87240a8b7bba7431ffd379b&am
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
-                      <a class="hover-with-bg" href="/tags/ajax/">ajax</a>
+                      <a class="hover-with-bg" href="/tags/git/">git</a>
                     
                   </div>
                 
@@ -326,18 +372,12 @@ xhr.send(<span class="hljs-string">&#x27;key=2162602fd87240a8b7bba7431ffd379b&am
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2020/08/24/Git/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Git</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2020/08/20/%E9%81%87%E5%88%B0%E7%9A%84%E5%B0%8F%E9%97%AE%E9%A2%98/">
-                        <span class="hidden-mobile">健忘盲区</span>
+                      <a href="/2020/08/20/AjAx/">
+                        <span class="hidden-mobile">AjAx</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -555,7 +595,7 @@ xhr.send(<span class="hljs-string">&#x27;key=2162602fd87240a8b7bba7431ffd379b&am
     var typed = new Typed('#subtitle', {
       strings: [
         '  ',
-        "AjAx&nbsp;",
+        "Git&nbsp;",
       ],
       cursorChar: "_",
       typeSpeed: 130,
