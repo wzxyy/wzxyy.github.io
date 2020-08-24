@@ -171,7 +171,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      766 字
+      947 字
     </span>
   
 
@@ -252,7 +252,7 @@
 <td align="left">将暂存区中的文件提交到本地仓库中（<code>常用</code>）</td>
 </tr>
 <tr>
-<td>git config –global user.email “<a href="mailto:&#121;&#111;&#117;&#x40;&#101;&#120;&#x61;&#x6d;&#112;&#x6c;&#101;&#46;&#x63;&#x6f;&#109;">&#121;&#111;&#117;&#x40;&#101;&#120;&#x61;&#x6d;&#112;&#x6c;&#101;&#46;&#x63;&#x6f;&#109;</a>“</td>
+<td>git config –global user.email “<a href="mailto:&#121;&#x6f;&#x75;&#x40;&#x65;&#x78;&#97;&#x6d;&#x70;&#x6c;&#x65;&#46;&#99;&#111;&#109;">&#121;&#x6f;&#x75;&#x40;&#x65;&#x78;&#97;&#x6d;&#x70;&#x6c;&#x65;&#46;&#99;&#111;&#109;</a>“</td>
 <td>设置邮箱</td>
 <td align="left">第一次使用git会让你输入邮箱</td>
 </tr>
@@ -302,7 +302,10 @@
 </ul>
 <p>就可以不用再克隆所有的了，会自动拉取我们没有的代码</p>
 <h2 id="多人开发-权限"><a href="#多人开发-权限" class="headerlink" title="多人开发 权限"></a>多人开发 权限</h2><p>仓库 👉 settings 👉 Manage access</p>
-<h2 id="恢复被删除的库，你本地有备份的情况新建一个相同库名的库"><a href="#恢复被删除的库，你本地有备份的情况新建一个相同库名的库" class="headerlink" title="恢复被删除的库，你本地有备份的情况新建一个相同库名的库"></a>恢复被删除的库，你本地有备份的情况新建一个相同库名的库</h2><ul>
+<h2 id="使本地仓库指向新的远程仓库地址"><a href="#使本地仓库指向新的远程仓库地址" class="headerlink" title="使本地仓库指向新的远程仓库地址"></a>使本地仓库指向新的远程仓库地址</h2><blockquote>
+<p>恢复被删除的库也可进行此操作，你本地有备份的情况新建一个相同库名的库</p>
+</blockquote>
+<ul>
 <li>执行命令：git remote add origin 仓库地址</li>
 <li>执行命令：git push -u origin master</li>
 </ul>
@@ -335,13 +338,28 @@ fatal: remote origin already exists.（报错远程起源已经存在。）
 </li>
 <li><p>切换到主分支，在master下合并子分支</p>
 <ul>
-<li><p>git merge 分支名</p>
+<li>git merge 分支名</li>
+</ul>
 </li>
 <li><p><code>git branch -d 分支名 (慎用)</code></p>
 </li>
-</ul>
+<li><p>push</p>
 </li>
 </ul>
+<h2 id="创建组织与团队"><a href="#创建组织与团队" class="headerlink" title="创建组织与团队"></a>创建组织与团队</h2><p>organization（组织） 、repository（仓库）、Team（团队）</p>
+<ul>
+<li>新建仓库下面有一个 <code>New organization</code> 就是新建阻止</li>
+<li>进入组织的主页，有 <code>Teams </code> 选项 可选择或创建团队</li>
+<li>组织页面可创建 repository(仓库)，### 权限管理</li>
+</ul>
+<h3 id="权限分配"><a href="#权限分配" class="headerlink" title="权限分配"></a>权限分配</h3><p>仓库 👉 Setting 👉 Manage access 👉 邀请团队或人员</p>
+<p><code>此时会出现权限分配选项</code></p>
+<ul>
+<li>Admin 管理者权限(只能 read、clone、push、给仓库添加成员 )</li>
+<li>Write 写权限(只能 read、clone、push)</li>
+<li>Read 读权限(只能 read、clone) </li>
+</ul>
+<p><code>另外任意一个Team可以供多个组织使用，到这里权限添加已经全部完成了。</code></p>
 
             </div>
             <hr>
