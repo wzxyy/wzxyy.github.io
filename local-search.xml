@@ -29,6 +29,31 @@
   
   
   <entry>
+    <title>ajax-03</title>
+    <link href="/2020/08/22/ajax-03/"/>
+    <url>/2020/08/22/ajax-03/</url>
+    
+    <content type="html"><![CDATA[<h2 id="onreadystatechange事件"><a href="#onreadystatechange事件" class="headerlink" title="onreadystatechange事件"></a>onreadystatechange事件</h2><pre><code class="hljs javascript">&lt;script&gt;    <span class="hljs-comment">/* onreadystatechange事件</span><span class="hljs-comment"></span><span class="hljs-comment">    onreadystatechange 与 onload异同点</span><span class="hljs-comment">        相同点：作用一致。 都是服务器响应事件</span><span class="hljs-comment">        不同点：浏览器兼容性不同</span><span class="hljs-comment">            onload：最新出的。 旧版本浏览器不支持的。</span><span class="hljs-comment">            onreadystatechange ： 浏览器兼容性更好</span><span class="hljs-comment">                a.会调用多次</span><span class="hljs-comment">                b.需要判断 xhr.readyState==4, 才能获取服务器响应数据</span><span class="hljs-comment">    */</span>    <span class="hljs-comment">//(1).实例化ajax对象</span>    <span class="hljs-keyword">let</span> xhr = <span class="hljs-keyword">new</span> XMLHttpRequest();    <span class="hljs-comment">//(2).设置请求方法和地址</span>    xhr.open(<span class="hljs-string">&#x27;post&#x27;</span>, <span class="hljs-string">&#x27;http://www.tuling123.com/openapi/api&#x27;</span>);    <span class="hljs-comment">//(3).设置请求头（post请求才需要设置）</span>    xhr.setRequestHeader(<span class="hljs-string">&#x27;Content-type&#x27;</span>, <span class="hljs-string">&#x27;application/x-www-form-urlencoded&#x27;</span>);    <span class="hljs-comment">//(4).发送请求 ： 参数格式  &#x27;key=value&#x27; </span>    xhr.send(<span class="hljs-string">&#x27;key=8b2116b8ddb94b6681fbbef3ee9bbbce&amp;info=你吃饭了?&#x27;</span>);    <span class="hljs-comment">//(5).注册回调函数</span>    xhr.onreadystatechange = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>&#123;        <span class="hljs-keyword">if</span>( xhr.readyState == <span class="hljs-number">4</span>)&#123;            <span class="hljs-built_in">console</span>.log(xhr.responseText);        &#125;    &#125;;  &lt;/script&gt;</code></pre><h2 id="http原理了解"><a href="#http原理了解" class="headerlink" title="http原理了解"></a>http原理了解</h2><ol><li><p>http网络协议原理 : 约定 客户端(浏览器) 与 服务端(后台) 数据交换格式。</p><ul><li><p>客户端数据必须是  请求报文</p><ul><li><p>请求行 ： 请求方法和地址</p></li><li><p>请求头 ： 数据格式（浏览器告诉服务器，我发你的是什么数据）</p></li><li><p>请求体 ： 请求参数</p></li></ul></li><li><p>服务端数据必须是  响应报文</p><ul><li><p>响应行 ： 请求状态码</p><ul><li>200 ： 成功 </li><li>400/3/4 ： 失败 (浏览器的锅)</li><li>500 ： 失败 （服务器内部错误）</li></ul></li><li><p>响应头 ： 数据格式（服务器告诉浏览器，我给你的数据格式）</p></li><li><p>响应体 ： 服务器响应数据</p></li></ul></li></ul></li></ol><h2 id="ajax原理-设置请求报文三个部分"><a href="#ajax原理-设置请求报文三个部分" class="headerlink" title="ajax原理 : 设置请求报文三个部分"></a>ajax原理 : 设置请求报文三个部分</h2><pre><code class="hljs javascript"><span class="hljs-comment">//(1).实例化ajax对象</span><span class="hljs-keyword">let</span> xhr = <span class="hljs-keyword">new</span> XMLHttpRequest();<span class="hljs-comment">//(2).设置请求方法和地址</span>xhr.open(<span class="hljs-string">&#x27;post&#x27;</span>, <span class="hljs-string">&#x27;http://www.tuling123.com/openapi/api&#x27;</span>);<span class="hljs-comment">//(3).设置请求头（post请求才需要设置）</span>xhr.setRequestHeader(<span class="hljs-string">&#x27;Content-type&#x27;</span>, <span class="hljs-string">&#x27;application/x-www-form-urlencoded&#x27;</span>);<span class="hljs-comment">//(4).发送请求 ： 参数格式  &#x27;key=value&#x27; </span>xhr.send(<span class="hljs-string">&#x27;key=8b2116b8ddb94b6681fbbef3ee9bbbce&amp;info=你吃饭了?&#x27;</span>);<span class="hljs-comment">//(5).注册回调函数</span>xhr.onload = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>&#123;    <span class="hljs-built_in">console</span>.log(xhr.responseText);&#125;;</code></pre><h2 id="File"><a href="#File" class="headerlink" title="File"></a>File</h2><pre><code class="hljs javascript"><span class="hljs-comment">/* 文件预览 */</span>   <span class="hljs-comment">//(1)给file表单注册onchange事件</span>   $(<span class="hljs-string">&#x27;#heroIcon&#x27;</span>).change(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>&#123;     <span class="hljs-comment">//(2)获取选择的文件</span>     <span class="hljs-keyword">let</span> file = <span class="hljs-built_in">this</span>.files[<span class="hljs-number">0</span>];     <span class="hljs-comment">//(3)将文件二进制转成url</span>     <span class="hljs-keyword">let</span> url = URL.createObjectURL(file)     <span class="hljs-comment">//(4)img标签的src来显示这个url</span>     $(<span class="hljs-string">&#x27;.preview&#x27;</span>).attr(<span class="hljs-string">&#x27;src&#x27;</span>, url);   &#125;);  <span class="hljs-comment">/* 文件上传 */</span>   <span class="hljs-comment">//(1)给按钮注册点击事件</span>   $(<span class="hljs-string">&#x27;.btn-save&#x27;</span>).click(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>)</span>&#123;     <span class="hljs-comment">//(2)阻止表单默认跳转</span>     e.preventDefault();     <span class="hljs-comment">//(3)创建formdata对象：处理文件参数</span>     <span class="hljs-keyword">let</span> fd = <span class="hljs-keyword">new</span> FormData($(<span class="hljs-string">&#x27;form&#x27;</span>)[<span class="hljs-number">0</span>]);     <span class="hljs-comment">/* 细节: 如果接口文档参数 &gt; 表单参数 . 可以使用append()手动追加参数 */</span>     fd.append(<span class="hljs-string">&#x27;id&#x27;</span>, id);</code></pre>]]></content>
+    
+    
+    <categories>
+      
+      <category>ajax</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>ajax</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>AjAx</title>
     <link href="/2020/08/20/AjAx/"/>
     <url>/2020/08/20/AjAx/</url>
