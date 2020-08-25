@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>大事件</title>
+    <link href="/2020/08/25/%E5%A4%A7%E4%BA%8B%E4%BB%B6/"/>
+    <url>/2020/08/25/%E5%A4%A7%E4%BA%8B%E4%BB%B6/</url>
+    
+    <content type="html"><![CDATA[<p>基于JQ的新闻类网页练习项目</p><a id="more"></a><h2 id="admin技术要点"><a href="#admin技术要点" class="headerlink" title="admin技术要点"></a>admin技术要点</h2><h3 id="登录模块"><a href="#登录模块" class="headerlink" title="登录模块"></a>登录模块</h3><ol><li>本地存储 token，实现跨页面无状态登录技术</li></ol><pre><code class="hljs javascript"><span class="hljs-built_in">localStorage</span>.setItem(“命名”，数据 )</code></pre><h3 id="index页面"><a href="#index页面" class="headerlink" title="index页面"></a>index页面</h3><ol><li>通过在JQ的源码的最底部添加全局的 $.ajaxSetup，修改默认配值。</li><li>接口文档中要求，在请求头中使用 <code>Authorization</code> 字段提供 <code>token</code> 令牌</li></ol><blockquote><p>jQuery ajaxSetup() : <code>为将来的 AJAX 请求设置默认值</code>。</p></blockquote><pre><code class="hljs javascript"><span class="hljs-comment">//为将来的 AJAX 请求设置默认值。</span>$.ajaxSetup(&#123;    <span class="hljs-comment">//beforeSend(xhr)    发送请求前运行的函数。</span>    <span class="hljs-comment">//相当于原生的 xhr.setRequestHeader(&#x27;xx&#x27;, xxx);</span>    beforeSend: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">xhr</span>) </span>&#123;        xhr.setRequestHeader(<span class="hljs-string">&#x27;Authorization&#x27;</span>,<span class="hljs-built_in">localStorage</span>.getItem(<span class="hljs-string">&#x27;token&#x27;</span>));    &#125;,    <span class="hljs-comment">//error(xhr,status,error)    如果请求失败要运行的函数。</span>    error: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">xhr, status, error</span>) </span>&#123;        <span class="hljs-built_in">console</span>.log(xhr.responseText);        <span class="hljs-built_in">console</span>.log(status);<span class="hljs-comment">//错误状态</span>        <span class="hljs-built_in">console</span>.log(error);<span class="hljs-comment">//错误信息</span>        <span class="hljs-keyword">if</span>(error == <span class="hljs-string">&#x27;Forbidden&#x27;</span>)&#123;<span class="hljs-comment">//用户未登录</span>            alert(<span class="hljs-string">&#x27;请先登录！&#x27;</span>)            <span class="hljs-built_in">window</span>.location = <span class="hljs-string">&#x27;./login.html&#x27;</span>;<span class="hljs-comment">//跳转登陆页面</span>        &#125;;     &#125;&#125;);</code></pre>]]></content>
+    
+    
+    <categories>
+      
+      <category>Jquery</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>JQ项目</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Git</title>
     <link href="/2020/08/24/Git/"/>
     <url>/2020/08/24/Git/</url>
