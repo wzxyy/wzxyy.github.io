@@ -378,22 +378,51 @@ Vue.use(Vant)</code></pre></div>
 </blockquote>
 <p>步骤：</p>
 <ul>
-<li><p>1.0 下载 postcss-pxtorem</p>
-<div class="hljs"><pre><code class="hljs bash">npm install postcss-pxtorem --save-dev</code></pre></div>
-</li>
-<li><p>2.0 使用插件</p>
-<p>&lt;!–hexoPostRenderEscape:<div class="hljs"><pre><code class="hljs javascript"><span class="hljs-comment">// 项目根目录中创建了<code>vue.config.js</code></span><br><span class="hljs-comment">// 导包</span><br><span class="hljs-keyword">const</span> autoprefixer = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;autoprefixer&#x27;</span>)<br><span class="hljs-comment">// 导包</span><br><span class="hljs-keyword">const</span> pxtorem = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;postcss-pxtorem&#x27;</span>)</p>
-</li>
+<li>1.0 下载 postcss-pxtorem</li>
 </ul>
-<p><span class="hljs-comment">// 暴露出去</span><br><span class="hljs-built_in">module</span>.exports = &#123;<br>  <span class="hljs-comment">// css属性如何处理</span><br>  css: &#123;<br>    <span class="hljs-comment">// 处理的选项</span><br>    loaderOptions: &#123;<br>      postcss: &#123;<br>        plugins: [<br>          autoprefixer(),<br>          <span class="hljs-comment">// 使用 pxtorem库进行转换</span><br>          pxtorem(&#123;<br>            rootValue: <span class="hljs-number">37.5</span>,<br>            propList: [<span class="hljs-string">&#x27;*&#x27;</span>]<br>          &#125;)<br>        ]<br>      &#125;<br>    &#125;<br>  &#125;<br>&#125;</code></pre></div>:hexoPostRenderEscape–&gt;</p>
-<h3 id="3-3-全局的less处理"><a href="#3-3-全局的less处理" class="headerlink" title="3.3 全局的less处理"></a>3.3 全局的less处理</h3><blockquote>
+<div class="hljs"><pre><code class="hljs javascript">npm install postcss-pxtorem --save-dev</code></pre></div>
+
+
+
+<ul>
+<li>2.0 使用插件</li>
+</ul>
+<div class="hljs"><pre><code class="hljs javascript"><span class="hljs-comment">// 项目根目录中创建了`vue.config.js`</span>
+<span class="hljs-comment">// 导包</span>
+<span class="hljs-keyword">const</span> autoprefixer = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;autoprefixer&#x27;</span>)
+<span class="hljs-comment">// 导包</span>
+<span class="hljs-keyword">const</span> pxtorem = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;postcss-pxtorem&#x27;</span>)
+
+<span class="hljs-comment">// 暴露出去</span>
+<span class="hljs-built_in">module</span>.exports = &#123;
+  <span class="hljs-comment">// css属性如何处理</span>
+  css: &#123;
+    <span class="hljs-comment">// 处理的选项</span>
+    loaderOptions: &#123;
+      postcss: &#123;
+        plugins: [
+          autoprefixer(),
+          <span class="hljs-comment">// 使用 pxtorem库进行转换</span>
+          pxtorem(&#123;
+            rootValue: <span class="hljs-number">37.5</span>,
+            propList: [<span class="hljs-string">&#x27;*&#x27;</span>]
+          &#125;)
+        ]
+      &#125;
+    &#125;
+  &#125;
+&#125;</code></pre></div>
+
+
+
+<h3 id="3-3全局的less处理"><a href="#3-3全局的less处理" class="headerlink" title="3.3全局的less处理"></a>3.3全局的less处理</h3><blockquote>
 <p>有了设计规范之后，我们就可以根据规范中的内容抽取<code>less</code>全局变量啦,把颜色抽取一波,同时配合自动化导入让代码中可以使用</p>
 </blockquote>
 <p><a target="_blank" rel="noopener" href="https://cli.vuejs.org/zh/guide/css.html#%E9%A2%84%E5%A4%84%E7%90%86%E5%99%A8">预处理器</a></p>
 <p><a target="_blank" rel="noopener" href="https://cli.vuejs.org/zh/guide/css.html#%E8%87%AA%E5%8A%A8%E5%8C%96%E5%AF%BC%E5%85%A5">自动化导入</a></p>
 <p><a target="_blank" rel="noopener" href="https://www.npmjs.com/package/vue-cli-plugin-style-resources-loader">style-resources-loader</a></p>
 <h4 id="3-3-1-定义全局文件"><a href="#3-3-1-定义全局文件" class="headerlink" title="3.3.1 定义全局文件"></a>3.3.1 定义全局文件</h4><p>在    src    的    style    目录下创建    xxx.less</p>
-<h4 id="3-3-2-装包"><a href="#3-3-2-装包" class="headerlink" title="3.3.2 装包"></a>3.3.2 装包</h4><div class="hljs"><pre><code class="hljs cmd">vue add style-resources-loader</code></pre></div>
+<h4 id="3-3-2-装包"><a href="#3-3-2-装包" class="headerlink" title="3.3.2 装包"></a>3.3.2 装包</h4><div class="hljs"><pre><code class="hljs javascript">vue add style-resources-loader</code></pre></div>
 
 <ul>
 <li>如果报错 输入命令   set-ExecutionPolicy RemoteSigned </li>
