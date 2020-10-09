@@ -208,7 +208,7 @@
               <p>Vue2.0 + vant-ui 的移动端练手项目</p>
 <a id="more"></a>
 
-<h2 id="创建项目"><a href="#创建项目" class="headerlink" title="创建项目"></a>创建项目</h2><h3 id="1-1-vue-create"><a href="#1-1-vue-create" class="headerlink" title="1.1 vue create"></a>1.1 vue create</h3><div class="hljs"><pre><code class="hljs cmd">vue create test</code></pre></div>
+<h2 id="1-创建项目"><a href="#1-创建项目" class="headerlink" title="1.创建项目"></a>1.创建项目</h2><h3 id="1-1-vue-create"><a href="#1-1-vue-create" class="headerlink" title="1.1 vue create"></a>1.1 vue create</h3><div class="hljs"><pre><code class="hljs cmd">vue create test</code></pre></div>
 
 <h3 id="1-2-自定义配置"><a href="#1-2-自定义配置" class="headerlink" title="1.2 自定义配置"></a>1.2 自定义配置</h3><h4 id="1-2-1-选择插件"><a href="#1-2-1-选择插件" class="headerlink" title="1.2.1 选择插件"></a>1.2.1 选择插件</h4><div class="hljs"><pre><code class="hljs ada">&gt; Manually <span class="hljs-keyword">select</span> features</code></pre></div>
 
@@ -382,7 +382,7 @@ Vue.use(Vant)</code></pre></div>
 <div class="hljs"><pre><code class="hljs bash">npm install postcss-pxtorem --save-dev</code></pre></div>
 </li>
 <li><p>2.0 使用插件</p>
-<p>&lt;!–hexoPostRenderEscape:<div class="hljs"><pre><code class="hljs js"><span class="hljs-comment">// 项目根目录中创建了<code>vue.config.js</code></span><br><span class="hljs-comment">// 导包</span><br><span class="hljs-keyword">const</span> autoprefixer = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;autoprefixer&#x27;</span>)<br><span class="hljs-comment">// 导包</span><br><span class="hljs-keyword">const</span> pxtorem = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;postcss-pxtorem&#x27;</span>)</p>
+<p>&lt;!–hexoPostRenderEscape:<div class="hljs"><pre><code class="hljs javascript"><span class="hljs-comment">// 项目根目录中创建了<code>vue.config.js</code></span><br><span class="hljs-comment">// 导包</span><br><span class="hljs-keyword">const</span> autoprefixer = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;autoprefixer&#x27;</span>)<br><span class="hljs-comment">// 导包</span><br><span class="hljs-keyword">const</span> pxtorem = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;postcss-pxtorem&#x27;</span>)</p>
 </li>
 </ul>
 <p><span class="hljs-comment">// 暴露出去</span><br><span class="hljs-built_in">module</span>.exports = &#123;<br>  <span class="hljs-comment">// css属性如何处理</span><br>  css: &#123;<br>    <span class="hljs-comment">// 处理的选项</span><br>    loaderOptions: &#123;<br>      postcss: &#123;<br>        plugins: [<br>          autoprefixer(),<br>          <span class="hljs-comment">// 使用 pxtorem库进行转换</span><br>          pxtorem(&#123;<br>            rootValue: <span class="hljs-number">37.5</span>,<br>            propList: [<span class="hljs-string">&#x27;*&#x27;</span>]<br>          &#125;)<br>        ]<br>      &#125;<br>    &#125;<br>  &#125;<br>&#125;</code></pre></div>:hexoPostRenderEscape–&gt;</p>
