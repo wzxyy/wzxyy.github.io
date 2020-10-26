@@ -1,211 +1,160 @@
-
-
 <!DOCTYPE html>
-<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+<html lang="zh-CN">
+    <head>
+    <meta charset="utf-8">
 
-
-
-<head>
-  <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="https://cdn.jsdelivr.net/gh/wzxyy/cdn@1.1/favicon.ico">
-  <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/wzxyy/cdn@1.1/favicon.ico">
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  
-  <meta name="theme-color" content="#2f4154">
-  <meta name="description" content="">
-  <meta name="author" content="wzx">
-  <meta name="keywords" content="">
-  <title>Vant | 夜雨声繁</title>
-
-  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
-
-
-  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
-  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
-
-  
     
-    <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/vs2015.min.css" />
-  
 
-  
+    <!-- 渲染优化 -->
+    <meta name="renderer" content="webkit">
+    <meta name="force-rendering" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="HandheldFriendly" content="True" >
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
+    <!--icon-->
 
-<!-- 主题依赖的图标库，不要自行修改 -->
-
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_6peoq002giu.css">
-
-
-
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_pjno9b9zyxs.css">
-
-
-<link  rel="stylesheet" href="/css/main.css" />
-
-<!-- 自定义样式保持在最底部 -->
+    <link rel="shortcut icon" type='image/x-icon' href="https://cdn.jsdelivr.net/gh/wzxyy/cdn/tian.jpg">
 
 
-  <script  src="/js/utils.js" ></script>
-  <script  src="/js/color-schema.js" ></script>
+    <!-- meta -->
+
+
+<title>Vant | 夜雨声繁</title>
+
+
+    <meta name="keywords" content="Vant-ui">
+
+
+
+
+    <!-- OpenGraph -->
+ 
+    <meta name="description" content="官网传送门 Vant：轻量、可靠的移动端 Vue 组件库">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Vant">
+<meta property="og:url" content="http://yoursite.com/2020/08/07/Vant-ui/index.html">
+<meta property="og:site_name" content="夜雨声繁">
+<meta property="og:description" content="官网传送门 Vant：轻量、可靠的移动端 Vue 组件库">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-08-07T07:00:00.000Z">
+<meta property="article:modified_time" content="2020-10-26T13:17:24.964Z">
+<meta property="article:author" content="wzx">
+<meta property="article:tag" content="Vant-ui">
+<meta name="twitter:card" content="summary_large_image">
+
+
+    
+<link rel="stylesheet" href="/css/style/main.css">
+ 
+
+
+
+    
+    
+        <link rel="stylesheet" id="hl-default-theme" href="/css/highlight/Atom%20One%20Dark.css" media="none" onload="if(getComputedStyle(document.documentElement).getPropertyValue('--color-mode').indexOf('dark')===-1)this.media='all'">
+        
+    
+
+    
+    
+
+     
+
+    <!-- custom head -->
+
 <meta name="generator" content="Hexo 5.0.2"></head>
 
-
-<body>
-  <header style="height: 70vh;">
-    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
-  <div class="container">
-    <a class="navbar-brand"
-       href="/">&nbsp;<strong>夜雨声繁</strong>&nbsp;</a>
-
-    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
-            data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <div class="animated-icon"><span></span><span></span><span></span></div>
-    </button>
-
-    <!-- Collapsible content -->
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto text-center">
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/">
-                <i class="iconfont icon-home-fill"></i>
-                首页
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/archives/">
-                <i class="iconfont icon-archive-fill"></i>
-                归档
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/categories/">
-                <i class="iconfont icon-category-fill"></i>
-                分类
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/tags/">
-                <i class="iconfont icon-tags-fill"></i>
-                标签
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/about/">
-                <i class="iconfont icon-user-fill"></i>
-                关于
-              </a>
-            </li>
-          
-        
-        
-          <li class="nav-item" id="search-btn">
-            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
-                class="iconfont icon-search"></i>&nbsp;</a>
-          </li>
-        
-        
-          <li class="nav-item" id="color-toggle-btn">
-            <a class="nav-link" href="javascript:">&nbsp;<i
-                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
-          </li>
-        
-      </ul>
+    <body>
+        <div id="app">
+            <header class="header">
+    <div class="header__left">
+        <a href="/" class="button">
+            <span class="logo__text">Home</span>
+        </a>
     </div>
-  </div>
-</nav>
+    <div class="header__right">
+        
+            <div class="navbar__menus">
+                
+                    <a href="/archives/" class="navbar-menu button">归档</a>
+                
+            </div>
+        
+        
+        
 
-    <div class="banner intro-2" id="background" parallax=true
-         style="background: url('https://cdn.jsdelivr.net/gh/wzxyy/cdn/guilin.jpg') no-repeat center center;
-           background-size: cover;">
-      <div class="full-bg-img">
-        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
-          <div class="container page-header text-center fade-in-up">
-            <span class="h2" id="subtitle">
-              
-            </span>
+        
+        
 
-            
-              
-  <div class="mt-3 post-meta">
-    <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-    <time datetime="2020-08-07 15:00" pubdate>
-      2020年8月7日 下午
-    </time>
-  </div>
+         
+    <a href="#" class="button" id="b2t" aria-label="回到顶部" title="回到顶部">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="32" height="32">
+            <path d="M233.376 722.752L278.624 768 512 534.624 745.376 768l45.248-45.248L512 444.128zM192 352h640V288H192z" fill="currentColor"></path>
+        </svg>
+    </a>
 
 
-<div class="mt-1">
-  
+        
+            <a class="dropdown-icon button" id="btn-dropdown"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width='24' height='24' fill="none" stroke="currentColor" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round"><path fill="currentColor" d="M3.314,4.8h13.372c0.41,0,0.743-0.333,0.743-0.743c0-0.41-0.333-0.743-0.743-0.743H3.314c-0.41,0-0.743,0.333-0.743,0.743C2.571,4.467,2.904,4.8,3.314,4.8z M16.686,15.2H3.314c-0.41,0-0.743,0.333-0.743,0.743s0.333,0.743,0.743,0.743h13.372c0.41,0,0.743-0.333,0.743-0.743S17.096,15.2,16.686,15.2z M16.686,9.257H3.314c-0.41,0-0.743,0.333-0.743,0.743s0.333,0.743,0.743,0.743h13.372c0.41,0,0.743-0.333,0.743-0.743S17.096,9.257,16.686,9.257z"></path></svg></a>
+            <div class="dropdown-menus" id="dropdown-menus">
+                
+                    <a href="/archives/" class="dropdown-menu button">归档</a>
+                
+            </div>
+        
+    </div>
+</header>
+
+
+            <main class="main">
     
-    <span class="post-meta mr-2">
-      <i class="iconfont icon-chart"></i>
-      969 字
-    </span>
-  
 
-  
+<div class="post-title">
+    <h1 class="post-title__text">
+        Vant
+    </h1>
+    <div class="post-title__meta">
+        <a href="/archives/2020/08/" class="post-meta__date button">
+    2020-08-07
+</a>
+        
+    <span class="separate-dot"></span><a href="/categories/Vue%E7%BB%84%E4%BB%B6%E5%BA%93/" class="button">Vue组件库</a>
 
-  
-  
+ 
+        
+    
+    
+
+
+ 
+
+ 
+    </div>
 </div>
 
-            
-          </div>
 
-          
+    <aside class="post-side">
+        <div class="post-side__toc">
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B5%B7%E6%AD%A5"><span class="toc-text">起步</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E6%8C%89%E9%92%AE-van-button"><span class="toc-text">1.按钮 van-button</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%8D%95%E5%85%83%E6%A0%BC-van-cell"><span class="toc-text">2.单元格 van-cell</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E5%AF%BC%E8%88%AA%E6%A0%8F-van-nav-bar"><span class="toc-text">3.导航栏 van-nav-bar</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E8%BE%93%E5%85%A5%E6%A1%86-van-field"><span class="toc-text">4.输入框 van-field</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E8%A1%A8%E5%8D%95-van-form"><span class="toc-text">5.表单 van-form</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-%E8%BD%BB%E6%8F%90%E7%A4%BA-van-toast"><span class="toc-text">6.轻提示 van-toast</span></a></li></ol>
         </div>
-      </div>
+    </aside>
+    <a class="btn-toc button" id="btn-toc">
+        <svg viewBox="0 0 1024 1024" width="32" height="32" xmlns="http://www.w3.org/2000/svg">
+            <path d="M128 256h64V192H128zM320 256h576V192H320zM128 544h64v-64H128zM320 544h576v-64H320zM128 832h64v-64H128zM320 832h576v-64H320z" fill="currentColor"></path>
+        </svg>
+    </a>
+    <div class="toc-menus" id="toc-menus">
+        <div class="toc-title">文章目录</div>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B5%B7%E6%AD%A5"><span class="toc-text">起步</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E6%8C%89%E9%92%AE-van-button"><span class="toc-text">1.按钮 van-button</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%8D%95%E5%85%83%E6%A0%BC-van-cell"><span class="toc-text">2.单元格 van-cell</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E5%AF%BC%E8%88%AA%E6%A0%8F-van-nav-bar"><span class="toc-text">3.导航栏 van-nav-bar</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E8%BE%93%E5%85%A5%E6%A1%86-van-field"><span class="toc-text">4.输入框 van-field</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E8%A1%A8%E5%8D%95-van-form"><span class="toc-text">5.表单 van-form</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-%E8%BD%BB%E6%8F%90%E7%A4%BA-van-toast"><span class="toc-text">6.轻提示 van-toast</span></a></li></ol>
     </div>
-  </header>
 
-  <main>
-    
-      
 
-<div class="container-fluid">
-  <div class="row">
-    <div class="d-none d-lg-block col-lg-2"></div>
-    <div class="col-lg-8 nopadding-md">
-      <div class="container nopadding-md" id="board-ctn">
-        <div class="py-5" id="board">
-          <article class="post-content mx-auto" id="post">
-            <!-- SEO header -->
-            <h1 style="display: none">Vant</h1>
-            
-            <div class="markdown-body" id="post-body">
-              <p><a target="_blank" rel="noopener" href="https://youzan.github.io/vant/#/zh-CN/">官网传送门</a></p>
+<article class="post content-card">
+    <div class="post__header"></div>
+    <div class="post__content">
+        <p><a target="_blank" rel="noopener" href="https://youzan.github.io/vant/#/zh-CN/">官网传送门</a></p>
 <p>Vant：轻量、可靠的移动端 Vue 组件库 </p>
 <a id="more"></a>
 
@@ -213,10 +162,7 @@
 <li><p>vant ：<code>npm i vant -S </code></p>
 </li>
 <li><p>导入组件（导入所有组件的方式）</p>
-<div class="hljs"><pre><code class="hljs js"><span class="hljs-keyword">import</span> Vant <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;vant&#x27;</span>
-<span class="hljs-keyword">import</span> <span class="hljs-string">&#x27;vant/lib/index.css&#x27;</span>
-<span class="hljs-comment">// 使用 vant</span>
-Vue.use(Vant)</code></pre></div>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Vant <span class="keyword">from</span> <span class="string">&#x27;vant&#x27;</span></span><br><span class="line"><span class="keyword">import</span> <span class="string">&#x27;vant/lib/index.css&#x27;</span></span><br><span class="line"><span class="comment">// 使用 vant</span></span><br><span class="line">Vue.use(Vant)</span><br></pre></td></tr></table></figure>
 
 
 
@@ -226,11 +172,7 @@ Vue.use(Vant)</code></pre></div>
 <h2 id="1-按钮-van-button"><a href="#1-按钮-van-button" class="headerlink" title="1.按钮 van-button"></a>1.按钮 van-button</h2><p>按钮支持 <code>default</code>、<code>primary</code>、<code>info</code>、<code>warning</code>、<code>danger</code> 五种类型，</p>
 <p>默认为 <code>default</code>。</p>
 <p>[其他属性][<a target="_blank" rel="noopener" href="https://youzan.github.io/vant/#/zh-CN/button]">https://youzan.github.io/vant/#/zh-CN/button]</a></p>
-<div class="hljs"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">van-button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;primary&quot;</span>&gt;</span>主要按钮<span class="hljs-tag">&lt;/<span class="hljs-name">van-button</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">van-button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;info&quot;</span>&gt;</span>信息按钮<span class="hljs-tag">&lt;/<span class="hljs-name">van-button</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">van-button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;default&quot;</span>&gt;</span>默认按钮<span class="hljs-tag">&lt;/<span class="hljs-name">van-button</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">van-button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;warning&quot;</span>&gt;</span>警告按钮<span class="hljs-tag">&lt;/<span class="hljs-name">van-button</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">van-button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;danger&quot;</span>&gt;</span>危险按钮<span class="hljs-tag">&lt;/<span class="hljs-name">van-button</span>&gt;</span></code></pre></div>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">van-button</span> <span class="attr">type</span>=<span class="string">&quot;primary&quot;</span>&gt;</span>主要按钮<span class="tag">&lt;/<span class="name">van-button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">van-button</span> <span class="attr">type</span>=<span class="string">&quot;info&quot;</span>&gt;</span>信息按钮<span class="tag">&lt;/<span class="name">van-button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">van-button</span> <span class="attr">type</span>=<span class="string">&quot;default&quot;</span>&gt;</span>默认按钮<span class="tag">&lt;/<span class="name">van-button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">van-button</span> <span class="attr">type</span>=<span class="string">&quot;warning&quot;</span>&gt;</span>警告按钮<span class="tag">&lt;/<span class="name">van-button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">van-button</span> <span class="attr">type</span>=<span class="string">&quot;danger&quot;</span>&gt;</span>危险按钮<span class="tag">&lt;/<span class="name">van-button</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 
 
@@ -244,22 +186,7 @@ Vue.use(Vant)</code></pre></div>
 </ul>
 </li>
 </ul>
-<div class="hljs"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">van-cell-group</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">van-cell</span> <span class="hljs-attr">title</span>=<span class="hljs-string">&quot;单元格&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;内容&quot;</span>&gt;</span>
-
-    <span class="hljs-tag">&lt;<span class="hljs-name">template</span> #<span class="hljs-attr">title</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
-        插槽测试1
-      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
-
-    <span class="hljs-tag">&lt;<span class="hljs-name">template</span> #<span class="hljs-attr">default</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
-        插槽测试2
-      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
-
-<span class="hljs-tag">&lt;/<span class="hljs-name">van-cell-group</span>&gt;</span></code></pre></div>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">van-cell-group</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">van-cell</span> <span class="attr">title</span>=<span class="string">&quot;单元格&quot;</span> <span class="attr">value</span>=<span class="string">&quot;内容&quot;</span>&gt;</span></span><br><span class="line">      </span><br><span class="line">    <span class="tag">&lt;<span class="name">template</span> #<span class="attr">title</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">        插槽测试1</span><br><span class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line">      </span><br><span class="line">    <span class="tag">&lt;<span class="name">template</span> #<span class="attr">default</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">        插槽测试2</span><br><span class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line">      </span><br><span class="line"><span class="tag">&lt;/<span class="name">van-cell-group</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <ul>
 <li>注意点：插槽是必须要别人提供的才能用的哦</li>
@@ -289,19 +216,7 @@ Vue.use(Vant)</code></pre></div>
 </ul>
 </li>
 </ul>
-<div class="hljs"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">van-nav-bar</span> <span class="hljs-attr">title</span>=<span class="hljs-string">&quot;标题&quot;</span> <span class="hljs-attr">right-text</span>=<span class="hljs-string">&quot;按钮&quot;</span>  @<span class="hljs-attr">click-left</span>=<span class="hljs-string">&quot;onClickLeft&quot;</span>&gt;</span>
-
-  <span class="hljs-tag">&lt;<span class="hljs-name">template</span> #<span class="hljs-attr">left</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;iconfont&quot;</span>&gt;</span>
-      <span class="hljs-symbol">&amp;#xe637;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
-
-<span class="hljs-tag">&lt;/<span class="hljs-name">van-nav-bar</span>&gt;</span>
-
-methods:&#123;
-    onClickLeft()&#123;window.console.log(&#x27;xxx&#x27;)&#125;
-&#125;</code></pre></div>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">van-nav-bar</span> <span class="attr">title</span>=<span class="string">&quot;标题&quot;</span> <span class="attr">right-text</span>=<span class="string">&quot;按钮&quot;</span>  @<span class="attr">click-left</span>=<span class="string">&quot;onClickLeft&quot;</span>&gt;</span></span><br><span class="line">    </span><br><span class="line">  <span class="tag">&lt;<span class="name">template</span> #<span class="attr">left</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;iconfont&quot;</span>&gt;</span></span><br><span class="line">      <span class="symbol">&amp;#xe637;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line">    </span><br><span class="line"><span class="tag">&lt;/<span class="name">van-nav-bar</span>&gt;</span></span><br><span class="line"></span><br><span class="line">methods:&#123;</span><br><span class="line">    onClickLeft()&#123;window.console.log(&#x27;xxx&#x27;)&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
 
@@ -322,21 +237,7 @@ methods:&#123;
 </ul>
 </li>
 </ul>
-<div class="hljs"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">van-field</span> <span class="hljs-attr">v-model</span>=<span class="hljs-string">&quot;number&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;number&quot;</span> <span class="hljs-attr">label</span>=<span class="hljs-string">&quot;数字&quot;</span>&gt;</span>
-
-  <span class="hljs-tag">&lt;<span class="hljs-name">template</span> #<span class="hljs-attr">left-icon</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;iconfont&quot;</span>&gt;</span>
-      <span class="hljs-symbol">&amp;#xe60b;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
-
-<span class="hljs-tag">&lt;/<span class="hljs-name">van-field</span>&gt;</span>
-
-data () &#123;
-    return &#123;
-      number: &#x27;&#x27;
-    &#125;
-  &#125;,</code></pre></div>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">van-field</span> <span class="attr">v-model</span>=<span class="string">&quot;number&quot;</span> <span class="attr">type</span>=<span class="string">&quot;number&quot;</span> <span class="attr">label</span>=<span class="string">&quot;数字&quot;</span>&gt;</span></span><br><span class="line">    </span><br><span class="line">  <span class="tag">&lt;<span class="name">template</span> #<span class="attr">left-icon</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;iconfont&quot;</span>&gt;</span></span><br><span class="line">      <span class="symbol">&amp;#xe60b;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line">    </span><br><span class="line"><span class="tag">&lt;/<span class="name">van-field</span>&gt;</span></span><br><span class="line"></span><br><span class="line">data () &#123;</span><br><span class="line">    return &#123;</span><br><span class="line">      number: &#x27;&#x27;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br></pre></td></tr></table></figure>
 
 
 
@@ -376,33 +277,9 @@ data () &#123;
 </ul>
 </li>
 </ul>
-<div class="hljs"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">van-form</span> <span class="hljs-attr">ref</span>=<span class="hljs-string">&quot;form&quot;</span>&gt;</span> 
-  <span class="hljs-tag">&lt;<span class="hljs-name">van-field</span></span>
-<span class="hljs-tag">    <span class="hljs-attr">label</span>=<span class="hljs-string">&quot;用户名&quot;</span></span>
-<span class="hljs-tag">    <span class="hljs-attr">v-model</span>=<span class="hljs-string">&quot;form.usname&quot;</span></span>
-<span class="hljs-tag">    <span class="hljs-attr">:rules</span>=<span class="hljs-string">&quot;rules.usname&quot;</span></span>
-<span class="hljs-tag">    <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;usname&quot;</span></span>
-<span class="hljs-tag">  &gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">van-field</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">van-form</span>&gt;</span></code></pre></div>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">van-form</span> <span class="attr">ref</span>=<span class="string">&quot;form&quot;</span>&gt;</span> </span><br><span class="line">  <span class="tag">&lt;<span class="name">van-field</span></span></span><br><span class="line"><span class="tag">    <span class="attr">label</span>=<span class="string">&quot;用户名&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">v-model</span>=<span class="string">&quot;form.usname&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">:rules</span>=<span class="string">&quot;rules.usname&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">name</span>=<span class="string">&quot;usname&quot;</span></span></span><br><span class="line"><span class="tag">  &gt;</span><span class="tag">&lt;/<span class="name">van-field</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">van-form</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<div class="hljs"><pre><code class="hljs javascript">data()&#123;
-    form: &#123;
-        usname: <span class="hljs-string">&#x27;&#x27;</span>
-      &#125;,
-     rules: &#123;
-        usname: [
-          &#123;<span class="hljs-attr">required</span>: <span class="hljs-literal">true</span>,<span class="hljs-attr">message</span>: <span class="hljs-string">&#x27;不能为空&#x27;</span>,<span class="hljs-attr">trigger</span>: <span class="hljs-string">&#x27;onChange&#x27;</span>&#125;,
-          &#123;
-            validator: <span class="hljs-function"><span class="hljs-params">value</span> =&gt;</span> &#123;
-              <span class="hljs-keyword">const</span> _reg = xxx
-              <span class="hljs-keyword">return</span> _reg.test(value)
-            &#125;,
-            message: <span class="hljs-string">&#x27;请输入正确的手机号&#x27;</span>,
-            trigger: <span class="hljs-string">&#x27;onChange&#x27;</span>
-          &#125;
-        ],
-    &#125;    
-&#125;</code></pre></div>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">data()&#123;</span><br><span class="line">    form: &#123;</span><br><span class="line">        usname: <span class="string">&#x27;&#x27;</span></span><br><span class="line">      &#125;,</span><br><span class="line">     rules: &#123;</span><br><span class="line">        usname: [</span><br><span class="line">          &#123;<span class="attr">required</span>: <span class="literal">true</span>,<span class="attr">message</span>: <span class="string">&#x27;不能为空&#x27;</span>,<span class="attr">trigger</span>: <span class="string">&#x27;onChange&#x27;</span>&#125;,</span><br><span class="line">          &#123;</span><br><span class="line">            validator: <span class="function"><span class="params">value</span> =&gt;</span> &#123;</span><br><span class="line">              <span class="keyword">const</span> _reg = xxx</span><br><span class="line">              <span class="keyword">return</span> _reg.test(value)</span><br><span class="line">            &#125;,</span><br><span class="line">            message: <span class="string">&#x27;请输入正确的手机号&#x27;</span>,</span><br><span class="line">            trigger: <span class="string">&#x27;onChange&#x27;</span></span><br><span class="line">          &#125;</span><br><span class="line">        ],</span><br><span class="line">    &#125;    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
 
@@ -429,16 +306,7 @@ data () &#123;
 </ul>
 </li>
 </ul>
-<div class="hljs"><pre><code class="hljs javascript"><span class="hljs-built_in">this</span>.$toast.success(<span class="hljs-string">&#x27;成功&#x27;</span>)
-<span class="hljs-built_in">this</span>.$toast.fail(<span class="hljs-string">&#x27;失败&#x27;</span>)
-<span class="hljs-built_in">this</span>.$toast.loading(<span class="hljs-string">&#x27;加载&#x27;</span>)
-
-his.$toast.loading(<span class="hljs-string">&#x27;加载&#x27;</span>)
-  <span class="hljs-built_in">this</span>.$toast.loading(&#123;
-    loadingType: <span class="hljs-string">&#x27;spinner&#x27;</span>,
-    duration: <span class="hljs-number">2000</span>,
-    message: <span class="hljs-string">&#x27;加载&#x27;</span>
-&#125;)</code></pre></div>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">this</span>.$toast.success(<span class="string">&#x27;成功&#x27;</span>)</span><br><span class="line"><span class="built_in">this</span>.$toast.fail(<span class="string">&#x27;失败&#x27;</span>)</span><br><span class="line"><span class="built_in">this</span>.$toast.loading(<span class="string">&#x27;加载&#x27;</span>)</span><br><span class="line"></span><br><span class="line">his.$toast.loading(<span class="string">&#x27;加载&#x27;</span>)</span><br><span class="line">  <span class="built_in">this</span>.$toast.loading(&#123;</span><br><span class="line">    loadingType: <span class="string">&#x27;spinner&#x27;</span>,</span><br><span class="line">    duration: <span class="number">2000</span>,</span><br><span class="line">    message: <span class="string">&#x27;加载&#x27;</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 
 
 
@@ -457,384 +325,121 @@ his.$toast.loading(<span class="hljs-string">&#x27;加载&#x27;</span>)
 
 
 
-            </div>
-            <hr>
-            <div>
-              <div class="post-metas mb-3">
-                
-                  <div class="post-meta mr-3">
-                    <i class="iconfont icon-category"></i>
-                    
-                      <a class="hover-with-bg" href="/categories/Vue%E7%BB%84%E4%BB%B6%E5%BA%93/">Vue组件库</a>
-                    
-                  </div>
-                
-                
-                  <div class="post-meta">
-                    <i class="iconfont icon-tags"></i>
-                    
-                      <a class="hover-with-bg" href="/tags/Vant-ui/">Vant-ui</a>
-                    
-                  </div>
-                
-              </div>
-              
-                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！</p>
-              
-              
-                <div class="post-prevnext row">
-                  <article class="post-prev col-6">
-                    
-                    
-                  </article>
-                  <article class="post-next col-6">
-                    
-                    
-                      <a href="/2020/08/07/Vue%E7%A7%BB%E5%8A%A8%E7%AB%AF/">
-                        <span class="hidden-mobile">面面移动端项目</span>
-                        <span class="visible-mobile">下一篇</span>
-                        <i class="iconfont icon-arrowright"></i>
-                      </a>
-                    
-                  </article>
-                </div>
-              
-            </div>
-
-            
-              <!-- Comments -->
-              <article class="comments" id="comments">
-                
-                
-  <div id="vcomments"></div>
-  <script type="text/javascript">
-    function loadValine() {
-      addScript('https://cdn.staticfile.org/valine/1.4.14/Valine.min.js', function () {
-        new Valine({
-          el: "#vcomments",
-          app_id: "Gf5Q9dqXU1FJawgocfhwUqOo-gzGzoHsz",
-          app_key: "3VvaKbHfPXTQ5849CwtVrLcT",
-          placeholder: "说点什么",
-          path: window.location.pathname,
-          avatar: "retro",
-          meta: ["nick","mail","link"],
-          pageSize: "10",
-          lang: "zh-CN",
-          highlight: false,
-          recordIP: false,
-          serverURLs: "",
-        });
-      });
-    }
-    waitElementVisible('vcomments', loadValine);
-  </script>
-  <noscript>Please enable JavaScript to view the <a target="_blank" href="https://valine.js.org" rel="nofollow noopener noopener">comments
-      powered by Valine.</a></noscript>
-
-
-              </article>
-            
-          </article>
-        </div>
-      </div>
     </div>
+     
+    <div class="post-footer__meta">
+    <p>
+        更新于 2020-10-26
+    </p>
+</div> 
+    <div class="post-meta__cats">
     
-      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
-        <div id="toc">
-  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
-  <div id="tocbot"></div>
-</div>
-
-      </div>
+        <a href="/categories/Vue%E7%BB%84%E4%BB%B6%E5%BA%93/" class="post-cats__link button">Vue组件库</a>
     
-  </div>
-</div>
-
-<!-- Custom -->
-
-
     
-  </main>
+        <a href="/tags/Vant-ui/" class="post-tags__link button"># Vant-ui</a>
+    
+</div> 
+</article>
 
-  
-    <a id="scroll-top-button" href="#" role="button">
-      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
-    </a>
-  
 
-  
-    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
-     aria-hidden="true">
-  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header text-center">
-        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
-        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body mx-3">
-        <div class="md-form mb-5">
-          <input type="text" id="local-search-input" class="form-control validate">
-          <label data-error="x" data-success="v"
-                 for="local-search-input">关键词</label>
+    <div class="nav">
+        <div class="nav__prev">
+            
+                <a href="/2020/09/03/Nodejs%E4%BA%86%E8%A7%A3/" class="nav__link">
+                    <div>
+                        <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M589.088 790.624L310.464 512l278.624-278.624 45.248 45.248L400.96 512l233.376 233.376z" fill="#808080"></path></svg>
+                    </div>
+                    <div>
+                        <div class="nav__label">
+                            Previous Post
+                        </div>
+                        <div class="nav__title">
+                            Nodejs了解
+                        </div>
+                    </div>
+                </a>
+            
         </div>
-        <div class="list-group" id="local-search-result"></div>
-      </div>
+        <div class="nav__next">
+            
+                <a href="/2020/08/07/Vue%E7%A7%BB%E5%8A%A8%E7%AB%AF/" class="nav__link">
+                    <div>
+                        <div class="nav__label">
+                            Next Post
+                        </div>
+                        <div class="nav__title">
+                            面面移动端项目
+                        </div>
+                    </div>
+                    <div>
+                        <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M434.944 790.624l-45.248-45.248L623.04 512l-233.376-233.376 45.248-45.248L713.568 512z" fill="#808080"></path></svg>
+                    </div>
+                </a>
+            
+        </div>
     </div>
-  </div>
-</div>
-  
 
-  
 
-  
 
-  <footer class="mt-5">
-    <div class="text-center py-3">
-        <div>
-            <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
-            <i class="iconfont icon-love"></i>
-            <a href="" target="_blank" rel="nofollow noopener">
-                <span>Fluid</span></a>
-        </div>
-        <div>
-            <span id="timeDate">载入天数...</span>
-            <span id="times">载入时分秒...</span>
-            <p id="hitokoto">:D 获取中...</p>
-            <script>
-                //运行时间
-                var now = new Date();
 
-                function createtime() {
-                    var grt = new Date("07/01/2020 00:00:00"); //此处修改你的建站时间或者网站上线时间
-                    now.setTime(now.getTime() + 250);
-                    days = (now - grt) / 1000 / 60 / 60 / 24;
-                    dnum = Math.floor(days);
-                    hours = (now - grt) / 1000 / 60 / 60 - (24 * dnum);
-                    hnum = Math.floor(hours);
-                    if (String(hnum).length == 1) {
-                        hnum = "0" + hnum;
-                    }
-                    minutes = (now - grt) / 1000 / 60 - (24 * 60 * dnum) - (60 * hnum);
-                    mnum = Math.floor(minutes);
-                    if (String(mnum).length == 1) {
-                        mnum = "0" + mnum;
-                    }
-                    seconds = (now - grt) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
-                    snum = Math.round(seconds);
-                    if (String(snum).length == 1) {
-                        snum = "0" + snum;
-                    }
-                    document.getElementById("timeDate").innerHTML = "已运行&nbsp" + dnum + "&nbsp天";
-                    document.getElementById("times").innerHTML = hnum + "&nbsp小时&nbsp" + mnum + "&nbsp分&nbsp" + snum +
-                        "&nbsp秒";
-                }
-                setInterval("createtime()", 250);
-                //一言
-                var yy = function() {
-                    fetch('https://v1.hitokoto.cn')
-                        .then(response => response.json())
-                        .then(data => {
-                            const hitokoto = document.getElementById('hitokoto')
-                            hitokoto.innerText = data.hitokoto
-                        })
-                        .catch(console.error)
-                }
-                yy();
-                setInterval("yy()", 4000);
-            </script>
-        </div>
+
+</main>
+
+            <footer class="footer">
+    
+
+
+    
+     
+ 
+
+ 
+    
         
-
-            
-
-                
-    </div>
+        <p class="footer-copyright">
+            Copyright © 2018&nbsp;-&nbsp;2020 <a href="/">夜雨声繁</a>
+        </p>
+    
+    
+    <p>Powered by <a href="https://hexo.io" target="_blank">Hexo</a> | Theme - <a href="https://github.com/ChrAlpha/hexo-theme-cards" target="_blank">Cards</a></p>
 </footer>
 
-<!-- SCRIPTS -->
-<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
-<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
-<script  src="/js/debouncer.js" ></script>
-<script  src="/js/main.js" ></script>
-
-<!-- Plugins -->
-
-
-  
-    <script  src="/js/lazyload.js" ></script>
-  
-
-
-
-  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
-  <script  src="/js/clipboard-use.js" ></script>
-
-
-
-
-
-
-
-  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
-  <script>
-    $(document).ready(function () {
-      var boardCtn = $('#board-ctn');
-      var boardTop = boardCtn.offset().top;
-
-      tocbot.init({
-        tocSelector: '#tocbot',
-        contentSelector: '#post-body',
-        headingSelector: 'h1,h2,h3,h4,h5,h6',
-        linkClass: 'tocbot-link',
-        activeLinkClass: 'tocbot-active-link',
-        listClass: 'tocbot-list',
-        isCollapsedClass: 'tocbot-is-collapsed',
-        collapsibleClass: 'tocbot-is-collapsible',
-        collapseDepth: 0,
-        scrollSmooth: true,
-        headingsOffset: -boardTop
-      });
-      if ($('.toc-list-item').length > 0) {
-        $('#toc').css('visibility', 'visible');
-      }
-    });
-  </script>
-
-
-
-  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
-  <script>
-    var typed = new Typed('#subtitle', {
-      strings: [
-        '  ',
-        "Vant&nbsp;",
-      ],
-      cursorChar: "_",
-      typeSpeed: 130,
-      loop: false,
-    });
-    typed.stop();
-    $(document).ready(function () {
-      $(".typed-cursor").addClass("h2");
-      typed.start();
-    });
-  </script>
-
-
-
-  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
-  <script>
-    anchors.options = {
-      placement: "right",
-      visible: "hover",
-      
-    };
-    var el = "h1,h2,h3,h4,h5,h6".split(",");
-    var res = [];
-    for (item of el) {
-      res.push(".markdown-body > " + item)
-    }
-    anchors.add(res.join(", "))
-  </script>
-
-
-
-  <script  src="/js/local-search.js" ></script>
-  <script>
-    var path = "/local-search.xml";
-    var inputArea = document.querySelector("#local-search-input");
-    inputArea.onclick = function () {
-      searchFunc(path, 'local-search-input', 'local-search-result');
-      this.onclick = null
-    }
-  </script>
-
-
-
-  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
-  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
-
-  <script>
-    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
-      function () {
-        var element = document.createElement('a');
-        $(element).attr('data-fancybox', 'images');
-        $(element).attr('href', $(this).attr('src'));
-        $(this).wrap(element);
-      }
-    );
-  </script>
-
-
-
-
-
-
-
-  
-  
+        </div>
+        
+    <script defer src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.0/dist/lazyload.min.js"></script>
     <script>
-      !function (e, t, a) {
-        function r() {
-          for (var e = 0; e < s.length; e++) s[e].alpha <= 0 ? (t.body.removeChild(s[e].el), s.splice(e, 1)) : (s[e].y--, s[e].scale += .004, s[e].alpha -= .013, s[e].el.style.cssText = "left:" + s[e].x + "px;top:" + s[e].y + "px;opacity:" + s[e].alpha + ";transform:scale(" + s[e].scale + "," + s[e].scale + ") rotate(45deg);background:" + s[e].color + ";z-index:99999");
-          requestAnimationFrame(r)
-        }
-
-        function n() {
-          var t = "function" == typeof e.onclick && e.onclick;
-          e.onclick = function (e) {
-            t && t(), o(e)
-          }
-        }
-
-        function o(e) {
-          var a = t.createElement("div");
-          a.className = "heart", s.push({
-            el: a,
-            x: e.clientX - 5,
-            y: e.clientY - 5,
-            scale: 1,
-            alpha: 1,
-            color: c()
-          }), t.body.appendChild(a)
-        }
-
-        function i(e) {
-          var a = t.createElement("style");
-          a.type = "text/css";
-          try {
-            a.appendChild(t.createTextNode(e))
-          } catch (t) {
-            a.styleSheet.cssText = e
-          }
-          t.getElementsByTagName("head")[0].appendChild(a)
-        }
-
-        function c() {
-          return "rgb(" + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + ")"
-        }
-
-        var s = [];
-        e.requestAnimationFrame = e.requestAnimationFrame || e.webkitRequestAnimationFrame || e.mozRequestAnimationFrame || e.oRequestAnimationFrame || e.msRequestAnimationFrame || function (e) {
-          setTimeout(e, 1e3 / 60)
-        }, i(".heart{width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);}.heart:after,.heart:before{content: '';width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: fixed;}.heart:after{top: -5px;}.heart:before{left: -5px;}"), n(), r()
-      }(window, document);
+        window.lazyLoadOptions = {
+            elements_selector: ".lazy",
+            threshold: 0
+        };
     </script>
+ 
+
+ 
+
+ 
+
+ 
+
   
 
 
 
+ 
+
+
+    
+ 
+
+ 
+
+ 
+
+ 
 
 
 
 
-
-
-
-
-
-
-</body>
+    </body>
 </html>

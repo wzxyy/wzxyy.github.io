@@ -1,427 +1,349 @@
-
-
 <!DOCTYPE html>
-<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+<html lang="zh-CN">
+    <head>
+    <meta charset="utf-8">
+
+    
+
+    <!-- 渲染优化 -->
+    <meta name="renderer" content="webkit">
+    <meta name="force-rendering" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="HandheldFriendly" content="True" >
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!--icon-->
+
+    <link rel="shortcut icon" type='image/x-icon' href="https://cdn.jsdelivr.net/gh/wzxyy/cdn/tian.jpg">
+
+
+    <!-- meta -->
+
+
+<title>归档：2020 | 夜雨声繁</title>
 
 
 
-<head>
-  <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="https://cdn.jsdelivr.net/gh/wzxyy/cdn@1.1/favicon.ico">
-  <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/wzxyy/cdn@1.1/favicon.ico">
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  
-  <meta name="theme-color" content="#2f4154">
-  <meta name="description" content="">
-  <meta name="author" content="wzx">
-  <meta name="keywords" content="">
-  <title>归档 | 夜雨声繁</title>
-
-  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
 
 
+    <!-- OpenGraph -->
+ 
+    <meta property="og:type" content="website">
+<meta property="og:title" content="夜雨声繁">
+<meta property="og:url" content="http://yoursite.com/archives/2020/index.html">
+<meta property="og:site_name" content="夜雨声繁">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="wzx">
+<meta name="twitter:card" content="summary_large_image">
 
-<!-- 主题依赖的图标库，不要自行修改 -->
 
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_6peoq002giu.css">
+    
+<link rel="stylesheet" href="/css/style/main.css">
+ 
 
 
 
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_pjno9b9zyxs.css">
+    
+    
+    
 
+     
 
-<link  rel="stylesheet" href="/css/main.css" />
+    <!-- custom head -->
 
-<!-- 自定义样式保持在最底部 -->
-
-
-  <script  src="/js/utils.js" ></script>
-  <script  src="/js/color-schema.js" ></script>
 <meta name="generator" content="Hexo 5.0.2"></head>
 
-
-<body>
-  <header style="height: 60vh;">
-    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
-  <div class="container">
-    <a class="navbar-brand"
-       href="/">&nbsp;<strong>夜雨声繁</strong>&nbsp;</a>
-
-    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
-            data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <div class="animated-icon"><span></span><span></span><span></span></div>
-    </button>
-
-    <!-- Collapsible content -->
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto text-center">
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/">
-                <i class="iconfont icon-home-fill"></i>
-                首页
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/archives/">
-                <i class="iconfont icon-archive-fill"></i>
-                归档
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/categories/">
-                <i class="iconfont icon-category-fill"></i>
-                分类
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/tags/">
-                <i class="iconfont icon-tags-fill"></i>
-                标签
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/about/">
-                <i class="iconfont icon-user-fill"></i>
-                关于
-              </a>
-            </li>
-          
-        
-        
-          <li class="nav-item" id="search-btn">
-            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
-                class="iconfont icon-search"></i>&nbsp;</a>
-          </li>
-        
-        
-          <li class="nav-item" id="color-toggle-btn">
-            <a class="nav-link" href="javascript:">&nbsp;<i
-                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
-          </li>
-        
-      </ul>
+    <body>
+        <div id="app">
+            <header class="header">
+    <div class="header__left">
+        <a href="/" class="button">
+            <span class="logo__text">Home</span>
+        </a>
     </div>
-  </div>
-</nav>
-
-    <div class="banner intro-2" id="background" parallax=true
-         style="background: url('https://cdn.jsdelivr.net/gh/wzxyy/cdn/guilin.jpg') no-repeat center center;
-           background-size: cover;">
-      <div class="full-bg-img">
-        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
-          <div class="container page-header text-center fade-in-up">
-            <span class="h2" id="subtitle">
-              
-            </span>
-
-            
-          </div>
-
-          
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <main>
-    
-      <div class="container nopadding-md">
-        <div class="py-5" id="board"
-          >
-          
-          <div class="container">
-            <div class="row">
-              <div class="col-12 col-md-10 m-auto">
+    <div class="header__right">
+        
+            <div class="navbar__menus">
                 
-
-<div class="list-group">
-  <p class="h4">共计 2 篇文章</p>
-  <hr>
-  
-    
-      
-      <p class="h5">2020</p>
-    
-    <a href="/2020/08/07/Vant-ui/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">Vant</span>
-      <time style="float: right;">08-07</time>
-    </a>
-  
-    
-    <a href="/2020/08/07/Vue%E7%A7%BB%E5%8A%A8%E7%AB%AF/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">面面移动端项目</span>
-      <time style="float: right;">08-07</time>
-    </a>
-  
-</div>
-
-
-
-              </div>
+                    <a href="/archives/" class="navbar-menu button">归档</a>
+                
             </div>
-          </div>
-        </div>
-      </div>
-    
-  </main>
-
-  
-    <a id="scroll-top-button" href="#" role="button">
-      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
-    </a>
-  
-
-  
-    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
-     aria-hidden="true">
-  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header text-center">
-        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
-        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body mx-3">
-        <div class="md-form mb-5">
-          <input type="text" id="local-search-input" class="form-control validate">
-          <label data-error="x" data-success="v"
-                 for="local-search-input">关键词</label>
-        </div>
-        <div class="list-group" id="local-search-result"></div>
-      </div>
-    </div>
-  </div>
-</div>
-  
-
-  
-
-  
-
-  <footer class="mt-5">
-    <div class="text-center py-3">
-        <div>
-            <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
-            <i class="iconfont icon-love"></i>
-            <a href="" target="_blank" rel="nofollow noopener">
-                <span>Fluid</span></a>
-        </div>
-        <div>
-            <span id="timeDate">载入天数...</span>
-            <span id="times">载入时分秒...</span>
-            <p id="hitokoto">:D 获取中...</p>
-            <script>
-                //运行时间
-                var now = new Date();
-
-                function createtime() {
-                    var grt = new Date("07/01/2020 00:00:00"); //此处修改你的建站时间或者网站上线时间
-                    now.setTime(now.getTime() + 250);
-                    days = (now - grt) / 1000 / 60 / 60 / 24;
-                    dnum = Math.floor(days);
-                    hours = (now - grt) / 1000 / 60 / 60 - (24 * dnum);
-                    hnum = Math.floor(hours);
-                    if (String(hnum).length == 1) {
-                        hnum = "0" + hnum;
-                    }
-                    minutes = (now - grt) / 1000 / 60 - (24 * 60 * dnum) - (60 * hnum);
-                    mnum = Math.floor(minutes);
-                    if (String(mnum).length == 1) {
-                        mnum = "0" + mnum;
-                    }
-                    seconds = (now - grt) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
-                    snum = Math.round(seconds);
-                    if (String(snum).length == 1) {
-                        snum = "0" + snum;
-                    }
-                    document.getElementById("timeDate").innerHTML = "已运行&nbsp" + dnum + "&nbsp天";
-                    document.getElementById("times").innerHTML = hnum + "&nbsp小时&nbsp" + mnum + "&nbsp分&nbsp" + snum +
-                        "&nbsp秒";
-                }
-                setInterval("createtime()", 250);
-                //一言
-                var yy = function() {
-                    fetch('https://v1.hitokoto.cn')
-                        .then(response => response.json())
-                        .then(data => {
-                            const hitokoto = document.getElementById('hitokoto')
-                            hitokoto.innerText = data.hitokoto
-                        })
-                        .catch(console.error)
-                }
-                yy();
-                setInterval("yy()", 4000);
-            </script>
-        </div>
+        
+        
         
 
-            
+        
+        
 
+         
+    <a href="#" class="button" id="b2t" aria-label="回到顶部" title="回到顶部">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="32" height="32">
+            <path d="M233.376 722.752L278.624 768 512 534.624 745.376 768l45.248-45.248L512 444.128zM192 352h640V288H192z" fill="currentColor"></path>
+        </svg>
+    </a>
+
+
+        
+            <a class="dropdown-icon button" id="btn-dropdown"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width='24' height='24' fill="none" stroke="currentColor" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round"><path fill="currentColor" d="M3.314,4.8h13.372c0.41,0,0.743-0.333,0.743-0.743c0-0.41-0.333-0.743-0.743-0.743H3.314c-0.41,0-0.743,0.333-0.743,0.743C2.571,4.467,2.904,4.8,3.314,4.8z M16.686,15.2H3.314c-0.41,0-0.743,0.333-0.743,0.743s0.333,0.743,0.743,0.743h13.372c0.41,0,0.743-0.333,0.743-0.743S17.096,15.2,16.686,15.2z M16.686,9.257H3.314c-0.41,0-0.743,0.333-0.743,0.743s0.333,0.743,0.743,0.743h13.372c0.41,0,0.743-0.333,0.743-0.743S17.096,9.257,16.686,9.257z"></path></svg></a>
+            <div class="dropdown-menus" id="dropdown-menus">
                 
+                    <a href="/archives/" class="dropdown-menu button">归档</a>
+                
+            </div>
+        
     </div>
+</header>
+
+
+    <div class="cover">
+        <div class="cover__logo">
+            
+                <h1>夜雨声繁</h1>
+            
+        </div>
+        
+        
+            <div class="cover__intro">
+                <p>你终于来啦o(<em>￣▽￣</em>)ブ</p>
+ 
+            </div>
+        
+    </div>
+
+            
+<main class='main'>
+    
+		
+    <div class="post-list">
+        
+            
+                <div class='post-entry content-card'>
+                    <div class="post-entry__header"></div>
+<div class="post-entry__content">
+    <h2 class="post-entry__title">
+        nodejs实战
+    </h2>
+    
+        <p>模拟英雄管理后台项目</p>
+    
+</div>
+<div class="post-entry__meta">
+    <a href="/archives/2020/09/" class="post-meta__date button">
+    2020-09-06
+</a>
+    
+    <span class="separate-dot"></span><a href="/categories/nodejs/" class="button">nodejs</a>
+
+ 
+</div>
+<div class="post-entry__tags">
+    
+        <a href="/tags/nodejs/" class="post-tags__link button"># nodejs</a>
+    
+</div> 
+<a href="/2020/09/06/nodejs%E5%AE%9E%E6%88%98/" class="post-entry__link">Link</a>
+                </div>
+            
+                <div class='post-entry content-card'>
+                    <div class="post-entry__header"></div>
+<div class="post-entry__content">
+    <h2 class="post-entry__title">
+        nodejs第三方模块使用流程
+    </h2>
+    
+        <p>nodejs 第三方模块使用流程</p>
+    
+</div>
+<div class="post-entry__meta">
+    <a href="/archives/2020/09/" class="post-meta__date button">
+    2020-09-05
+</a>
+    
+    <span class="separate-dot"></span><a href="/categories/Node-js/" class="button">Node.js</a>
+
+ 
+</div>
+<div class="post-entry__tags">
+    
+        <a href="/tags/nodejs/" class="post-tags__link button"># nodejs</a>
+    
+</div> 
+<a href="/2020/09/05/nodejs%E7%AC%AC%E4%B8%89%E6%96%B9%E6%A8%A1%E5%9D%97%E4%BD%BF%E7%94%A8%E6%B5%81%E7%A8%8B/" class="post-entry__link">Link</a>
+                </div>
+            
+                <div class='post-entry content-card'>
+                    <div class="post-entry__header"></div>
+<div class="post-entry__content">
+    <h2 class="post-entry__title">
+        nodejs-03
+    </h2>
+    
+        <p>搭建静态资源服务器，接受get与post参数</p>
+    
+</div>
+<div class="post-entry__meta">
+    <a href="/archives/2020/09/" class="post-meta__date button">
+    2020-09-05
+</a>
+    
+    <span class="separate-dot"></span><a href="/categories/Node-js/" class="button">Node.js</a>
+
+ 
+</div>
+<div class="post-entry__tags">
+    
+        <a href="/tags/JS/" class="post-tags__link button"># JS</a>
+    
+</div> 
+<a href="/2020/09/05/nodejs-03/" class="post-entry__link">Link</a>
+                </div>
+            
+                <div class='post-entry content-card'>
+                    <div class="post-entry__header"></div>
+<div class="post-entry__content">
+    <h2 class="post-entry__title">
+        Nodejs了解
+    </h2>
+    
+        <p><a>Node.js</a> 是一个基于 Chrome V8 引擎的 JavaScript 运行环境。</p>
+<p>模块化开发</p>
+    
+</div>
+<div class="post-entry__meta">
+    <a href="/archives/2020/09/" class="post-meta__date button">
+    2020-09-03
+</a>
+    
+    <span class="separate-dot"></span><a href="/categories/Nodejs/" class="button">Nodejs</a>
+
+ 
+</div>
+<div class="post-entry__tags">
+    
+        <a href="/tags/Nodejs/" class="post-tags__link button"># Nodejs</a>
+    
+</div> 
+<a href="/2020/09/03/Nodejs%E4%BA%86%E8%A7%A3/" class="post-entry__link">Link</a>
+                </div>
+            
+                <div class='post-entry content-card'>
+                    <div class="post-entry__header"></div>
+<div class="post-entry__content">
+    <h2 class="post-entry__title">
+        Vant
+    </h2>
+    
+        <p><a target="_blank" rel="noopener" href="https://youzan.github.io/vant/#/zh-CN/">官网传送门</a></p>
+<p>Vant：轻量、可靠的移动端 Vue 组件库 </p>
+    
+</div>
+<div class="post-entry__meta">
+    <a href="/archives/2020/08/" class="post-meta__date button">
+    2020-08-07
+</a>
+    
+    <span class="separate-dot"></span><a href="/categories/Vue%E7%BB%84%E4%BB%B6%E5%BA%93/" class="button">Vue组件库</a>
+
+ 
+</div>
+<div class="post-entry__tags">
+    
+        <a href="/tags/Vant-ui/" class="post-tags__link button"># Vant-ui</a>
+    
+</div> 
+<a href="/2020/08/07/Vant-ui/" class="post-entry__link">Link</a>
+                </div>
+            
+                <div class='post-entry content-card'>
+                    <div class="post-entry__header"></div>
+<div class="post-entry__content">
+    <h2 class="post-entry__title">
+        面面移动端项目
+    </h2>
+    
+        <p>Vue2.0 + vant-ui 的移动端练手项目</p>
+    
+</div>
+<div class="post-entry__meta">
+    <a href="/archives/2020/08/" class="post-meta__date button">
+    2020-08-07
+</a>
+    
+    <span class="separate-dot"></span><a href="/categories/%E7%BB%83%E4%B9%A0/" class="button">练习</a>
+
+ 
+</div>
+<div class="post-entry__tags">
+    
+        <a href="/tags/Vue/" class="post-tags__link button"># Vue</a>
+    
+</div> 
+<a href="/2020/08/07/Vue%E7%A7%BB%E5%8A%A8%E7%AB%AF/" class="post-entry__link">Link</a>
+                </div>
+            
+        
+    </div>
+    
+
+
+	
+</main>
+
+            <footer class="footer">
+    
+
+
+    
+     
+ 
+
+ 
+    
+        
+        <p class="footer-copyright">
+            Copyright © 2018&nbsp;-&nbsp;2020 <a href="/">夜雨声繁</a>
+        </p>
+    
+    
+    <p>Powered by <a href="https://hexo.io" target="_blank">Hexo</a> | Theme - <a href="https://github.com/ChrAlpha/hexo-theme-cards" target="_blank">Cards</a></p>
 </footer>
 
-<!-- SCRIPTS -->
-<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
-<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
-<script  src="/js/debouncer.js" ></script>
-<script  src="/js/main.js" ></script>
-
-<!-- Plugins -->
-
-
-  
-    <script  src="/js/lazyload.js" ></script>
-  
-
-
-
-  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
-  <script  src="/js/clipboard-use.js" ></script>
-
-
-
-
-
-
-
-
-
-  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
-  <script>
-    var typed = new Typed('#subtitle', {
-      strings: [
-        '  ',
-        "归档&nbsp;",
-      ],
-      cursorChar: "_",
-      typeSpeed: 130,
-      loop: false,
-    });
-    typed.stop();
-    $(document).ready(function () {
-      $(".typed-cursor").addClass("h2");
-      typed.start();
-    });
-  </script>
-
-
-
-
-
-  <script  src="/js/local-search.js" ></script>
-  <script>
-    var path = "/local-search.xml";
-    var inputArea = document.querySelector("#local-search-input");
-    inputArea.onclick = function () {
-      searchFunc(path, 'local-search-input', 'local-search-result');
-      this.onclick = null
-    }
-  </script>
-
-
-
-
-
-
-
-
-
-  
-  
+        </div>
+        
+    <script defer src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.0/dist/lazyload.min.js"></script>
     <script>
-      !function (e, t, a) {
-        function r() {
-          for (var e = 0; e < s.length; e++) s[e].alpha <= 0 ? (t.body.removeChild(s[e].el), s.splice(e, 1)) : (s[e].y--, s[e].scale += .004, s[e].alpha -= .013, s[e].el.style.cssText = "left:" + s[e].x + "px;top:" + s[e].y + "px;opacity:" + s[e].alpha + ";transform:scale(" + s[e].scale + "," + s[e].scale + ") rotate(45deg);background:" + s[e].color + ";z-index:99999");
-          requestAnimationFrame(r)
-        }
-
-        function n() {
-          var t = "function" == typeof e.onclick && e.onclick;
-          e.onclick = function (e) {
-            t && t(), o(e)
-          }
-        }
-
-        function o(e) {
-          var a = t.createElement("div");
-          a.className = "heart", s.push({
-            el: a,
-            x: e.clientX - 5,
-            y: e.clientY - 5,
-            scale: 1,
-            alpha: 1,
-            color: c()
-          }), t.body.appendChild(a)
-        }
-
-        function i(e) {
-          var a = t.createElement("style");
-          a.type = "text/css";
-          try {
-            a.appendChild(t.createTextNode(e))
-          } catch (t) {
-            a.styleSheet.cssText = e
-          }
-          t.getElementsByTagName("head")[0].appendChild(a)
-        }
-
-        function c() {
-          return "rgb(" + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + ")"
-        }
-
-        var s = [];
-        e.requestAnimationFrame = e.requestAnimationFrame || e.webkitRequestAnimationFrame || e.mozRequestAnimationFrame || e.oRequestAnimationFrame || e.msRequestAnimationFrame || function (e) {
-          setTimeout(e, 1e3 / 60)
-        }, i(".heart{width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);}.heart:after,.heart:before{content: '';width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: fixed;}.heart:after{top: -5px;}.heart:before{left: -5px;}"), n(), r()
-      }(window, document);
+        window.lazyLoadOptions = {
+            elements_selector: ".lazy",
+            threshold: 0
+        };
     </script>
+ 
+
+ 
+
+ 
+
+ 
+
   
 
 
 
+ 
+
+
+    
+ 
+
+ 
+
+ 
+
+ 
 
 
 
 
-
-
-
-
-
-
-</body>
+    </body>
 </html>
